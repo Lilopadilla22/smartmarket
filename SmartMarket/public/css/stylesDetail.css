@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    color: black; 
+    
+}
+
+header {
+    padding: 10px;
+    background-color: #008c2a;
+}
+
+.logo {
+    width: 200px;
+    background-color: #63cb5e;
+    border-radius: 10px;
+}
+
+main{
+    padding-top: 30px;
+}
+
+.cuerpoDelDetalle{
+    display: flex;
+    
+}
+
+.detalleDelProducto {
+    flex-basis: 50%;
+    border-right: 1px solid black;
+}
+
+
+.carritoDelProducto{
+    flex-basis: 50%;
+}
+
+.detalleImagen{
+    display: flex;  
+    justify-content: center;
+    padding: 10%;
+    background-color: #eeee;
+    border-radius: 20px;
+}
+
+.detalleImagen>img {
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.productoDetalle{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+.fichaDescripcion {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.detallesDelCarrito{
+    padding-left: 5%;
+    padding-top: 10%;
+}
+
+.carritoDescripcion {
+    padding-bottom: 10px;
+}
+
+.carritoDescripcion h4 {
+    width: 100%;
+}
+
+
+.botonDeCantidad{
+    width: 25px;
+    height: 25px;
+}
+
+.botonDeAdicionar {
+    padding-top: 5%;
+}
+
+.botonDeAgregar{
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  
+}
+
+.botonPago{
+    padding: 10px;
+    justify-content: center;
+    width: 80%;
+}
+
+
+footer{
+    padding-top: 50%;
+}
+
+
+@media (min-width: 320px) and (max-width: 425px) {
+    .cuerpoDelDetalle {flex-direction: column;}
+    .detalleDelProducto {border-right: none; border-bottom: 1px solid black;}
+
+}
+
+@media (min-width: 456px) and (max-width: 768px) {
+
+}
+
+@media (min-width: 769px) {
+
+}
