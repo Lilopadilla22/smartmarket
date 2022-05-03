@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./css/sections-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Almacén - SmartMarket</title>
+</head>
+<body>
+<header>
+    <div class="elementos-header">
+        <div class="box-logo-principal"><img src="./img/SMART MARKET_logo sin fondo.png" class="logo-principal"></div>
+        <p class="ubicacion-pestaña">ALMACÉN</p>
+    <nav class="nav-menu">
+        <button class="boton-menu" onclick="actionMenu()"><i class="fa-solid fa-bars"></i></button>
+        
+            <a class="enlaces-menu" href="/home"><i class="fa-solid fa-house"></i> HOME</a>
+            <a class="enlaces-menu" href="/categories"><i class="fa-solid fa-tag"></i>CATEGORÍAS</a>
+            <a class="enlaces-menu" href="/carrito"><i class="fa-solid fa-cart-shopping"></i>CARRITO</a>
+            <a class="enlaces-menu" href="/perfil"><i class="fa-solid fa-user"></i>MI PERFIL</a>
+        
+    </nav>
+    <nav class="nav-barra-menu">
+            <a class="enlaces-barra-menu" href="/home"><i class="fa-solid fa-house"></i><div>HOME</div></a>
+            <a class="enlaces-barra-menu" href="/categories"><i class="fa-solid fa-tag"></i><div>CATEGORÍAS</div></a>
+            <a class="enlaces-barra-menu" href="/carrito"><i class="fa-solid fa-cart-shopping"></i><div>CARRITO</div></a>
+            <a class="enlaces-barra-menu" href="/perfil"><i class="fa-solid fa-user"></i><div>MI PERFIL</div></a>
+    </nav>
+    
+    </div>
+</header>
+
+<main>
+<div>
+    <a href="/categories">
+      <button class="boton-categorias"> Todas las categorías
+        <div class="icono-boton-categorias">
+          <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path></svg>
+        </div>
+      </button>
+    </a>
+</div>
+    <section class="conjunto-articulos-productos">
+        <div class="articulosx4">
+        <div class="articulosx2-izquierda">
+        <article class="articulo-productos">
+            <a href="/producto">
+             <img class="imagen-producto" src="/img/pan 1.jpg">
+             <div class="detalles-producto"></div>
+             <div class="nombre-producto">Pan de Mesa Lactal</div>
+             <div class="descripcion-producto">Pan De Mesa Blanco Lactal Bsa 500 Grm</div>
+             <div class="precio-producto">$250</div>
+            </a>
+            <button class="agregar-carrito-boton">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Agregar al carrito</span>
+            </button>
+        </article>
+        <article class="articulo-productos">
+            <a href="/producto">
+             <img class="imagen-producto" src="/img/pan 2.jpg">
+             <div class="detalles-producto"></div>
+             <div class="nombre-producto">Pan de Mesa Fargo</div>
+             <div class="descripcion-producto">Pan Salvado Plus Chico Fargo Bsa 350 Grm</div>
+             <div class="precio-producto">$250</div>
+            </a>
+            <button class="agregar-carrito-boton">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Agregar al carrito</span>
+            </button>
+        </article>
+        </div>
+        <div class="articulosx2-derecha">
+        <article class="articulo-productos">
+            <a href="/producto">
+             <img class="imagen-producto" src="/img/papas fritas.jpg">
+             <div class="detalles-producto"></div>
+             <div class="nombre-producto">Papas Fritas Lays</div>
+             <div class="descripcion-producto">Papas Fritas Clásicas Lays Paq 249 Grm</div>
+             <div class="precio-producto">$430</div>
+            </a>
+            <button class="agregar-carrito-boton">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Agregar al carrito</span>
+            </button>
+        </article>
+        <article class="articulo-productos">
+            <a href="/producto">
+                <img class="imagen-producto" src="/img/fideos 1.jpg">
+                <div class="detalles-producto"></div>
+                <div class="nombre-producto">Fideos Lucchetti</div>
+                <div class="descripcion-producto">Tirabuzon LUCCHETTI Paquete 500 Gr</div>
+                <div class="precio-producto">$67</div>
+               </a>
+            <button class="agregar-carrito-boton">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Agregar al carrito</span>
+            </button>
+        </article>
+        </div>
+    </div>
+    <div class="articulosx4">
+        <div class="articulosx2-izquierda">
+            <article class="articulo-productos">
+                <a href="/producto">
+                 <img class="imagen-producto" src="/img/fideos 2.jpg">
+                 <div class="detalles-producto"></div>
+                 <div class="nombre-producto">Fideos Lucchetti</div>
+                 <div class="descripcion-producto">Tirabuzon verduras LUCCHETTI Paquete 500 Gr</div>
+                 <div class="precio-producto">$130</div>
+                </a>
+                <button class="agregar-carrito-boton">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Agregar al carrito</span>
+                </button>
+            </article>
+            <article class="articulo-productos">
+                <a href="/producto">
+                    <img class="imagen-producto" src="/img/fideos 3.jpg">
+                    <div class="detalles-producto"></div>
+                    <div class="nombre-producto">Fideos La Campagnola</div>
+                    <div class="descripcion-producto">Fid.Semola De Trig Tallarin La Campagno Paq 500 Grm</div>
+                    <div class="precio-producto">$110</div>
+                   </a>
+                <button class="agregar-carrito-boton">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Agregar al carrito</span>
+                </button>
+            </article>
+            </div>
+            <div class="articulosx2-derecha">
+                <article class="articulo-productos">
+                    <a href="/producto">
+                     <img class="imagen-producto" src="/img/fideos 4.jpg">
+                     <div class="detalles-producto"></div>
+                     <div class="nombre-producto">Fideos Lucchetti</div>
+                     <div class="descripcion-producto">Coditos LUCCHETTI Paquete 500 Gr</div>
+                     <div class="precio-producto">$101</div>
+                    </a>
+                    <button class="agregar-carrito-boton">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Agregar al carrito</span>
+                    </button>
+                </article>
+                <article class="articulo-productos">
+                    <a href="/producto">
+                     <img class="imagen-producto" src="/img/fideos 5.jpg">
+                     <div class="detalles-producto"></div>
+                     <div class="nombre-producto">Fideos Lucchetti</div>
+                     <div class="descripcion-producto">Mostachol LUCCHETTI Paquete 500 Gr</div>
+                     <div class="precio-producto">$101</div>
+                    </a>
+                    <button class="agregar-carrito-boton">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Agregar al carrito</span>
+                    </button>
+                </article>
+                </div>
+            </div>
+            <div class="articulosx4">
+                <div class="articulosx2-izquierda">
+                    <article class="articulo-productos">
+                        <a href="/producto">
+                         <img class="imagen-producto" src="/img/lasagna.jpg">
+                         <div class="detalles-producto"></div>
+                         <div class="nombre-producto">Lasagna Matarazzo</div>
+                         <div class="descripcion-producto">Lasagna Matarazzo Paq 400 Grm</div>
+                         <div class="precio-producto">$265</div>
+                        </a>
+                        <button class="agregar-carrito-boton">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span>Agregar al carrito</span>
+                        </button>
+                    </article>
+                    <article class="articulo-productos">
+                        <a href="/producto">
+                         <img class="imagen-producto" src="/img/ñoquis.jpg">
+                         <div class="detalles-producto"></div>
+                         <div class="nombre-producto">Ñoquis La Salteña</div>
+                         <div class="descripcion-producto">Ñoquis . La Salteña Ban 900 Grm</div>
+                         <div class="precio-producto">$405</div>
+                        </a>
+                        <button class="agregar-carrito-boton">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span>Agregar al carrito</span>
+                        </button>
+
+                    </article>
+                    </div>
+                    <div class="articulosx2-derecha">
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/capelletini.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Capelletini Giacomo</div>
+                             <div class="descripcion-producto">Capelletini Verdura Giacomo Paq 500 Grm</div>
+                             <div class="precio-producto">$330</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                                <img class="imagen-producto" src="/img/arroz 1.jpg">
+                                <div class="detalles-producto"></div>
+                                <div class="nombre-producto">Arroz Ciudad del Lago</div>
+                                <div class="descripcion-producto">Arroz Largo Fino CIUDAD DEL LAGO Paquete 1 Kg</div>
+                                <div class="precio-producto">$100</div>
+                               </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        </div>
+                </div>
+                <div class="articulosx4">
+                    <div class="articulosx2-izquierda">
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/arroz 2.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Arroz Gallo</div>
+                             <div class="descripcion-producto">Arroz Largo Fino GALLO Versátil Paquete 1 Kg</div>
+                             <div class="precio-producto">$115</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/arroz 3.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Arroz Lucchetti</div>
+                             <div class="descripcion-producto">Arroz Parboil LUCCHETTI Estuche X1 Kg</div>
+                             <div class="precio-producto">$125</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+    
+                        </article>
+                        </div>
+                        <div class="articulosx2-derecha">
+                            <article class="articulo-productos">
+                                <a href="/producto">
+                                 <img class="imagen-producto" src="/img/arroz 4.jpg">
+                                 <div class="detalles-producto"></div>
+                                 <div class="nombre-producto">Arroz Molinos</div>
+                                 <div class="descripcion-producto">Arroz Integ. . MOLINOS ALA Paq 1 Kgm</div>
+                                 <div class="precio-producto">$160</div>
+                                </a>
+                                <button class="agregar-carrito-boton">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span>Agregar al carrito</span>
+                                </button>
+                            </article>
+                            <article class="articulo-productos">
+                                <a href="/producto">
+                                    <img class="imagen-producto" src="/img/harina 1.jpg">
+                                    <div class="detalles-producto"></div>
+                                    <div class="nombre-producto">Harina Favorita</div>
+                                    <div class="descripcion-producto">Harina Trigo 000 FAVORITA Paq 1 Kgm</div>
+                                    <div class="precio-producto">$70</div>
+                                   </a>
+                                <button class="agregar-carrito-boton">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span>Agregar al carrito</span>
+                                </button>
+                            </article>
+                            </div>
+                    </div>
+                    <div class="articulosx4">
+                        <div class="articulosx2-izquierda">
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/harina 2.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Harina Cañuelas</div>
+                             <div class="descripcion-producto">Harina Ultra Refinada Cañuelas Paq 1 Kgm</div>
+                             <div class="precio-producto">$70</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/harina 3.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Harina Pureza</div>
+                             <div class="descripcion-producto">Harina Leudante Ultra Refinada Pureza Paq 1 Kgm</div>
+                             <div class="precio-producto">$150</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        </div>
+                        <div class="articulosx2-derecha">
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/galles 1.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Galletitas Criollitas</div>
+                             <div class="descripcion-producto">Galletitas . Criollitas Paq 300 Grm</div>
+                             <div class="precio-producto">$106</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                                <img class="imagen-producto" src="/img/galles 2.jpg">
+                                <div class="detalles-producto"></div>
+                                <div class="nombre-producto">Galletitas OREO</div>
+                                <div class="descripcion-producto">Galletitas OREO Mini Clásica 50gr</div>
+                                <div class="precio-producto">$55</div>
+                               </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        </div>
+                    </div><div class="articulosx4">
+                        <div class="articulosx2-izquierda">
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/galles 3.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Galletitas Chocolinas</div>
+                             <div class="descripcion-producto">Gall.Dulces Chocolat Chocolinas Paq 250 Grm</div>
+                             <div class="precio-producto">$105</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/galles 4.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Galletitas Don Satur</div>
+                             <div class="descripcion-producto">Pepas DON SATUR Bsa 300 Grm</div>
+                             <div class="precio-producto">$120</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        </div>
+                        <div class="articulosx2-derecha">
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/galles 5.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Galletitas Opera</div>
+                             <div class="descripcion-producto">Gall.Rellena Opera Opera Pak 220 Grm</div>
+                             <div class="precio-producto">$130</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                                <img class="imagen-producto" src="/img/galles 6.jpg">
+                                <div class="detalles-producto"></div>
+                                <div class="nombre-producto">Galletitas Bagley</div>
+                                <div class="descripcion-producto">Gall.Dulces Surtido Bagley Paq 390 Grm</div>
+                                <div class="precio-producto">$210</div>
+                               </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        </div>
+                    </div><div class="articulosx4">
+                        <div class="articulosx2-izquierda">
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/galles 7.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Galletitas Terrabusi</div>
+                             <div class="descripcion-producto">Galletitas Terrabusi VARIEDAD Clásica 610grs</div>
+                             <div class="precio-producto">$350</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/galles 8.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Galletitas 9 de Oro</div>
+                             <div class="descripcion-producto">Bizcochos Clásicos 9 De Oro Paq 215 Grm</div>
+                             <div class="precio-producto">$99</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        </div>
+                        <div class="articulosx2-derecha">
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/galles 9.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Galletitas 9 de Oro</div>
+                             <div class="descripcion-producto">Bizcochos Agridulces 9 De Oro Paq 215 Grm</div>
+                             <div class="precio-producto">$99</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                                <img class="imagen-producto" src="/img/galles 10.jpg">
+                                <div class="detalles-producto"></div>
+                                <div class="nombre-producto">Galletitas Oreo</div>
+                                <div class="descripcion-producto">Galletitas Rellena Veggie Tripack Oreo Paq 354 Grm</div>
+                                <div class="precio-producto">$430</div>
+                               </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        </div>
+                    </div><div class="articulosx4">
+                        <div class="articulosx2-izquierda">
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/chocolate.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Chocolate Milka</div>
+                             <div class="descripcion-producto">Chocolate MILKA Relleno Oreo Paq 100 Grm</div>
+                             <div class="precio-producto">$410</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/chocolate 2.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Chocolate Milka</div>
+                             <div class="descripcion-producto">Chocolate Con Almendras Milka Fwp 110 Grm</div>
+                             <div class="precio-producto">$450</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        </div>
+                        <div class="articulosx2-derecha">
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/chocolate 3.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Alfajor Milka</div>
+                             <div class="descripcion-producto">Alfajor MILKA Chocolate 70 Gr X 1 Uni</div>
+                             <div class="precio-producto">$100</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                                <img class="imagen-producto" src="/img/chocolate 4.jpg">
+                                <div class="detalles-producto"></div>
+                                <div class="nombre-producto">Chocolate Milka</div>
+                                <div class="descripcion-producto">Chocolate MILKA C/ Dulce De Leche Tab 67.5 Grm</div>
+                                <div class="precio-producto">$230</div>
+                               </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        </div>
+                    </div><div class="articulosx4">
+                        <div class="articulosx2-izquierda">
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/turron.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Turron Mani Arcor</div>
+                             <div class="descripcion-producto">Turron Mani ARCOR Paq 25 Grm</div>
+                             <div class="precio-producto">$33</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/gomitas.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Gomitas Mogul</div>
+                             <div class="descripcion-producto">Pastillas De Goma Rodajas Ácidas Mogul Fwp 50 Grm</div>
+                             <div class="precio-producto">$70</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        </div>
+                        <div class="articulosx2-derecha">
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/alfajor.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Alfajor Bon o Bon</div>
+                             <div class="descripcion-producto">Alfajor Bon O Bon 40 Gr X 1 Uni</div>
+                             <div class="precio-producto">$70</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                                <img class="imagen-producto" src="/img/confites.jpg">
+                                <div class="detalles-producto"></div>
+                                <div class="nombre-producto">Sugus Confitados</div>
+                                <div class="descripcion-producto">Caramelos Sugus Confitados Est 50 Grm</div>
+                                <div class="precio-producto">$98</div>
+                               </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        </div>
+                    </div><div class="articulosx4">
+                        <div class="articulosx2-izquierda">
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/yerba 1.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Yerba Mate Amanda</div>
+                             <div class="descripcion-producto">Yerba Mate AMANDA Paquete 500 Gr</div>
+                             <div class="precio-producto">$180</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/yerba 2.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Yerba Mate Cruz de Malta</div>
+                             <div class="descripcion-producto">Yerba Mate CRUZ DE MALTA Con Palo Paquete 500 Gr</div>
+                             <div class="precio-producto">$220</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        </div>
+                        <div class="articulosx2-derecha">
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/yerba 3.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Yerba Mate Mañanita</div>
+                             <div class="descripcion-producto">Yerba Mate 4 Flex MAÑANITA 1 Kg</div>
+                             <div class="precio-producto">$630</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                                <img class="imagen-producto" src="/img/cafe 1.jpg">
+                                <div class="detalles-producto"></div>
+                                <div class="nombre-producto">Café Arlistan</div>
+                                <div class="descripcion-producto">Café Instantaneo Torrado Selección Arlistan Fra 50 Grm</div>
+                                <div class="precio-producto">$230</div>
+                               </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        </div>
+                    </div><div class="articulosx4">
+                        <div class="articulosx2-izquierda">
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/cafe 2.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Café La Virginia</div>
+                             <div class="descripcion-producto">Café Molido LA VIRGINIA Paquete 250 Gr</div>
+                             <div class="precio-producto">$310</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/cafe 3.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Café Nescafe</div>
+                             <div class="descripcion-producto">Cafe Instantaneo Suave Nescafe Fra 100 Grm</div>
+                             <div class="precio-producto">$750</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        </div>
+                        <div class="articulosx2-derecha">
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/te 1.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Té Taragui</div>
+                             <div class="descripcion-producto">Te X100 Saq Filtr Taragui Est 100 Uni</div>
+                             <div class="precio-producto">$300</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                                <img class="imagen-producto" src="/img/te 2.jpg">
+                                <div class="detalles-producto"></div>
+                                <div class="nombre-producto">Té La Virginia</div>
+                                <div class="descripcion-producto">Te Verde Citrus LA VIRGINIA Est 20 Uni</div>
+                                <div class="precio-producto">$130</div>
+                               </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        </div>
+                    </div><div class="articulosx4">
+                        <div class="articulosx2-izquierda">
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/te 3.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Té Virgin Islands</div>
+                             <div class="descripcion-producto">Te Clasico Virgin Islands Est 25 Saq</div>
+                             <div class="precio-producto">$106</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/cereal 1.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Cereal Bocaditos Granix</div>
+                             <div class="descripcion-producto">Cer.Avena Bocaditos Rell Granix Pou 180 Grm</div>
+                             <div class="precio-producto">$250</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        </div>
+                        <div class="articulosx2-derecha">
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/cereal 2.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Cereal Zucaritas Kellogs</div>
+                             <div class="descripcion-producto">Cereal Kelloggs Zucaritas Est 730 Grm</div>
+                             <div class="precio-producto">$710</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                                <img class="imagen-producto" src="/img/atun.jpg">
+                                <div class="detalles-producto"></div>
+                                <div class="nombre-producto">Atún Ciudad del Lago</div>
+                                <div class="descripcion-producto">Atún Al Natural CIUDAD DEL LAGO Desmenuzado Lata 170 Gr</div>
+                                <div class="precio-producto">$109</div>
+                               </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        </div>
+                    </div><div class="articulosx4">
+                        <div class="articulosx2-izquierda">
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/arvejas.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Arvejas Coto</div>
+                             <div class="descripcion-producto">Arvejas . Coto Bsa 300 Grm</div>
+                             <div class="precio-producto">$210</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/mayonesa.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Mayonesa Natura</div>
+                             <div class="descripcion-producto">Mayonesa NATURA Pouch 475 Gr</div>
+                             <div class="precio-producto">$150</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        </div>
+                        <div class="articulosx2-derecha">
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/mostaza.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Mostaza Natura</div>
+                             <div class="descripcion-producto">Mostaza NATURA Pouch 250 Gr</div>
+                             <div class="precio-producto">$90</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                                <img class="imagen-producto" src="/img/ketchup.jpg">
+                                <div class="detalles-producto"></div>
+                                <div class="nombre-producto">Ketchup Natura</div>
+                                <div class="descripcion-producto">Ketchup NATURA Pouch 250 Gr</div>
+                                <div class="precio-producto">$103</div>
+                               </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        </div>
+                    </div><div class="articulosx4">
+                        <div class="articulosx2-izquierda">
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/chimi.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Chimichurri La Parmesana</div>
+                             <div class="descripcion-producto">Salsa Chimichurri LA PARMESANA Pet 300 Ml</div>
+                             <div class="precio-producto">$110</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/aceite.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Aceite de Girasol Cocinero</div>
+                             <div class="descripcion-producto">Aceite Girasol Plus Omega 9 Cocinero Pet 900 Ml</div>
+                             <div class="precio-producto">$303</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        </div>
+                        <div class="articulosx2-derecha">
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                             <img class="imagen-producto" src="/img/aceite 2.jpg">
+                             <div class="detalles-producto"></div>
+                             <div class="nombre-producto">Aceite de Oliva Cañuelas</div>
+                             <div class="descripcion-producto">Aceite Oliva Extra Virgen CAÑUELAS Intenso Botella 500 Ml</div>
+                             <div class="precio-producto">$430</div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        <article class="articulo-productos">
+                            <a href="/producto">
+                                <img class="imagen-producto" src="/img/sal.jpg">
+                                <div class="detalles-producto"></div>
+                                <div class="nombre-producto">Sal fina Dos Anclas</div>
+                                <div class="descripcion-producto">Sal Fina . Dos Anclas Paq 500 Grm</div>
+                                <div class="precio-producto">$50</div>
+                               </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        </div>
+                    </div>
+        
+    </section>
+    <section class="conjunto-articulos-barra-categorias">
+        <nav class="barra-categorias">
+            <ul class="lista-categorias">
+                <a href="/all-products"><div class="all"><i class="fa-solid fa-store"></i>Todos los productos</div></a>
+                <a href="/almacen"><div class="catego"><i class="fa-solid fa-basket-shopping"></i>Almacén</div></a>
+                <a href="/bebidas"><div class="catego"><i class="fa-solid fa-bottle-droplet"></i>Bebidas</div></a>
+                <a href="/bebidas-con-alcohol"><div class="catego"><i class="fa-solid fa-wine-glass"></i>Bebidas con alcohol</div></a>
+                <a href="/carnes"><div class="catego"><i class="fa-solid fa-drumstick-bite"></i></i>Carnicería</div></a>
+                <a href="/higiene"><div class="catego"><i class="fa-solid fa-soap"></i>Higiene</div></a>
+                <a href="/lacteos"><div class="catego"><i class="fa-solid fa-cheese"></i></i>Lácteos</div></a>
+                <a href="/limpieza"><div class="catego"><i class="fa-solid fa-broom"></i>Limpieza</div></a>
+                <a href="/verduleria"><div class="catego-verdu"><i class="fa-solid fa-carrot"></i>Verdulería</div></a>
+            </ul>
+        </nav>
+    </section>
+</main>
+
+
+<footer>
+
+
+</footer>
+
+</body>
+</html>
