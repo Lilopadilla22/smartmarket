@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Registro</title>
+</head>
+
+<body class="body-register">
+    <form class="card-register">
+        <div class="card_header">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path fill="currentColor"
+                    d="M4 15h2v5h12V4H6v5H4V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6zm6-4V8l5 4-5 4v-3H2v-2h8z">
+                </path>
+            </svg>
+            <h1 class="form_heading">Registro</h1>
+        </div>
+        <div class="field">
+            <label for="username">Nombre y apellido</label>
+            <input class="input-login" name="username" type="text" placeholder="Juan Martinez" id="username" required>
+        </div>
+        
+        <div class="field">
+            <label for="usuario">Nombre de usuario</label>
+            <input class="input-login" name="usuario" type="usuaio" placeholder="JuanMartinez115" id="usuario" required>
+        </div>
+        <div class="field">
+            <label for="password">Contraseña</label>
+            <input class="input-login" name="user_password" type="password" placeholder="Password" id="password" minlength="5" maxlength="10">
+        </div>
+        <div class="field">
+            <label for="password">Confirmar Contraseña</label>
+            <input class="input-login" name="user_password" type="password" placeholder="Password" id="password" minlength="5" maxlength="10">
+        </div>
+        <div class="field">
+            <label for="password">País</label>
+            <input class="input-login" name="pais" type="pais" placeholder="Argentina" id="pais" required>
+        </div>
+        
+        <div class="field">
+            <label for="direccion">Dirección</label>
+            <input class="input-login" name="direccion" type="direccion" placeholder="San Martín 525" id="direccion" required>
+        </div>
+        <div class="checkbox-register">
+            <label class="label-checkbox" for="acepto">
+                    <input type="checkbox" name="acepto" value="terminos">Acepto términos y condiciones
+                    <input type="checkbox" name="acepto" value="ofertas">Quiero recibir ofertas
+                </label>
+        </div>
+        
+        <div>
+            <button class="button-login" type="submit"><a href="/">Enviar</a></button>
+        </div>
+    </form>
+</body>
+
+</html>

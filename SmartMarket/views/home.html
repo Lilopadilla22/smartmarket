@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Market</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a38fcc55c5.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="elementos-header">
+            <nav class="nav-menu">
+                <div class="img-burguer">
+                    <button class="boton-menu" onclick="actionMenu()"><i class="fa-solid fa-bars"></i></button>
+                    <img src="./images/SMART MARKET_logo sin fondo.png" class="logo-principal">
+                </div>
+                <div class="group">
+                    <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                        <g>
+                            <path
+                                d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                            </path>
+                        </g>
+                    </svg>
+                    <input placeholder="¿Qué producto buscas?" type="search" class="input">
+                </div>
+                <div class="opciones-header">
+                    <div class="opciones-nav"><a href="/register"><i class="fa-solid fa-user"></i></a>
+                    </div>
+                    <div class="opciones-nav"><a href="/login"><i class="fa-solid fa-right-to-bracket"></i></a>
+                    </div>
+                    <div class="opciones-nav"><a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+
+    </header>
+    <main>
+        <div class="slider-div">
+            <ul class="slider">
+                <li>
+                    <input type="radio" id="sbutton1" name="sradio" checked>
+                    <label for="sbutton1"></label>
+                    <img src="./images/imagen reel 1.webp" alt="">
+                </li>
+                <li>
+                    <input type="radio" id="sbutton2" name="sradio">
+                    <label for="sbutton2"></label>
+                    <img src="./images/img reel 2.webp" alt="">
+                </li>
+                <li>
+                    <input type="radio" id="sbutton3" name="sradio">
+                    <label for="sbutton3"></label>
+                    <img src="./images/imagen reel 3.webp" alt="">
+                </li>
+            </ul>
+        </div>
+        <section class="categorias">
+            <h3 class="titulares">Categorías</h3>
+            <div class="categorias-div">
+                <section class="categoria">
+                    <i class="fa-solid fa-bottle-water"></i>
+                    <p>Bebidas</p>
+                </section>
+                <section class="categoria">
+                    <i class="fa-solid fa-bread-slice"></i>
+                    <p>Almacén</p>
+                </section>
+                <section class="categoria">
+                    <i class="fa-solid fa-cheese"></i>
+                    <p>Lacteos</p>
+                </section>
+                <section class="categoria">
+                    <i class="fa-solid fa-spray-can-sparkles"></i>
+                    <p>Limpieza</p>
+                </section>
+                <section class="categoria">
+                    <i class="fa-solid fa-toilet-paper"></i>
+                    <p>Higiene</p>
+                </section>
+                <section class="categoria">
+                    <i class="fa-solid fa-carrot"></i>
+                    <p>Verduleria</p>
+                </section>
+                <section class="categoria">
+                    <i class="fa-solid fa-drumstick-bite"></i>
+                    <p>Carnes</p>
+                </section>
+            </div>
+            <section class="productos-destacados">
+                <h3 class="titulares">Productos destacados</h3>
+                <div class="productos-div">
+                    <img src="./images/destacado 1.webp">
+                    <img src="./images/destacado 2.webp">
+                </div>
+            </section>
+            <section class="opiniones">
+                <h3 class="titulares">Opiniones de clientes</h3>
+                <div class="opiniones-div">
+                    <img src="./images/opinion1.png">
+                    <img src="./images/opinion2.png">
+                    <img src="./images/opinion3.png">
+                </div>
+            </section>
+        <div class="div-iconos">
+            <section class="section-iconos">
+                <i class="fa-solid fa-lock" style="color:#6d6d6d; font-size: 2em;"></i>
+                <p class="p-iconos">100% Pago seguro</p>
+            </section>
+            <section class="section-iconos">
+                <i class="fa-brands fa-whatsapp" style="color:#6d6d6d; font-size: 2em;"></i>
+                <p class="p-iconos">Estamos para vos en Whatsapp</p>   
+            </section>
+            <section class="section-iconos">
+                <i class="fa-solid fa-arrow-right-arrow-left" style="color:#6d6d6d; font-size: 2em;"></i>
+                <p class="p-iconos">Somos sustentables</p>
+            </section>
+            <section class="section-iconos" >
+                <i class="fa-solid fa-thumbs-up" style="color:#6d6d6d; font-size: 2em;"></i>
+                <p class="p-iconos">Te ayudamos a compar mejor</p>
+            </section>
+
+        </div>
+
+    </main>
+    <footer>
+        <section>
+            <article>
+                <nav class="nav-footer">
+                    <ul class="lista-categorias">
+                        <li><a href="">Categorías <i class="fa-solid fa-angle-down" style="font-size:medium;"></i></a>
+                            <ul class="lista-footer">
+                                <li><a href="">Bebidas</a></li>
+                                <li><a href="">Almacén</a></li>
+                                <li><a href="">Lacteos</a></li>
+                                <li><a href="">Limpieza</a></li>
+                                <li><a href="">Higiene</a></li>
+                                <li><a href="">Verduleria</a></li>
+                                <li><a href="">Carnes</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="">Servicio al cliente <i class="fa-solid fa-angle-down"
+                                    style="font-size:medium;"></i></a>
+                            <ul class="lista-footer">
+                                <li><a href="">Términos y condiciones</a></li>
+                                <li><a href="">Búsqueda avanzada</a></li>
+                                <li><a href="">Pedidos y devoluciones</a></li>
+                                <li><a href="">Contáctanos</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Sobre Smart Market <i class="fa-solid fa-angle-down"
+                                    style="font-size:medium;"></i></a>
+                            <ul class="lista-footer">
+                                <li class="ultimo-li"><a href="">Convertí las compras del mes en tu momento favorito.
+                                        Nos enfocamos en solucionar tus necesidades, evitando que te muevas de tu casa.
+                                        #HacemosTiending</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </article>
+        </section>
+        <p>Copyright © 2022 Smart Market</p>
+    </footer>
+
+
+</body>
+
+</html>
