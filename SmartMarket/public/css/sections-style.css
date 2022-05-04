@@ -37,7 +37,7 @@ header.categories{
 }
 .ubicacion-pestaña{
    color: #ffffff;
-   font-size: 18px;
+   font-size: 14px;
    font-style: italic;
    position: absolute;
    left: 140px;
@@ -253,14 +253,16 @@ main{
 }
 main.main-categories{
     background-image: url(/img/fondo-market.jpg);
+    background-size: cover;
+    padding-bottom: 185px;
+    margin-bottom: 0px;
 }
 .conjunto-articulos-categories{
     width: 80vw;
     height: 80vh;
-    margin: 10%;
     position: relative;
-    top: 70px;
-    
+    top: 120px;
+    left: 5%;
 }
 nav.categories{
     text-align: center;
@@ -271,9 +273,11 @@ nav.categories{
     opacity: 90%;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    text-align: center;
 }
 .lista-categories{
     padding: 15px;
+    
 }
 .lista-categories .categorie{
     padding:10px;
@@ -283,6 +287,7 @@ nav.categories{
     background-color: #ebebeb;
     color: #383e42;
     border-radius: 15px;
+    
 }
 .lista-categories .all-product{
     padding:10px;
@@ -319,6 +324,14 @@ nav.categories{
     .precio-producto{
         margin: 12px;
     }
+    .conjunto-articulos-categories{
+        width: 80vw;
+        height: 80vh;
+        position: relative;
+        top: 120px;
+        left: 20%;
+    }
+    
 }
 
 @media (min-width: 1024px){
@@ -477,6 +490,13 @@ nav.categories{
     .precio-producto{
         margin-left: 5px
     }
+    .conjunto-articulos-categories{
+        width: 80vw;
+        height: 80vh;
+        position: relative;
+        top: 120px;
+        left: 25%;
+    }
     
 
 }
@@ -491,6 +511,13 @@ nav.categories{
       position: relative;
       top: 15px;
   }
+  .conjunto-articulos-categories{
+    width: 80vw;
+    height: 80vh;
+    position: relative;
+    top: 120px;
+    left: 33%;
+}
 }
 @media (min-width: 1800px) {
     .imagen-producto{
@@ -506,5 +533,12 @@ nav.categories{
         position: absolute;
         left: 20%;
     } 
+    .conjunto-articulos-categories{
+        width: 80vw;
+        height: 80vh;
+        position: relative;
+        top: 120px;
+        left: 20%;
+    }
 }
    
