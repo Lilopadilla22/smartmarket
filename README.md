@@ -16,3 +16,8 @@ https://www.exito.com/
 https://www.carulla.com/
 https://www.carrefour.com.ar/
 Elegimos éstos sitios como referencia por el parecido a los productos que ofrecen y que nos sirve como guía. Nos gusto la organización de los elementos de Carulla , la paleta de colores de jumbo y la facilidad de acceso a los ítems de exito. Con éstos sitios como ejemplos vamos a armar nuestro ecommerce de supermercado digital.
+
+
+Spring #2
+Tablero de Trabajo
+https://trello.com/invite/b/zUaTwT40/b7c1e25236359c57ee1950a681aff805/smartmarketdh
