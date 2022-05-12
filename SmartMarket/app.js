@@ -5,6 +5,7 @@ const path = require('path');
 const publicPath = path.resolve(__dirname, './public');
 const mainRouter = require ('./routers/mainRouters');
 app.use(express.static(publicPath));
+app.set('view engine', 'ejs');
 
 
 app.listen(3000, () => {

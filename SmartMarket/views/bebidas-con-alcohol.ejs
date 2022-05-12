@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,31 +10,108 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Bebidas con alcohol - SmartMarket</title>
 </head>
-<body>
-<header>
-    <div class="elementos-header">
-        <div class="box-logo-principal"><img src="./img/SMART MARKET_logo sin fondo.png" class="logo-principal"></div>
-        <p class="ubicacion-pestaña">BEBIDAS CON ALCOHOL</p>
-    <nav class="nav-menu">
-        <button class="boton-menu" onclick="actionMenu()"><i class="fa-solid fa-bars"></i></button>
-        
-            <a class="enlaces-menu" href="/"><i class="fa-solid fa-house"></i> HOME</a>
-            <a class="enlaces-menu" href="/categories"><i class="fa-solid fa-tag"></i>CATEGORÍAS</a>
-            <a class="enlaces-menu" href="/productCart"><i class="fa-solid fa-cart-shopping"></i>CARRITO</a>
-            <a class="enlaces-menu" href="/perfil"><i class="fa-solid fa-user"></i>MI PERFIL</a>
-        
-    </nav>
-    <nav class="nav-barra-menu">
-            <a class="enlaces-barra-menu" href="/"><i class="fa-solid fa-house"></i><div>HOME</div></a>
-            <a class="enlaces-barra-menu" href="/categories"><i class="fa-solid fa-tag"></i><div>CATEGORÍAS</div></a>
-            <a class="enlaces-barra-menu" href="/productCart"><i class="fa-solid fa-cart-shopping"></i><div>CARRITO</div></a>
-            <a class="enlaces-barra-menu" href="/perfil"><i class="fa-solid fa-user"></i><div>MI PERFIL</div></a>
-    </nav>
-    
-    </div>
-</header>
 
-<main>
+<body>
+    <header>
+        <div class="elementos-header">
+            <div class="box-logo-principal"><img src="./img/SMART MARKET_logo sin fondo.png" class="logo-principal">
+            </div>
+            <p class="ubicacion-pestaña">BEBIDAS CON ALCOHOL</p>
+            <nav class="nav-menu">
+                <button class="boton-menu" onclick="actionMenu()"><i class="fa-solid fa-bars"></i></button>
+
+                <a class="enlaces-menu" href="/"><i class="fa-solid fa-house"></i> HOME</a>
+                <a class="enlaces-menu" href="/categories"><i class="fa-solid fa-tag"></i>CATEGORÍAS</a>
+                <a class="enlaces-menu" href="/productCart"><i class="fa-solid fa-cart-shopping"></i>CARRITO</a>
+                <a class="enlaces-menu" href="/perfil"><i class="fa-solid fa-user"></i>MI PERFIL</a>
+
+            </nav>
+            <nav class="nav-barra-menu">
+                <a class="enlaces-barra-menu" href="/"><i class="fa-solid fa-house"></i>
+                    <div>HOME</div>
+                </a>
+                <a class="enlaces-barra-menu" href="/categories"><i class="fa-solid fa-tag"></i>
+                    <div>CATEGORÍAS</div>
+                </a>
+                <a class="enlaces-barra-menu" href="/productCart"><i class="fa-solid fa-cart-shopping"></i>
+                    <div>CARRITO</div>
+                </a>
+                <a class="enlaces-barra-menu" href="/perfil"><i class="fa-solid fa-user"></i>
+                    <div>MI PERFIL</div>
+                </a>
+            </nav>
+
+        </div>
+    </header>
+    <main>
+        <div>
+            <a href="/categories">
+                <button class="boton-categorias"> Todas las categorías
+                    <div class="icono-boton-categorias">
+                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </div>
+                </button>
+            </a>
+        </div>
+        <section class="conjunto-articulos-productos">
+            <!-- <div class="articulosx4"> -->
+                
+
+                    <% bebidasConAlcohol.forEach(bebidaConAlcohol => { %>
+
+                        <% if(bebidaConAlcohol % 2 == 0) {%>
+                            <div class="articulosx4"> 
+                        <div class="articulosx2-izquierda">
+                        <article class="articulo-productos">
+                            <a href="/productDetail">
+                                <img class="imagen-producto" src="/img/<%= bebidaConAlcohol.imagen %> ">
+                                <div class="detalles-producto"></div>
+                                <div class="nombre-producto"><%= bebidaConAlcohol.nombre %></div>
+                                <div class="descripcion-producto"><%= bebidaConAlcohol.detalle %></div>
+                                <div class="precio-producto"><%= bebidaConAlcohol.precio %></div>
+                            </a>
+                            <button class="agregar-carrito-boton">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Agregar al carrito</span>
+                            </button>
+                        </article>
+                        </div>
+                    </div>
+                        <% } else { %>
+                            
+                            <div class="articulosx2-derecha">
+                                <article class="articulo-productos">
+                                    <a href="/productDetail">
+                                        <img class="imagen-producto" src="/img/<%= bebidaConAlcohol.imagen %> ">
+                                        <div class="detalles-producto"></div>
+                                        <div class="nombre-producto"><%= bebidaConAlcohol.nombre %></div>
+                                        <div class="descripcion-producto"><%= bebidaConAlcohol.detalle %></div>
+                                        <div class="precio-producto"><%= bebidaConAlcohol.precio %></div>
+                                    </a>
+                                    <button class="agregar-carrito-boton">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                        <span>Agregar al carrito</span>
+                                    </button>
+                                </article>
+                                </div>
+                            
+                            <% } %> 
+                            <% }) %>
+
+
+
+                <!-- </div> -->
+                <!-- <div class="articulosx2-derecha">
+
+                </div> -->
+            <!-- </div> -->
+        </section>
+    </main>
+    <!-- <main>
 <div>
     <a href="/categories">
       <button class="boton-categorias"> Todas las categorías
@@ -208,13 +286,14 @@
             </ul>
         </nav>
     </section>
-</main>
+</main> -->
 
 
-<footer>
+    <footer>
 
 
-</footer>
+    </footer>
 
 </body>
+
 </html>
