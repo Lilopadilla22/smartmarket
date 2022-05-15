@@ -1,3 +1,5 @@
+
+
 let bebidasConAlcohol = [
     {
         id: '00',
@@ -71,18 +73,6 @@ let bebidasConAlcohol = [
     }
 ];
 
-
-let producto = 
-[
-{
-    id: '', 
-    imagen: '',
-    nombre:'',
-    detalle: '',
-    precio: '',
-}
-
-];
 
 
 module.exports = bebidasConAlcohol;

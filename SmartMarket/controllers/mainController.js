@@ -1,6 +1,15 @@
 const path = require('path');
 
-const bebidasConAlcohol = require('./productsController');
+const productos = require('./productosController')
+const almacen = require('./almacenController');
+const bebidasConAlcohol = require('./bebidasConAlcoholController');
+const bebidas = require('./bebidasController');
+const carnes = require('./carnesController');
+const higiene = require('./higieneController');
+const lacteos = require('./lacteosController');
+const limpieza = require('./limpiezaController');
+const verduleria = require('./verduleriaController')
+
 
 const mainController = {
 
@@ -20,34 +29,34 @@ const mainController = {
         res.render('productDetail');
     },
     allProducts: (req, res) =>{
-        res.render('all-products');
+        res.render('all-products', {productos:productos});
     },
     almacen: (req, res) =>{
-        res.render('almacen');
+        res.render('almacen', {almacen:almacen});
     },
     bebidasConAlcohol: (req, res) =>{
-        res.render('bebidas-con-alcohol', {bebidasConAlcohol: bebidasConAlcohol});
+        res.render('bebidas-con-alcohol', {bebidasConAlcohol:bebidasConAlcohol});
     },
     bebidas: (req, res) =>{
-        res.render('bebidas');
+        res.render('bebidas', {bebidas:bebidas});
     },
     carnes: (req, res) =>{
-        res.render('carnes');
+        res.render('carnes', {carnes:carnes});
     },
     categories: (req, res) =>{
         res.render('categories');
     },
     higiene: (req, res) =>{
-        res.render('higiene');
+        res.render('higiene', {higiene:higiene});
     },
     lacteos: (req, res) =>{
-        res.render('lacteos');
+        res.render('lacteos', {lacteos:lacteos});
     },
     limpieza: (req, res) =>{
-        res.render('limpieza');
+        res.render('limpieza', {limpieza:limpieza});
     },
     verduleria: (req, res) =>{
-        res.render('verduleria');
+        res.render('verduleria', {verduleria:verduleria});
     },
     
 };

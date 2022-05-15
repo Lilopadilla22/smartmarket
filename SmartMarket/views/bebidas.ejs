@@ -43,156 +43,29 @@
       </button>
     </a>
 </div>
-    <section class="conjunto-articulos-productos">
-        <div class="articulosx4">
-        <div class="articulosx2-izquierda">
-        <article class="articulo-productos">
-            <a href="/productDetail">
-             <img class="imagen-producto" src="/img/coca 2.25.png">
-             <div class="detalles-producto"></div>
-             <div class="nombre-producto">Coca-Cola</div>
-             <div class="descripcion-producto">Gaseosa Coca-Cola 2.25lts Sabor Original</div>
-             <div class="precio-producto">$250</div>
-            </a>
-            <button class="agregar-carrito-boton">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span>Agregar al carrito</span>
-            </button>
-        </article>
-        <article class="articulo-productos">
-            <a href="/productDetail">
-             <img class="imagen-producto" src="/img/Coca light 2.25.png">
-             <div class="detalles-producto"></div>
-             <div class="nombre-producto">Coca-Cola</div>
-             <div class="descripcion-producto">Gaseosa Coca-Cola Light 2.25lts. Sin azúcares</div>
-             <div class="precio-producto">$250</div>
-            </a>
-            <button class="agregar-carrito-boton">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span>Agregar al carrito</span>
-            </button>
-        </article>
-        </div>
-        <div class="articulosx2-derecha">
-        <article class="articulo-productos">
-            <a href="/productDetail">
-             <img class="imagen-producto" src="/img/fanta 2.25.png">
-             <div class="detalles-producto"></div>
-             <div class="nombre-producto">Fanta</div>
-             <div class="descripcion-producto">Gaseosa Fanta 2.25lts Sabor Naranja</div>
-             <div class="precio-producto">$230</div>
-            </a>
-            <button class="agregar-carrito-boton">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span>Agregar al carrito</span>
-            </button>
-        </article>
-        <article class="articulo-productos">
-            <a href="/productDetail">
-                <img class="imagen-producto" src="/img/fanta light 2.25.png">
-                <div class="detalles-producto"></div>
-                <div class="nombre-producto">Fanta Light</div>
-                <div class="descripcion-producto">Gaseosa Fanta 2.25lts Sabor Naranja. Sin azúcares</div>
-                <div class="precio-producto">$230</div>
-               </a>
-            <button class="agregar-carrito-boton">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span>Agregar al carrito</span>
-            </button>
-        </article>
-        </div>
-    </div>
-    <div class="articulosx4">
-        <div class="articulosx2-izquierda">
+<section class="conjunto-articulos-productos">
+            
+    <% bebidas.forEach(bebida => { %>
+
             <article class="articulo-productos">
-                <a href="/productDetail">
-                 <img class="imagen-producto" src="/img/sprite 2.25.png">
-                 <div class="detalles-producto"></div>
-                 <div class="nombre-producto">Sprite</div>
-                 <div class="descripcion-producto">Gaseosa Sprite 2.25lts Sabor Lima Limón</div>
-                 <div class="precio-producto">$230</div>
+                <a href="/producto">
+                 <img class="imagen-producto" src="/img/<%= bebida.imagen%>">
+                 <div class="detalles-producto">
+                 <div class="nombre-producto"><%= bebida.nombre%></div>
+                 <div class="descripcion-producto"><%= bebida.detalle%></div>
+                 <div class="precio-producto"><%= bebida.precio%></div>
                 </a>
                 <button class="agregar-carrito-boton">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span>Agregar al carrito</span>
                 </button>
-            </article>
-            <article class="articulo-productos">
-                <a href="/productDetail">
-                    <img class="imagen-producto" src="/img/sprite light 2.25.png">
-                    <div class="detalles-producto"></div>
-                    <div class="nombre-producto">Sprite Light</div>
-                    <div class="descripcion-producto">Gaseosa Sprite 2.25lts Sabor Lima Limón. Sin azúcares</div>
-                    <div class="precio-producto">$230</div>
-                   </a>
-                <button class="agregar-carrito-boton">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span>Agregar al carrito</span>
-                </button>
-            </article>
             </div>
-            <div class="articulosx2-derecha">
-                <article class="articulo-productos">
-                    <a href="/productDetail">
-                     <img class="imagen-producto" src="/img/pepsi 2.25.png">
-                     <div class="detalles-producto"></div>
-                     <div class="nombre-producto">Pepsi</div>
-                     <div class="descripcion-producto">Gaseosa Pepsi 2.25lts Sabor Cola</div>
-                     <div class="precio-producto">$245</div>
-                    </a>
-                    <button class="agregar-carrito-boton">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span>Agregar al carrito</span>
-                    </button>
-                </article>
-                <article class="articulo-productos">
-                    <a href="/productDetail">
-                     <img class="imagen-producto" src="/img/pepsi light 2.25.png">
-                     <div class="detalles-producto"></div>
-                     <div class="nombre-producto">Pepsi Light</div>
-                     <div class="descripcion-producto">Gaseosa Pepsi 2.25lts Sabor Cola. Sin azúcares</div>
-                     <div class="precio-producto">$245</div>
-                    </a>
-                    <button class="agregar-carrito-boton">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span>Agregar al carrito</span>
-                    </button>
-                </article>
-                </div>
-            </div>
-            <div class="articulosx4">
-                <div class="articulosx2-izquierda">
-                    <article class="articulo-productos">
-                        <a href="/productDetail">
-                         <img class="imagen-producto" src="/img/7up 2.25.png">
-                         <div class="detalles-producto"></div>
-                         <div class="nombre-producto">7up</div>
-                         <div class="descripcion-producto">Gaseosa 7up 2.25lts Sabor Lima Limón</div>
-                         <div class="precio-producto">$225</div>
-                        </a>
-                        <button class="agregar-carrito-boton">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <span>Agregar al carrito</span>
-                        </button>
-                    </article>
-                    <article class="articulo-productos">
-                        <a href="/productDetail">
-                         <img class="imagen-producto" src="/img/7up free 2.25.png">
-                         <div class="detalles-producto"></div>
-                         <div class="nombre-producto">7up Free</div>
-                         <div class="descripcion-producto">Gaseosa 7up 2.25lts Sabor Lima Limón. Sin azúcares</div>
-                         <div class="precio-producto">$225</div>
-                        </a>
-                        <button class="agregar-carrito-boton">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <span>Agregar al carrito</span>
-                        </button>
+            </article>
+                
+                 
+    <% }) %>
 
-                    </article>
-                    </div>
-                </div>
-        
-    </section>
+</section>
     <section class="conjunto-articulos-barra-categorias">
         <nav class="barra-categorias">
             <ul class="lista-categorias">
