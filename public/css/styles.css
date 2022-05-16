@@ -235,7 +235,13 @@ input:hover {
     width: 120px;
     height: 100px;
     font-size: 29px;
+}
+.categoria i {
+    color:#008c2a ;
+}
 
+a {
+    text-decoration: none;
 }
 
 .titulares {
