@@ -8,7 +8,7 @@
 
 /*HEADER*/
 
-header{
+/* header{
     background-color: #63cb5e;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     position: fixed;
@@ -94,7 +94,7 @@ button.boton-menu:focus .enlaces-menu{
 }
 .nav-barra-menu{
     display: none;
-}
+} */
 
 
 
@@ -103,6 +103,11 @@ button.boton-menu:focus .enlaces-menu{
 main{
     background-color: #ffffff;
     margin-bottom: 50px;
+}
+
+.body-categories {
+    background-image: url(/img/fondo-market.jpg);
+    background-size: cover;
 }
 
 .boton-categorias {
@@ -256,7 +261,7 @@ main{
     visibility: hidden;
 }
 main.main-categories{
-    background-image: url(/img/fondo-market.jpg);
+    
 }
 .conjunto-articulos-categories{
     width: 80vw;
