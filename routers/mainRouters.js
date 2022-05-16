@@ -18,6 +18,7 @@ router.get('/higiene', controllers.higiene);
 router.get('/lacteos', controllers.lacteos);
 router.get('/limpieza', controllers.limpieza);
 router.get('/verduleria', controllers.verduleria);
+router.get('/agregarProductos', controllers.agregarProductos);
 
 
 module.exports = router;

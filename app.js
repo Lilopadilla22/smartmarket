@@ -30,5 +30,6 @@ app.use('/higiene', mainRouter);
 app.use('/lacteos', mainRouter);
 app.use('/limpieza', mainRouter);
 app.use('/verduleria', mainRouter);
+app.use('/agregarProductos', mainRouter);
 
 
