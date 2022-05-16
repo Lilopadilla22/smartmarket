@@ -8,7 +8,7 @@ const carnes = require('./carnesController');
 const higiene = require('./higieneController');
 const lacteos = require('./lacteosController');
 const limpieza = require('./limpiezaController');
-const verduleria = require('./verduleriaController')
+const verduleria = require('./verduleriaController');
 
 
 const mainController = {
@@ -57,6 +57,9 @@ const mainController = {
     },
     verduleria: (req, res) =>{
         res.render('verduleria', {verduleria:verduleria});
+    },
+    agregarProductos: (req, res) => {
+        res.render('agregarProductos')
     },
     
 };

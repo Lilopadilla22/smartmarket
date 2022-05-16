@@ -38,7 +38,7 @@ header.categories{
 }
 .ubicacion-pestaña{
    color: #ffffff;
-   font-size: 14px;
+   font-size: 10px;
    font-style: italic;
    position: absolute;
    left: 140px;
@@ -306,6 +306,10 @@ nav.categories{
   
    
 /*FOOTER*/
+
+/* agregar productos*/
+
+
 
 
 
