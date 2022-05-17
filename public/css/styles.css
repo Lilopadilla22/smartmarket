@@ -298,6 +298,7 @@ footer {
     padding: 3px;
     width: 100%;
     height: auto;
+    position: relative;
 }
 
 footer section article {
@@ -322,7 +323,7 @@ footer section article {
 }
 
 .nav-footer li a:hover {
-    background-color: #434343;
+    background-color: #868686;
 }
 
 .nav-footer>li {
@@ -339,9 +340,9 @@ ul.lista-footer li a {
     font-size: 15px;
 }
 
-.nav-footer li:hover>ul {
+/* .nav-footer li:hover>ul {
     display: block;
-}
+} */
 
 .nav-footer li ul li {
     position: relative;
