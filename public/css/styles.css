@@ -19,7 +19,7 @@ body {
 .slider {
     width: 100%;
     height: 25vh;
-    margin: 0px;
+    margin: 83px 0px 0px 0px;
     position: relative;
     list-style: none;
     padding: 0px;
@@ -105,7 +105,9 @@ header {
     background-color: #63bc5e;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     width: 100vw;
-
+    position: fixed;
+    z-index: 10;
+    opacity: 95%;
 }
 
 .elementos-header {
@@ -124,19 +126,21 @@ header {
     justify-content: space-between;
 }
 
-div .opciones-nav {
+div.opciones-nav {
     margin: 5px;
     align-items: center;
 }
 
-.logo-principal {
-    width: 40%;
+img.logo-principal {
+    width: 100px;
     height: auto;
+}
+a.logo-principal{
+    max-width: 100px;
 }
 
 .opciones-header {
     display: flex;
-    justify-content: space-around;
     align-items: center;
     margin-right: 10px;
 }
@@ -158,7 +162,8 @@ button.boton-menu {
 
 .opciones-nav i {
     font-size: 20px;
-    color: #008c2a
+    color: #ffffff;
+    padding: 5px;
 }
 
 .opciones-nav {
@@ -174,20 +179,23 @@ button.boton-menu {
     line-height: 28px;
     align-items: center;
     width: 40%;
+    position: relative;
+    left: 5%;
 }
 
 .input {
-
+    width: 280px;
     height: auto;
     line-height: 28px;
     padding: 0 1rem;
     padding-left: 2.5rem;
-    border: 2px solid #008c2a;
+    border: 1px solid #008c2a;
     border-radius: 8px;
     outline: none;
     background-color: #f3f3f4;
     color: #0d0c22;
     transition: .3s ease;
+    
 }
 
 .input::placeholder {
@@ -366,6 +374,16 @@ ul.lista-footer li a {
 
 
 @media (min-width: 768px) {
+    .boton-menu{
+        display: none;
+    }
+    img.logo-principal {
+        width: 150px;
+        height: auto;
+    }
+    a.logo-principal{
+        max-width: 150px;
+    }
     .slider {
         width: 100%;
         height: 45vh;
@@ -431,6 +449,9 @@ ul.lista-footer li a {
 
 @media (min-width: 1024px) {
     
+    .nav-menu {
+        justify-content: space-evenly;
+    }
     .slider {
         width: 100%;
         height: 45vh;
@@ -445,16 +466,15 @@ ul.lista-footer li a {
 
         font-size: 20px;
     }
-    .logo-principal {
-        width: 20%;
-        height: auto;
-        margin-right: 50%;
-    }
+    
     .productos-div {
         justify-content: center ;
     }
     .opiniones-div {
         justify-content: space-evenly;
+    }
+    .group {
+        left: 10%;
     }
 }
 
