@@ -6,97 +6,6 @@
 }
 /*MOBILE*/
 
-/*HEADER*/
-
-/* header{
-    background-color: #63cb5e;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    position: fixed;
-    width: 100vw;
-    opacity: 95%;
-    z-index: 100;
-
-}
-header.categories{
-    position: absolute;
-    top: 0px;
-    width: 100vw;
-}
-.elementos-header{
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    position: relative;
-}
-
-.logo-principal{
-    width: 130px;
-    border-right: solid 1px #008c2a;
-    margin-top: 10px;
-    margin-left: 5px;
-    margin-right: 10px;
-}
-.ubicacion-pestaña{
-   color: #ffffff;
-   font-size: 10px;
-   font-style: italic;
-   position: absolute;
-   left: 140px;
-   bottom: 5px;
-}
-
-
-button.boton-menu{
-    background-color: #63cb5e;
-    color: #ffffff;
-    font-size: 1.3em;
-    padding: 8px;
-    position: absolute;
-    right: 15px;
-    top: 42px;
-    border: none;
-}
-.nav-menu{
-    height: 1px;
-}
-.enlaces-menu{
-    display: flex;
-    background-color: #e4e4e4;
-    position: relative;
-    right: 2px;
-    top: 10px;
-    width: 45vw;
-    text-align: left;
-    text-decoration: none;
-    color: #7E8489;
-    border-bottom: #ffffff solid 1px;
-    padding: 15px;
-    border-radius: 2%;
-    font-weight: bold;
-    font-size: 14px;
-    visibility: hidden;
-}
-
-.enlaces-menu i{
-    margin-right: 5px;
-}
-.enlaces-menu:hover{
-    background-color: #B1B9C1;
-}
-
-button.boton-menu:focus {
-    background-color: #008c2a;
-    border-radius: 30%;
-    
-}
-button.boton-menu:focus .enlaces-menu{
-    visibility: visible;
-}
-.nav-barra-menu{
-    display: none;
-} */
-
-
 
 
 /*MAIN*/
@@ -260,9 +169,7 @@ main{
    .barra-categorias{
     visibility: hidden;
 }
-main.main-categories{
-    
-}
+
 .conjunto-articulos-categories{
     width: 80vw;
     height: 80vh;

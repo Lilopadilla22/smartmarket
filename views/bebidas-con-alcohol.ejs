@@ -13,38 +13,8 @@
 </head>
 
 <body>
-    <!-- <header>
-        <div class="elementos-header">
-            <div class="box-logo-principal"><img src="./img/SMART MARKET_logo sin fondo.png" class="logo-principal">
-            </div>
-            <p class="ubicacion-pestaña">BEBIDAS CON ALCOHOL</p>
-            <nav class="nav-menu">
-                <button class="boton-menu" onclick="actionMenu()"><i class="fa-solid fa-bars"></i></button>
 
-                <a class="enlaces-menu" href="/"><i class="fa-solid fa-house"></i> HOME</a>
-                <a class="enlaces-menu" href="/categories"><i class="fa-solid fa-tag"></i>CATEGORÍAS</a>
-                <a class="enlaces-menu" href="/productCart"><i class="fa-solid fa-cart-shopping"></i>CARRITO</a>
-                <a class="enlaces-menu" href="/perfil"><i class="fa-solid fa-user"></i>MI PERFIL</a>
-
-            </nav>
-            <nav class="nav-barra-menu">
-                <a class="enlaces-barra-menu" href="/"><i class="fa-solid fa-house"></i>
-                    <div>HOME</div>
-                </a>
-                <a class="enlaces-barra-menu" href="/categories"><i class="fa-solid fa-tag"></i>
-                    <div>CATEGORÍAS</div>
-                </a>
-                <a class="enlaces-barra-menu" href="/productCart"><i class="fa-solid fa-cart-shopping"></i>
-                    <div>CARRITO</div>
-                </a>
-                <a class="enlaces-barra-menu" href="/perfil"><i class="fa-solid fa-user"></i>
-                    <div>MI PERFIL</div>
-                </a>
-            </nav>
-
-        </div>
-    </header> -->
-    <%- include ('./partials/header') %> 
+    <%- include ('./partials/header') %>
     <main>
         <div>
             <a href="/categories">
@@ -66,15 +36,15 @@
             <article class="articulo-productos">
                 <a href="/productDetail">
                     <img class="imagen-producto" src="/img/<%= bebidaConAlcohol.imagen%>">
-                <div class="detalles-producto">
+                    <div class="detalles-producto">
                         <div class="nombre-producto"><%= bebidaConAlcohol.nombre%></div>
                         <div class="descripcion-producto"><%= bebidaConAlcohol.detalle%></div>
                         <div class="precio-producto"><%= bebidaConAlcohol.precio%></div>
                 </a>
-                    <button class="agregar-carrito-boton">
+                <button class="agregar-carrito-boton">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span>Agregar al carrito</span>
-                    </button>
+                </button>
                 </div>
             </article>
 
@@ -117,10 +87,9 @@
         </section>
     </main>
 
-    <footer>
 
+    <%- include ('partials/footer') %>
 
-    </footer>
 
 </body>
 
