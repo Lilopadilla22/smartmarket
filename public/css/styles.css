@@ -611,3 +611,30 @@ label {
     align-content: center;
 
 }
+
+/*agregar productos*/
+
+.agregarProductos {
+    padding: 30px 0 30px 0;
+}
+
+.agregarProductos input{
+    padding: 3px;
+}
+
+.formularioAgregarProductos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.AgregarNuevosProductos {
+    justify-content: center;
+    flex-basis: 50%;
+    color: black;
+}
+
+form label{
+    padding: 10px;
+}
+
