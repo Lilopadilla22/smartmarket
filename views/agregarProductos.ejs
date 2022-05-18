@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="./css/sections-style.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Agregar productos</title>
@@ -15,16 +14,18 @@
     <%- include ('./partials/header') %> 
     <main>
 
-        <section>
-        <form action="/" method="post">
+        <section class="agregarProductos">
+        <form action="/" method="post" class="formularioAgregarProductos">
 
-            <label> Agregar Producto </label>
-            <input type="text" name="nombreProductos">
-            <label> Foto del Producto </label>
-            <input type="imagen" name="imagen">
-
-
-
+            <label class="AgregarNuevosProductos"> Agregar Producto </label>
+            <input name="text" placeholder="id del producto" class="AgregarNuevosProductos"/>
+            <input type="text" name="nombreProductos" placeholder="Nombre del producto" class="AgregarNuevosProductos">
+            <label class="AgregarNuevosProductos"> Foto del producto</label>
+            <input name="uploadedfile" type="file" class="seleccionDeFoto" class="AgregarNuevosProductos"/>
+            <input name="text" placeholder="Precio del producto" class="AgregarNuevosProductos"/>
+            <input name="text" placeholder="Descripción" class="AgregarNuevosProductos"/>
+            <input type="submit" name="enviar" class="AgregarNuevosProductos"/>
+          
         </form>
     </section>
 
