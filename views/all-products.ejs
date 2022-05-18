@@ -15,7 +15,7 @@
 <body>
 
     <%- include ('./partials/header') %>
-    <main>
+    <main class="main-section">
         <div>
             <a href="/categories">
                 <button class="boton-categorias"> Todas las categorías
@@ -40,12 +40,13 @@
                         <div class="nombre-producto"><%= producto.nombre%></div>
                         <div class="descripcion-producto"><%= producto.detalle%></div>
                         <div class="precio-producto"><%= producto.precio%></div>
-                </a>
+                
                 <button class="agregar-carrito-boton">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span>Agregar al carrito</span>
                 </button>
                 </div>
+            </a>
             </article>
 
 
