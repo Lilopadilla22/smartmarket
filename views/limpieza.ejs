@@ -1,70 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="./css/sections-style.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>Limpieza - SmartMarket</title>
-</head>
+
+<%- include ('./partials/head') %>
+
 <body>
 
-<%- include ('./partials/header') %> 
+    <%- include ('./partials/header') %>
 
-<main>
-<div>
-    <a href="/categories">
-      <button class="boton-categorias"> Todas las categorías
-        <div class="icono-boton-categorias">
-          <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path></svg>
+    <main>
+        <div>
+            <a href="/categories">
+                <button class="boton-categorias"> Todas las categorías
+                    <div class="icono-boton-categorias">
+                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </div>
+                </button>
+            </a>
         </div>
-      </button>
-    </a>
-</div>
-<section class="conjunto-articulos-productos">
+        <section class="conjunto-articulos-productos">
 
-    <% limpieza.forEach(productoLimpieza => { %>
+            <% limpieza.forEach(productoLimpieza => { %>
 
-    <article class="articulo-productos">
-        <a href="/productDetail">
-            <img class="imagen-producto" src="/img/<%= productoLimpieza.imagen%>">
-        <div class="detalles-producto">
-                <div class="nombre-producto"><%= productoLimpieza.nombre%></div>
-                <div class="descripcion-producto"><%= productoLimpieza.detalle%></div>
-                <div class="precio-producto"><%= productoLimpieza.precio%></div>
-        
-            <button class="agregar-carrito-boton">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span>Agregar al carrito</span>
-            </button>
-        </div>
-    </a>
-    </article>
+            <article class="articulo-productos">
+                <a href="/productDetail">
+                    <img class="imagen-producto" src="/img/<%= productoLimpieza.imagen%>">
+                    <div class="detalles-producto">
+                        <div class="nombre-producto"><%= productoLimpieza.nombre%></div>
+                        <div class="descripcion-producto"><%= productoLimpieza.detalle%></div>
+                        <div class="precio-producto"><%= productoLimpieza.precio%></div>
+
+                        <button class="agregar-carrito-boton">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span>Agregar al carrito</span>
+                        </button>
+                    </div>
+                </a>
+            </article>
 
 
-    <% }) %>
+            <% }) %>
 
-</section>
-    <section class="conjunto-articulos-barra-categorias">
-        <nav class="barra-categorias">
-            <ul class="lista-categorias">
-                <a href="/all-products"><div class="all"><i class="fa-solid fa-store"></i>Todos los productos</div></a>
-                <a href="/almacen"><div class="catego"><i class="fa-solid fa-basket-shopping"></i>Almacén</div></a>
-                <a href="/bebidas"><div class="catego"><i class="fa-solid fa-bottle-droplet"></i>Bebidas</div></a>
-                <a href="/bebidas-con-alcohol"><div class="catego"><i class="fa-solid fa-wine-glass"></i>Bebidas con alcohol</div></a>
-                <a href="/carnes"><div class="catego"><i class="fa-solid fa-drumstick-bite"></i></i>Carnicería</div></a>
-                <a href="/higiene"><div class="catego"><i class="fa-solid fa-soap"></i>Higiene</div></a>
-                <a href="/lacteos"><div class="catego"><i class="fa-solid fa-cheese"></i></i>Lácteos</div></a>
-                <a href="/limpieza"><div class="catego"><i class="fa-solid fa-broom"></i>Limpieza</div></a>
-                <a href="/verduleria"><div class="catego-verdu"><i class="fa-solid fa-carrot"></i>Verdulería</div></a>
-            </ul>
-        </nav>
-    </section>
-</main>
+        </section>
+        <section class="conjunto-articulos-barra-categorias">
+            <nav class="barra-categorias">
+                <ul class="lista-categorias">
+                    <a href="/all-products">
+                        <div class="all"><i class="fa-solid fa-store"></i>Todos los productos</div>
+                    </a>
+                    <a href="/almacen">
+                        <div class="catego"><i class="fa-solid fa-basket-shopping"></i>Almacén</div>
+                    </a>
+                    <a href="/bebidas">
+                        <div class="catego"><i class="fa-solid fa-bottle-droplet"></i>Bebidas</div>
+                    </a>
+                    <a href="/bebidas-con-alcohol">
+                        <div class="catego"><i class="fa-solid fa-wine-glass"></i>Bebidas con alcohol</div>
+                    </a>
+                    <a href="/carnes">
+                        <div class="catego"><i class="fa-solid fa-drumstick-bite"></i></i>Carnicería</div>
+                    </a>
+                    <a href="/higiene">
+                        <div class="catego"><i class="fa-solid fa-soap"></i>Higiene</div>
+                    </a>
+                    <a href="/lacteos">
+                        <div class="catego"><i class="fa-solid fa-cheese"></i></i>Lácteos</div>
+                    </a>
+                    <a href="/limpieza">
+                        <div class="catego"><i class="fa-solid fa-broom"></i>Limpieza</div>
+                    </a>
+                    <a href="/verduleria">
+                        <div class="catego-verdu"><i class="fa-solid fa-carrot"></i>Verdulería</div>
+                    </a>
+                </ul>
+            </nav>
+        </section>
+    </main>
 
-<%- include ('partials/footer') %>
+    <%- include ('partials/footer') %>
 </body>
+
 </html>

@@ -1,19 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="./css/sections-style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Carnicería - SmartMarket</title>
-</head>
+<%- include ('./partials/head') %>
 
 <body>
 
+    <%- include ('./partials/header') %>
 
     <main>
         <div>
@@ -40,13 +32,13 @@
                         <div class="nombre-producto"><%= carne.nombre%></div>
                         <div class="descripcion-producto"><%= carne.detalle%></div>
                         <div class="precio-producto"><%= carne.precio%></div>
-                
-                <button class="agregar-carrito-boton">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span>Agregar al carrito</span>
-                </button>
-                </div>
-            </a>
+
+                        <button class="agregar-carrito-boton">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span>Agregar al carrito</span>
+                        </button>
+                    </div>
+                </a>
             </article>
 
 

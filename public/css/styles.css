@@ -474,17 +474,14 @@ ul.lista-footer li a {
     .opiniones-div {
         justify-content: space-evenly;
     }
-    .group {
-        left: 10%;
-    }
-}
+   
 
 
 
 /* ---------------------- REGISTER--------------------*/
 .card-register {
     width: 250px;
-    height: 510px;
+    height: 650px;
     background: #F4F6FB;
     border: 1px solid white;
     box-shadow: 10px 10px 64px 0px #399e34;
@@ -522,7 +519,7 @@ ul.lista-footer li a {
 
 .card {
     width: 190px;
-    height: 254px;
+    height: 270px;
     background: #F4F6FB;
     border: 1px solid white;
     box-shadow: 10px 10px 64px 0px #399e34;
@@ -638,3 +635,4 @@ form label{
     padding: 10px;
 }
 
+ }

@@ -1,21 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Smart Market</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/a38fcc55c5.js" crossorigin="anonymous"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-        <link rel="stylesheet" href="/css/styles.css">
-    </head>
+
+<%- include ('./partials/head') %>
 
 <body>
-    <%- include ('./partials/header') %> 
+    <%- include ('./partials/header') %>
     <main>
         <div class="slider-div">
             <ul class="slider">
@@ -41,7 +30,8 @@
             <div class="categorias-div">
                 <section class="categoria">
                     <a href="/bebidas"><i class="fa-solid fa-bottle-water"></i>
-                    <p>Bebidas</p></a>
+                        <p>Bebidas</p>
+                    </a>
                 </section>
                 <section class="categoria">
                     <a href="/almacen"><i class="fa-solid fa-bread-slice"></i></a>
@@ -83,28 +73,28 @@
                     <img src="./images/opinion3.png">
                 </div>
             </section>
-        <div class="div-iconos">
-            <section class="section-iconos">
-                <i class="fa-solid fa-lock" style="color:#6d6d6d; font-size: 2em;"></i>
-                <p class="p-iconos">100% Pago seguro</p>
-            </section>
-            <section class="section-iconos">
-                <i class="fa-brands fa-whatsapp" style="color:#6d6d6d; font-size: 2em;"></i>
-                <p class="p-iconos">Estamos para vos en Whatsapp</p>   
-            </section>
-            <section class="section-iconos">
-                <i class="fa-solid fa-arrow-right-arrow-left" style="color:#6d6d6d; font-size: 2em;"></i>
-                <p class="p-iconos">Somos sustentables</p>
-            </section>
-            <section class="section-iconos" >
-                <i class="fa-solid fa-thumbs-up" style="color:#6d6d6d; font-size: 2em;"></i>
-                <p class="p-iconos">Te ayudamos a compar mejor</p>
-            </section>
+            <div class="div-iconos">
+                <section class="section-iconos">
+                    <i class="fa-solid fa-lock" style="color:#6d6d6d; font-size: 2em;"></i>
+                    <p class="p-iconos">100% Pago seguro</p>
+                </section>
+                <section class="section-iconos">
+                    <i class="fa-brands fa-whatsapp" style="color:#6d6d6d; font-size: 2em;"></i>
+                    <p class="p-iconos">Estamos para vos en Whatsapp</p>
+                </section>
+                <section class="section-iconos">
+                    <i class="fa-solid fa-arrow-right-arrow-left" style="color:#6d6d6d; font-size: 2em;"></i>
+                    <p class="p-iconos">Somos sustentables</p>
+                </section>
+                <section class="section-iconos">
+                    <i class="fa-solid fa-thumbs-up" style="color:#6d6d6d; font-size: 2em;"></i>
+                    <p class="p-iconos">Te ayudamos a compar mejor</p>
+                </section>
 
-        </div>
+            </div>
 
     </main>
-    
+
     <%- include ('partials/footer') %>
 </body>
 
