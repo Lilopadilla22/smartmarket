@@ -1,14 +1,18 @@
 const path = require('path');
+const fs = require('fs')
 
-const productos = require('./productosController')
-const almacen = require('./almacenController');
-const bebidasConAlcohol = require('./bebidasConAlcoholController');
-const bebidas = require('./bebidasController');
-const carnes = require('./carnesController');
-const higiene = require('./higieneController');
-const lacteos = require('./lacteosController');
-const limpieza = require('./limpiezaController');
-const verduleria = require('./verduleriaController');
+const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+// const productos = require('./productosController')
+// const almacen = require('./almacenController');
+// const bebidasConAlcohol = require('./bebidasConAlcoholController');
+// const bebidas = require('./bebidasController');
+// const carnes = require('./carnesController');
+// const higiene = require('./higieneController');
+// const lacteos = require('./lacteosController');
+// const limpieza = require('./limpiezaController');
+// const verduleria = require('./verduleriaController');
 
 
 const mainController = {
