@@ -1,22 +1,27 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-
+// const methodOverride = require('method-override');
 const publicPath = path.resolve(__dirname, './public');
-const mainRouter = require ('./routers/mainRouters');
+
 app.use(express.static(publicPath));
 app.set('view engine', 'ejs');
+// app.use(methodOverride('_method'));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 app.listen(3000, () => {
     console.log('Servidor corriendo');
 });
 
-const mainRouter = require('./routes/main'); // Rutas main
-const productsRouter = require('./routes/products'); // Rutas /products
+const mainRouters = require('./routers/mainRouters'); 
+const productsRouter = require('./routers/productsRouter'); 
+const usersRouter = require('./routers/usersRouter');
 
 
-app.use('/', mainRouter);
+app.use('/', mainRouters);
 app.use('/products', productsRouter);
+app.use('/users', usersRouter);
 
 
 

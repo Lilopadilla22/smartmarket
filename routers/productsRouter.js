@@ -13,16 +13,4 @@ router.get('/categories', controllers.categories);
 
 
 
-
-router.get('/almacen', controllers.almacen);
-router.get('/bebidas-con-alcohol', controllers.bebidasConAlcohol);
-router.get('/bebidas', controllers.bebidas);
-router.get('/carnes', controllers.carnes);
-router.get('/higiene', controllers.higiene);
-router.get('/lacteos', controllers.lacteos);
-router.get('/limpieza', controllers.limpieza);
-router.get('/verduleria', controllers.verduleria);
-router.get('/agregarProductos', controllers.agregarProductos);
-
-
 module.exports = router;

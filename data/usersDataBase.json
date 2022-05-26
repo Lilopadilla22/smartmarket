@@ -1,0 +1,28 @@
+[{
+    "id": 1,
+    "nombre": "Lenis Lípari",
+    "usuario": "lenislipari",
+    "user_password": "12345",
+    "userRepeat_password": "12345",
+    "pais": "Argentina",
+    "direccion": "Armada Argentina 2483",
+    "terminos": "terminos"
+}, {
+    "id": 2,
+    "nombre": "Pedro Correa",
+    "usuario": "pedrocorrea",
+    "user_password": "54321",
+    "userRepeat_password": "54321",
+    "pais": "Argentina",
+    "direccion": "San Javier 32",
+    "terminos": "terminos",
+    "ofertas": "ofertas"
+}, {
+    "id": 3,
+    "nombre": "Pedro Correa",
+    "usuario": "pedrocorrea",
+    "user_password": "54321",
+    "userRepeat_password": "54321",
+    "pais": "Argentina",
+    "direccion": "San Javier 32"
+}]
