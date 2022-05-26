@@ -1,6 +1,6 @@
 const path = require('path');
 
-const productos = require('./productosController')
+const productos = require('./productsController')
 const almacen = require('./almacenController');
 const bebidasConAlcohol = require('./bebidasConAlcoholController');
 const bebidas = require('./bebidasController');
