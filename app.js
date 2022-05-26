@@ -7,12 +7,12 @@ const mainRouter = require ('./routers/mainRouters');
 app.use(express.static(publicPath));
 app.set('view engine', 'ejs');
 
-
 app.listen(3000, () => {
     console.log('Servidor corriendo');
 });
 
-
+const mainRouter = require('./routes/main'); // Rutas main
+const productsRouter = require('./routes/products'); // Rutas /products
 
 
 app.use('/', mainRouter);

@@ -1482,11 +1482,4 @@ let products = [
         detalle: 'Papa Negra Selec Xkg',
         precio: '$80',
     }
-
 ]
-
-
-
-
-
-    module.exports = products;
