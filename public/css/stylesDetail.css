@@ -6,8 +6,8 @@
 
 body {
     font-family: 'Work Sans', sans-serif;
-    color: black; 
-    
+    color: black;
+
 }
 
 header {
@@ -20,42 +20,46 @@ header {
     border-radius: 10px;
 }
 
-main{
+main {
     /* margin-top: 100px; */
 }
 
-.cuerpoDelDetalle{
+.cuerpoDelDetalle {
     display: flex;
-    
 }
 
 .detalleDelProducto {
     flex-basis: 50%;
     border-right: 1px solid black;
     align-self: center;
+    justify-content: center;
 }
 
 
-.carritoDelProducto{
+.carritoDelProducto {
     flex-basis: 50%;
 }
 
-.detalleImagen{
-    display: flex;  
+.detalleImagen {
+    display: flex;
     justify-content: center;
     background-color: #eeee;
     border-radius: 20px;
+    max-width: 400px;
+    position: relative;
+    left: 25%;
 }
 
 .detalleImagen>img {
     border-radius: 20px;
     max-width: 300px;
+    margin: 35px;
 }
 
-.productoDetalle{
+.productoDetalle {
     display: flex;
     flex-direction: column;
-    justify-content:space-between;
+    position: relative;
 }
 
 .fichaDescripcion {
@@ -64,9 +68,9 @@ main{
     padding: 20px;
 }
 
-.detallesDelCarrito{
+.detallesDelCarrito {
     padding-left: 5%;
-    padding-top: 10%;
+    padding-top: 5%;
     margin-bottom: 50px;
 }
 
@@ -79,7 +83,7 @@ main{
 }
 
 
-.botonDeCantidad{
+.botonDeCantidad {
     width: 25px;
     height: 25px;
 }
@@ -88,19 +92,24 @@ main{
     padding-top: 5%;
 }
 
-.botonDeAgregar{
+.botonDeAgregar {
     padding-top: 50px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;  
+    justify-content: center;
 }
 
-.botonPago{
+.botonPago {
     padding: 10px;
     justify-content: center;
     width: 80%;
 }
 
+.precio-en-detail {
+    font-size: 40px;
+    font-weight: 700;
+    color: #383e42;
+}
 
 /* footer{
     padding-top: 50%;
@@ -108,15 +117,21 @@ main{
 
 
 @media (min-width: 320px) and (max-width: 425px) {
-    .cuerpoDelDetalle {flex-direction: column;}
-    .detalleDelProducto {border-right: none; border-bottom: 1px solid black;}
+    .cuerpoDelDetalle {
+        flex-direction: column;
+    }
+
+    .detalleDelProducto {
+        border-right: none;
+        border-bottom: 1px solid black;
+    }
 
 }
 
-@media (min-width: 456px) and (max-width: 768px) {
-
-}
-
-@media (min-width: 769px) {
-
+@media (max-width: 1260px){
+    .detalleImagen {
+        
+        position: relative;
+        left: 0%;
+    }
 }
