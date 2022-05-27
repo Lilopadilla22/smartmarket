@@ -35,6 +35,57 @@ agregarProductos: (req, res) => {
     res.render('agregarProductos')
 },
 
+edit: (req, res) => {
+		
+    let id = req.params.id
+    let product = products.find(product => product.id == id)
+
+    res.render("product-edit-form", {product})
+
+},
+
+update: (req, res) => {
+    
+    let id = req.params.id
+    let productToEdit = products.find(product => product.id == id)
+
+    let image 
+
+    if(req.files[0] != undefined){
+
+        image = req.files[0].filename
+
+    }else{
+
+        image = productToEdit.image
+
+    }
+
+
+    productToEdit = {
+        id: productToEdit.id,
+        ...req.body,
+        image: image,
+    }
+
+
+    let newProduct = products.map(product => {
+
+        if (product.id == productToEdit.id) {
+
+            return product = {...productToEdit};
+        }
+
+        return product
+    })
+
+
+    fs.writeFileSync(productsFilePath, JSON.stringify(newProduct));
+
+    res.redirect("/products/detail/" + productToEdit.id)
+
+}
+
 };
 
 module.exports = productsController;
