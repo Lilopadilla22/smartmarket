@@ -1,14 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const controllers = require ('../controllers/productsController');
+const path = require ('path')
+
+const productsController = require('../controllers/productsController');
 
 
-
-router.get('/', controllers.allProducts);
-router.get('/productCart', controllers.productCart);
-router.get('/productDetail/:id', controllers.productDetail);
-router.get('/categories/:categoria', controllers.productDetail);
-router.get('/categories', controllers.categories);
+router.get('/', productsController.index);
+router.get('/productCart', productsController.productCart);
+router.get('/productDetail/:id', productsController.productDetail);
+// router.get('/categories', productsController.categories);
+router.get('/:categoria', productsController.categoriaProducto);
 
 
 

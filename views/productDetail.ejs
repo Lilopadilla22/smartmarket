@@ -8,10 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
     <script src="https://kit.fontawesome.com/3899215381.js" crossorigin="anonymous"></script>
+    <link href="/css/stylesDetail.css" rel="stylesheet">
 
-    <link href="./css/stylesDetail.css" rel="stylesheet">
 
-    <title>DetallesDelProducto</title>
+    <title><%=product.nombre%></title>
 </head>
 <body>
     
@@ -21,7 +21,7 @@
         <section class="cuerpoDelDetalle">
             <section class="detalleDelProducto">
                 <div class="productoDetalle">
-                    <div class="detalleImagen"> <img src="img/descarga.jpg"  alt="Doritos" > </div>
+                    <div class="detalleImagen"> <img src="/img/<%= product.imagen %>"  alt="Doritos" > </div>
                     <div class="fichaDescripcion">Ficha Tecnica:</div>
                     <div class="fichaDescripcion"><span>Marca</span><span>Descripcion</span></div>
                     <div class="fichaDescripcion"><span>Presentación del producto</span><span>Descripcion</span></div>
@@ -36,10 +36,10 @@
             
             <section class="carritoDelProducto">
                 <div class="detallesDelCarrito">
-                    <div class="carritoDescripcion"><h2>DORITOS</h2></div>
-                    <div class="carritoDescripcion"><h4>Doritos 300gr x1 unidad</h4></div>
-                    <div class="carritoDescripcion"><span>$0.000.000</span></div>
-                    <div class="carritoDescripcion"><span>Valor unidad</span></div>
+                    <div class="carritoDescripcion"><h2><%= product.nombre %></h2></div>
+                    <div class="carritoDescripcion"><h4><%= product.descripcion %></h4></div>
+                    <div class="carritoDescripcion"><span><%= product.precio %></span></div>
+                    <div class="carritoDescripcion"><span><%= product.precio %></span></div>
                     <div class="botonDeAdicionar"> <button class="botonDeCantidad">+</button> Cantidad
                         <button class="botonDeCantidad">-</button></div>
                     <div class="botonDeAgregar"><button class="botonPago">Agregar Producto</button></div>

@@ -9,7 +9,7 @@
 
     <main>
         <div>
-            <a href="/categories">
+            <a href="/products">
                 <button class="boton-categorias"> Todas las categorías
                     <div class="icono-boton-categorias">
                         <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -23,15 +23,16 @@
         </div>
         <section class="conjunto-articulos-productos">
 
-            <% carnes.forEach(carne => { %>
+
+            <% categoria.forEach(producto => {%>
 
             <article class="articulo-productos">
-                <a href="/productDetail/:id">
-                    <img class="imagen-producto" src="/img/<%= carne.imagen%>">
+                <a href="/products/productDetail/<%= producto.id %>">
+                    <img class="imagen-producto" src="/img/<%= producto.imagen%>">
                     <div class="detalles-producto">
-                        <div class="nombre-producto"><%= carne.nombre%></div>
-                        <div class="descripcion-producto"><%= carne.detalle%></div>
-                        <div class="precio-producto"><%= carne.precio%></div>
+                        <div class="nombre-producto"><%= producto.nombre%></div>
+                        <div class="descripcion-producto"><%= producto.detalle%></div>
+                        <div class="precio-producto"><%= producto.precio%></div>
 
                         <button class="agregar-carrito-boton">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -41,38 +42,38 @@
                 </a>
             </article>
 
-
+           
             <% }) %>
 
         </section>
         <section class="conjunto-articulos-barra-categorias">
             <nav class="barra-categorias">
                 <ul class="lista-categorias">
-                    <a href="/categories/todos-los-productos">
+                    <a href="/products">
                         <div class="all"><i class="fa-solid fa-store"></i>Todos los productos</div>
                     </a>
-                    <a href="/categories/almacen">
+                    <a href="/products/almacen">
                         <div class="catego"><i class="fa-solid fa-basket-shopping"></i>Almacén</div>
                     </a>
-                    <a href="/categories/bebidas">
+                    <a href="/products/bebidas">
                         <div class="catego"><i class="fa-solid fa-bottle-droplet"></i>Bebidas</div>
                     </a>
-                    <a href="/categories/bebidas-con-alcohol">
+                    <a href="/products/bebidas-con-alcohol">
                         <div class="catego"><i class="fa-solid fa-wine-glass"></i>Bebidas con alcohol</div>
                     </a>
-                    <a href="/categories/carnes">
-                        <div class="catego"><i class="fa-solid fa-drumstick-bite"></i></i>Carnicería</div>
+                    <a href="/products/carnes">
+                        <div class="catego"><i class="fa-solid fa-drumstick-bite"></i></i>Carnes</div>
                     </a>
-                    <a href="/categories/higiene">
+                    <a href="/products/higiene">
                         <div class="catego"><i class="fa-solid fa-soap"></i>Higiene</div>
                     </a>
-                    <a href="/categories/lacteos">
+                    <a href="/products/lacteos">
                         <div class="catego"><i class="fa-solid fa-cheese"></i></i>Lácteos</div>
                     </a>
-                    <a href="/categories/limpieza">
+                    <a href="/products/limpieza">
                         <div class="catego"><i class="fa-solid fa-broom"></i>Limpieza</div>
                     </a>
-                    <a href="/categories/verduleria">
+                    <a href="/products/verduleria">
                         <div class="catego-verdu"><i class="fa-solid fa-carrot"></i>Verdulería</div>
                     </a>
                 </ul>
