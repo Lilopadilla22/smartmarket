@@ -11,6 +11,9 @@ const productsController = {
 index: (req, res) =>{
     res.render('all-products', {products})
 },
+categorias: (req, res) => {
+    res.render('provis-categorias')
+},
 categoriaProducto: (req, res) =>{
     let categoriaURL = req.params.categoria;
     let categoria= products.filter(producto => producto.categoria == categoriaURL);
