@@ -24,7 +24,7 @@ const storage = multer.diskStorage({
 router.get('/', productsController.index);
 router.get('/productCart', productsController.productCart);
 router.get('/productDetail/:id', productsController.productDetail);
-// router.get('/categories', productsController.categories);
+router.get('/categories', productsController.categorias);
 router.get('/:categoria', productsController.categoriaProducto);
 
 // /*** EDIT ONE PRODUCT ***/ 

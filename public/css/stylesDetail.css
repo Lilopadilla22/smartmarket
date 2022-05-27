@@ -32,6 +32,7 @@ main{
 .detalleDelProducto {
     flex-basis: 50%;
     border-right: 1px solid black;
+    align-self: center;
 }
 
 
@@ -42,14 +43,13 @@ main{
 .detalleImagen{
     display: flex;  
     justify-content: center;
-    padding: 10%;
     background-color: #eeee;
     border-radius: 20px;
 }
 
 .detalleImagen>img {
-    border: 1px solid black;
     border-radius: 20px;
+    max-width: 300px;
 }
 
 .productoDetalle{
@@ -67,6 +67,7 @@ main{
 .detallesDelCarrito{
     padding-left: 5%;
     padding-top: 10%;
+    margin-bottom: 50px;
 }
 
 .carritoDescripcion {
