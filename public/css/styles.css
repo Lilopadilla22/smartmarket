@@ -300,6 +300,7 @@ footer {
     width: 100%;
     height: auto;
     position: relative;
+    margin-top: 250px;
 }
 
 footer section article {
@@ -341,9 +342,9 @@ ul.lista-footer li a {
     font-size: 15px;
 }
 
-/* .nav-footer li:hover>ul {
+.nav-footer li:hover>ul {
     display: block;
-} */
+}
 
 .nav-footer li ul li {
     position: relative;
@@ -485,7 +486,10 @@ section.opiniones {
     .opiniones-div img {
         width: 150px;
         height: 200px;
-         }
+    }
+    .nav-footer li:hover>ul {
+        display: flex;
+    }
 
 
    
@@ -649,4 +653,4 @@ form label{
     padding: 10px;
 }
 
- }
+}
