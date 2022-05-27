@@ -5,7 +5,7 @@ const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
-const productController = {
+const productsController = {
 
 productCart: (req, res) =>{
     res.render('productCart');
@@ -49,4 +49,4 @@ agregarProductos: (req, res) => {
 
 };
 
-module.exports = productController;
+module.exports = productsController;
