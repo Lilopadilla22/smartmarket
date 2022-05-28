@@ -373,7 +373,72 @@ section.opiniones {
     margin-top: 100px ;
 }
 
+main.main-edit {
+    position: relative;
+    background-color: white;
+    text-align: center; 
+    padding-top: 110px;
+    height: 120vh;
+}
 
+form.form-edit {
+    position: relative;
+    width: 80%;
+    background-color: #e4e4e4;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 90%;
+    padding-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+h2.products-title{
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    color: #383e42;
+}
+div.div-form-edit{
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+label.form-label{
+    color: #383e42;
+    font-size: 20px;
+    margin-right: 20px;
+}
+.form-input{
+    width: 97%;
+    height: 35px;
+    border-radius: 5px;
+    border: 0.1px solid black;
+    margin-bottom: 15px;
+}
+.form-input-image{
+    width: 97%;
+}
+textarea.form-input{
+    min-height: 70px;
+    height: 5%;
+    max-height: 120px;
+}
+
+button.buy-now-button{
+    margin: 30px;
+    padding: 5px;
+    background-color: #0d0c22;
+    color: #fff;
+}
+img.form-img{
+    width: 20%;
+    max-width: 60px;
+    margin: 10px;
+}
 
 
 
@@ -488,6 +553,12 @@ section.opiniones {
     }
     .nav-footer li:hover>ul {
         display: flex;
+    }
+    main.main-edit{
+        height: 150vh;
+    }
+    label.form-label{
+        margin-bottom: 5px;
     }
 }
 
@@ -628,17 +699,3 @@ label {
 
 /* --------------- productEdit ------------------------- */
 
-main .main-edit {
-    position: absolute;
-    background-color: white;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-}
-
-form .form-edit {
-    position: relative;
-    width: 80%;
-    background-color: #aeaed6;
-
-}
