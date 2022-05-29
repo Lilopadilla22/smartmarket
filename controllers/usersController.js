@@ -8,10 +8,10 @@ const usersController = {
     login: (req, res) =>{
     res.render('login');
 },
-register: (req, res) =>{
+registro: (req, res) =>{
     res.render('register');
 },
-newRegister: (req, res) => {
+nuevoRegistro: (req, res) => {
     let newRegister = {
         id: users[users.length - 1].id + 1,
         ...req.body

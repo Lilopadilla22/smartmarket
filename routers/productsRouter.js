@@ -9,12 +9,12 @@ const productsController = require('../controllers/productsController');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, 'public/images/products')
+      cb(null, 'public/img')
     },
 
     filename: function (req, file, cb) {
     //   
-      cb(null, file.fieldname + 'img' + path.extname(file.originalname))
+      cb(null, file.fieldname + path.extname(file.originalname))
     }
   })
   
@@ -22,15 +22,19 @@ const storage = multer.diskStorage({
 
 
 router.get('/', productsController.index);
-router.get('/productCart', productsController.productCart);
-router.get('/productDetail/:id', productsController.productDetail);
-router.get('/categories', productsController.categorias);
+router.get('/carrito', productsController.productCart);
+router.get('/detalle-de-producto/:id', productsController.productDetail);
+router.get('/categorias', productsController.categorias);
 router.get('/:categoria', productsController.categoriaProducto);
 
 // /*** EDIT ONE PRODUCT ***/ 
-router.get('/edit/:id', productsController.edit); 
-router.put('/edit/:id', upload.any(), productsController.update); 
+router.get('/editar-producto/:id', productsController.edit); 
+router.put('/editar-producto/:id', upload.any(), productsController.update); 
 
+
+// // CREATE ONE PRODUCT //
+router.get('/crear-producto', productsController.create);
+router.post('/crear-producto', upload.any(), productsController.store);
 
 
 

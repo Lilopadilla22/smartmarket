@@ -462,18 +462,18 @@
     "precio": "$1239"
 }, {
     "id": 67,
-    "imagen": "coca 2.25.png",
-    "categoria": "bebidas",
     "nombre": "Coca-Cola",
+    "precio": "$250",
+    "categoria": "bebidas",
     "detalle": "Gaseosa Coca-Cola 2.25lts Sabor Original",
-    "precio": "$250"
+    "imagen": "coca 2.25.png"
 }, {
     "id": 68,
-    "imagen": "Coca light 2.25.png",
+    "nombre": "Coca-Cola Light",
+    "precio": "$250",
     "categoria": "bebidas",
-    "nombre": "Coca-Cola",
-    "detalle": "Gaseosa Coca-Cola Light 2.25lts. Sin azúcares",
-    "precio": "$250"
+    "detalle": "Gaseosa Coca-Cola Light 2.25lts. Sin Azucares",
+    "imagen": "Coca light 2.25.png"
 }, {
     "id": 69,
     "imagen": "fanta 2.25.png",
@@ -511,11 +511,11 @@
     "precio": "$245"
 }, {
     "id": 74,
-    "imagen": "pepsi light 2.25.png",
-    "categoria": "bebidas",
     "nombre": "Pepsi Light",
+    "precio": "$245",
+    "categoria": "bebidas",
     "detalle": "Gaseosa Pepsi 2.25lts Sabor Cola. Sin azúcares",
-    "precio": "$245"
+    "imagen": "pepsi light 2.25.png"
 }, {
     "id": 75,
     "imagen": "carne 1.jpg",
@@ -616,11 +616,11 @@
     "precio": "$875"
 }, {
     "id": 89,
-    "imagen": "carne 11.jpg",
-    "categoria": "carnes",
     "nombre": "Molleja",
-    "detalle": "Molleja X Kg",
-    "precio": "$1230"
+    "precio": "$1230",
+    "categoria": "carnes",
+    "detalle": "Molleja X kg",
+    "imagen": "imagen.jpg"
 }, {
     "id": 90,
     "imagen": "cerdo 5.jpg",
@@ -1004,7 +1004,7 @@
     "imagen": "jabon ropa 2.jpg",
     "categoria": "limpieza",
     "nombre": "Jabón en Polvo ALA",
-    "detalle": "Jabón En Polvo Ala Con Perlas Suavizantes 800 G",
+    "detalle": "Jabón En Polvo Ala Lavado A Mano Con Perlas Suavizantes 800 G",
     "precio": "$250"
 }, {
     "id": 145,
@@ -1286,4 +1286,5 @@
     "nombre": "Papa",
     "detalle": "Papa Negra Selec Xkg",
     "precio": "$80"
-}]
+}
+]
