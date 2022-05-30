@@ -5,6 +5,10 @@
 
 <body class="body-register">
 
+    <%- include ('./partials/header') %>
+
+    <main class="main-register">
+
     <form class="card-register"  action="/users/register" method="POST">
         <div class="card_header">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -55,7 +59,8 @@
             <button class="button-login" type="submit">Enviar</button>
         </div>
     </form>
-
+</main>
+    <%- include('./partials/footer') %>
 </body>
 
 </html>
