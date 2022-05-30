@@ -62,7 +62,7 @@ store: (req, res) => {
 
 	fs.writeFileSync(productsFilePath, JSON.stringify(products));
 
-	res.redirect("/productos/" + newProduct.categoria);
+	res.redirect("/productos/categoria/" + newProduct.categoria);
 },
 edit: (req, res) => {
 		
