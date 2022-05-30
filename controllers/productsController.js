@@ -16,15 +16,14 @@ categorias: (req, res) => {
 },
 categoriaProducto: (req, res) =>{
     let categoriaURL = req.params.categoria;
-    let categoria= products.filter(producto => producto.categoria == categoriaURL);
+    let categoria = products.filter(producto => producto.categoria == categoriaURL);
     
     if (categoria[0] != undefined){
 
         res.render('x-categoria', {categoria})
-
-    } else {
-        res.render('productCreate')
-    }
+    
+    } 
+   
     
 },
 productCart: (req, res) =>{

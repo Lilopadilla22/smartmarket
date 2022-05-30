@@ -546,11 +546,11 @@
     "precio": "$1000"
 }, {
     "id": 79,
-    "imagen": "carne 5.jpg",
-    "categoria": "carnes",
     "nombre": "Picanha",
+    "precio": "$995",
+    "categoria": "carnes",
     "detalle": "Picanha Estancias Coto X KG",
-    "precio": "$995"
+    "imagen": "carne 5.jpg"
 }, {
     "id": 80,
     "imagen": "carne 6.jpg",
@@ -707,11 +707,11 @@
     "precio": "$185"
 }, {
     "id": 102,
-    "imagen": "pasta dental.jpg",
-    "categoria": "higiene",
     "nombre": "Crema Dental Colgate",
+    "precio": "$110",
+    "categoria": "higiene",
     "detalle": "Crema dental Colgate Triple Acción Xtra blancura 50g.",
-    "precio": "$110"
+    "imagen": "pasta dental.jpg"
 }, {
     "id": 103,
     "imagen": "pasta dental 2.jpg",

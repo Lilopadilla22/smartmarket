@@ -25,7 +25,7 @@ router.get('/', productsController.index);
 router.get('/carrito', productsController.productCart);
 router.get('/detalle-de-producto/:id', productsController.productDetail);
 router.get('/categorias', productsController.categorias);
-router.get('/:categoria', productsController.categoriaProducto);
+router.get('/categoria/:categoria', productsController.categoriaProducto);
 
 // /*** EDIT ONE PRODUCT ***/ 
 router.get('/editar-producto/:id', productsController.edit); 

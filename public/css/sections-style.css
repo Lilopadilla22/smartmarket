@@ -10,14 +10,17 @@
 
 
 /*MAIN*/
-main .main-section {
-    background-color: #ffffff;
-    margin-bottom: 50px;
+main.main-section {
+    background-image: url(/img/fondo-carrito.png);
+    background-repeat: repeat;
+    background-size: 200px;
+    padding-bottom: 50px;
 }
 
 .body-categories {
-    background-image: url(/img/fondo-market.jpg);
-    background-size: cover;
+    background-image: url(/img/fondo-carrito.png);
+    background-repeat: repeat;
+    background-size: 200px;
 }
 
 .boton-categorias {
@@ -187,7 +190,6 @@ section.conjunto-articulos-barra-categorias {
     height: 80vh;
     position: relative;
     top: 100px;
-
 }
 
 nav.categories {
