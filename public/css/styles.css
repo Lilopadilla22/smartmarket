@@ -218,6 +218,16 @@ input:hover {
     height: 1rem;
 }
 
+main.main-edit{
+    background-image: url(/img/fondo-carrito.png);
+    background-repeat: repeat;
+    background-size: 200px;
+}
+main.main-detail{
+    background-image: url(/img/fondo-carrito.png);
+    background-repeat: repeat;
+    background-size: 300px;
+}
 .categorias {
     width: 100%;
     height: auto;
