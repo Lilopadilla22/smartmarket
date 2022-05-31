@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const res = require('express/lib/response');
 // const res = require('express/lib/response');
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
@@ -113,6 +114,20 @@ update: (req, res) => {
 
     res.redirect("/productos/detalle-de-producto/" + productToEdit.id)
 
+},
+destroy: (req, res) => {
+    let id = req.params.id
+		let productToEliminate = products.find(product => product.id == id)
+
+		
+
+		products.splice(products.indexOf(productToEliminate), 1)
+		
+		
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(products));
+
+		res.redirect("/productos/categoria/" + productToEliminate.categoria)
 }
 
 };

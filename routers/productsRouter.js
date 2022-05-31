@@ -36,6 +36,9 @@ router.put('/editar-producto/:id', upload.any(), productsController.update);
 router.get('/crear-producto', productsController.create);
 router.post('/crear-producto', upload.any(), productsController.store);
 
+// DELETE ONE PRODUCT //
+router.delete('/borrar-producto/:id', productsController.destroy);
+
 
 
 module.exports = router;

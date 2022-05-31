@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,38 +14,51 @@
 
     <title><%=product.nombre%></title>
 </head>
+
 <body>
-    
-    <%- include ('./partials/header') %> 
+
+    <%- include ('./partials/header') %>
 
     <main class="main-detail">
         <section class="cuerpoDelDetalle">
             <section class="detalleDelProducto">
                 <div class="productoDetalle">
 
-                    <div class="detalleImagen"> <img src="/img/<%= product.imagen %>"  alt="Doritos" > </div>
-                   
+                    <div class="detalleImagen"> <img src="/img/<%= product.imagen %>" alt="Doritos"> </div>
+
                 </div>
             </section>
-            
+
             <section class="carritoDelProducto">
                 <div class="detallesDelCarrito">
-                    <div class="carritoDescripcion"><h2><%= product.nombre %></h2></div>
-                    <div class="carritoDescripcion"><h3><%= product.detalle %></h3></div>
+                    <div class="carritoDescripcion">
+                        <h2><%= product.nombre %></h2>
+                    </div>
+                    <div class="carritoDescripcion">
+                        <h3><%= product.detalle %></h3>
+                    </div>
                     <div class="carritoDescripcion"><span class="precio-en-detail"><%= product.precio %></span></div>
                     <div class="botonDeAdicionar"> <button class="botonDeCantidad">+</button> Cantidad
                         <button class="botonDeCantidad">-</button></div>
                     <div class="botonDeAgregar"><button class="botonPago">Agregar Producto</button></div>
                     <div class="botonDeAgregar"><button class="botonPago">Comprar ahora</button></div>
-                    <a href="/productos/editar-producto/<%= product.id %> "><div class="botonDeAgregar"><button class="botonPago">Editar Producto</button></div></a>
-                    
-            
+                    <a href="/productos/editar-producto/<%= product.id %> ">
+                        <div class="botonDeAgregar"><button class="botonPago">Editar Producto</button></div>
+                    </a>
+                    <form action="/productos/borrar-producto/<%= product.id %>?_method=DELETE" method="POST">
+
+                        <div class="botonDeAgregar"><button class="botonPago">Eliminar Producto</button></div>
+
+                    </form>
+
+
                 </div>
             </section>
 
         </section>
     </main>
     <%- include ('partials/footer') %>
-    
+
 </body>
+
 </html>
