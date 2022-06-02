@@ -88,7 +88,6 @@ section.conjunto-articulos-productos {
     top: 180px;
     left: 5vw;
     right: 5vw;
-    margin-bottom: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -430,8 +429,8 @@ section.conjunto-articulos-productos {
 @media (min-width: 1440px) {
 
     section.conjunto-articulos-productos {
-        left: 400px;
-        width: 70%;
+        left: 300px;
+        width: 75%;
         max-width: 1010px;
     }
 

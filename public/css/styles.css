@@ -429,6 +429,8 @@ label.form-label{
 }
 .form-input-image{
     width: 97%;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 textarea.form-input{
     min-height: 70px;
