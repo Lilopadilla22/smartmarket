@@ -26,7 +26,6 @@
 
                 <label for="categoria" class="form-label">Categoría:</label>
                 <select name="categoria" id="categoria" class="form-input" value="categoria">
-                    <option value="">Elige una categoria</option>
                     <option value="almacen" <%= product.category === 'almacen' ? 'selected' : '' %> >Almacen</option>
                     <option value="bebidas" <%= product.category === 'bebidas' ? 'selected' : '' %> >Bebidas</option>
                     <option value="bebidas-con-alcohol" <%= product.category === 'bebidas-con-alcohol' ? 'selected' : '' %> >Bebidas con alcohol</option>

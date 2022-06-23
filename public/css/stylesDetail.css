@@ -6,11 +6,6 @@
 a{
     text-decoration: none;
 }
-body {
-    font-family: 'Work Sans', sans-serif;
-    color: black;
-
-}
 
 header {
     position: relative;
@@ -23,7 +18,7 @@ header {
 }
 
 main {
-    /* margin-top: 100px; */
+    margin-top: 50px;
 }
 
 .cuerpoDelDetalle {
