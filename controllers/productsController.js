@@ -117,17 +117,13 @@ update: (req, res) => {
 },
 destroy: (req, res) => {
     let id = req.params.id
-		let productToEliminate = products.find(product => product.id == id)
+    let productToEliminate = products.find(product => product.id == id)
+    
+    products.splice(products.indexOf(productToEliminate), 1)
+    
+    fs.writeFileSync(productsFilePath, JSON.stringify(products));
 
-		
-
-		products.splice(products.indexOf(productToEliminate), 1)
-		
-		
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(products));
-
-		res.redirect("/productos/categoria/" + productToEliminate.categoria)
+    res.redirect("/productos/categoria/" + productToEliminate.categoria)
 }
 
 };
