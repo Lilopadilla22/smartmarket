@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs')
+const { validationResult } = require('express-validator')
 
 
 
@@ -12,8 +13,17 @@ const usersController = {
         res.render('register');
     },
     nuevoRegistro: (req, res) => {
+     
+    const resultValidation = validationResult(req);
+    
 
-     res.send(req.body)
+    if(resultValidation.errors.length > 0) {
+         return res.render('register', {
+            errors: resultValidation.mapped()
+         })
+    }
+
+     
     //     let newRegister = {
     //     id: users[users.length - 1].id + 1,
     //     ...req.body
