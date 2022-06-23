@@ -9,7 +9,7 @@
 
     <main class="main-register">
 
-    <form class="card-register"  action="/usuarios/registro" method="POST">
+    <form class="card-register"  action="/usuarios/registro" method="POST" enctype="multipart/form-data">
         <div class="card_header">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                 <path fill="none" d="M0 0h24v24H0z"></path>
@@ -47,6 +47,10 @@
             <label for="direccion">Dirección</label>
             <input class="input-login" name="direccion" type="direccion" placeholder="San Martín 525" id="direccion"
                 required>
+        </div>
+        <div class="field">
+            <label for="fotoPerfil">Foto de perfil</label>
+            <input type="file" name="fotoPerfil">
         </div>
         <div class="checkbox-register">
             <label class="label-checkbox" for="acepto">
