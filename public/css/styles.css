@@ -135,7 +135,8 @@ img.logo-principal {
     width: 100px;
     height: auto;
 }
-a.logo-principal{
+
+a.logo-principal {
     max-width: 100px;
 }
 
@@ -195,7 +196,7 @@ button.boton-menu {
     background-color: #f3f3f4;
     color: #0d0c22;
     transition: .3s ease;
-    
+
 }
 
 .input::placeholder {
@@ -218,14 +219,16 @@ input:hover {
     height: 1rem;
 }
 
-main.main-edit{
+main.main-edit {
     background-image: url(/img/fondo-carrito.png);
     background-repeat: repeat;
     background-size: 200px;
 }
-main.main-detail{
+
+main.main-detail {
     background-color: #ffffff;
 }
+
 .categorias {
     width: 100%;
     height: auto;
@@ -252,8 +255,9 @@ main.main-detail{
     height: 100px;
     font-size: 29px;
 }
+
 .categoria i {
-    color:#008c2a ;
+    color: #008c2a;
 }
 
 a {
@@ -300,7 +304,7 @@ a {
 }
 
 footer {
-    
+
     background-color: #E4E4E4;
     text-align: center;
     align-content: center;
@@ -309,7 +313,8 @@ footer {
     height: auto;
     position: relative;
 }
-footer p{
+
+footer p {
     position: absolute;
     bottom: 2px;
     font-size: 10px;
@@ -319,8 +324,8 @@ footer p{
 
 
 footer section article {
-     margin: 30px; 
-} 
+    margin: 30px;
+}
 
 .lista-footer {
     list-style: none;
@@ -334,10 +339,10 @@ footer section article {
     background-color: #E4E4E4;
     color: black;
     text-decoration: none;
-    padding:  10px 5px;
+    padding: 10px 5px;
     display: block;
     font-size: 25px;
-    
+
 }
 
 .nav-footer li a:hover {
@@ -380,23 +385,24 @@ ul.lista-footer li a {
     padding: 15px;
     margin: 1px;
     border-radius: 5px;
-    
+
     width: 210px;
     height: 100px;
 
 }
+
 section.opiniones {
-    margin-top: 100px ;
+    margin-top: 100px;
 }
 
 main.main-edit {
     position: relative;
     background-color: white;
-    text-align: center; 
+    text-align: center;
     padding-top: 110px;
     height: 1000vh;
     max-height: 770px;
-    
+
 }
 
 form.form-edit {
@@ -410,43 +416,48 @@ form.form-edit {
     border-radius: 10px;
 }
 
-h2.products-title{
+h2.products-title {
     position: absolute;
     top: 2%;
     left: 5%;
     color: #383e42;
 }
-div.div-form-edit{
+
+div.div-form-edit {
     position: absolute;
     top: 15%;
     left: 5%;
     display: flex;
     flex-wrap: wrap;
 }
-label.form-label{
+
+label.form-label {
     color: #383e42;
     font-size: 20px;
     margin-right: 20px;
 }
-.form-input{
+
+.form-input {
     width: 97%;
     height: 35px;
     border-radius: 5px;
     border: 0.1px solid black;
     margin-bottom: 15px;
 }
-.form-input-image{
+
+.form-input-image {
     width: 97%;
     margin-bottom: 15px;
     margin-top: 15px;
 }
-textarea.form-input{
+
+textarea.form-input {
     min-height: 70px;
     height: 5%;
     max-height: 120px;
 }
 
-button.buy-now-button{
+button.buy-now-button {
     margin: 30px;
     padding: 5px;
     background-color: #0d0c22;
@@ -458,7 +469,8 @@ button.buy-now-button{
     height: 30px;
     border: none;
 }
-img.form-img{
+
+img.form-img {
     width: 20%;
     max-width: 60px;
     margin: 10px;
@@ -469,22 +481,69 @@ img.form-img{
     font-size: 12px;
 }
 
+/*PROFILE*/
+.main-profile {
+    padding-top: 3%;
+    height: 95vh;
+    display: flex;
+    align-content: center;
+    background-image: url(/img/fondo-carrito.png);
+    background-repeat: repeat;
+    background-size: 200px;
+}
+
+.profile-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 30vw;
+    min-width: 300px;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    background-color: #fff;
+}
+
+.profile-nombreCompleto {
+    color: grey;
+    font-size: 18px;
+    margin: 3%;
+}
+
+.profile-boton {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.profile-boton:hover {
+    opacity: 0.7;
+}
+
 
 @media (min-width: 768px) {
-    .boton-menu{
+    .boton-menu {
         display: none;
     }
+
     img.logo-principal {
         width: 150px;
         height: auto;
     }
-    a.logo-principal{
+
+    a.logo-principal {
         max-width: 150px;
     }
+
     .slider {
         width: 100%;
         height: 30vh;
-        
+
     }
 
     .slider img {
@@ -540,34 +599,40 @@ img.form-img{
         margin-right: 30px;
         margin-left: 15px;
     }
+
     .logo-principal {
         width: 30%;
         height: auto;
     }
+
     .section-iconos {
         width: 180px;
 
     }
+
     main.main-edit {
         max-height: 870px;
     }
-   
-   
+
+
 }
 
 @media (min-width: 1024px) {
-    
+
     .nav-menu {
         justify-content: space-evenly;
     }
+
     .slider {
         width: 100%;
         height: 45vh;
     }
+
     .slider img {
         width: 100%;
         height: 80%;
-         }
+    }
+
     .opciones-header {
 
         margin-right: 70px;
@@ -578,50 +643,59 @@ img.form-img{
 
         font-size: 20px;
     }
-    
+
     .productos-div {
-        justify-content: center ;
+        justify-content: center;
         margin-top: 40px;
     }
+
     .opiniones-div {
         justify-content: space-evenly;
     }
+
     .opiniones-div img {
         width: 150px;
         height: 200px;
     }
+
     .nav-footer li:hover>ul {
         display: flex;
     }
-    main.main-edit{
+
+    main.main-edit {
         height: 150vh;
     }
-    label.form-label{
+
+    label.form-label {
         margin-bottom: 5px;
     }
-    main.main-detail{
+
+    main.main-detail {
         background-image: url(/img/fondo-carrito.png);
         background-repeat: repeat;
         background-size: 350px;
     }
+
     footer section article {
-        margin: 8px; 
-   }
-   .nav-footer li a {
-    
-    padding:  10px 15px;
-    
-}
+        margin: 8px;
+    }
+
+    .nav-footer li a {
+
+        padding: 10px 15px;
+
+    }
 
 
 }
+
 @media (min-width: 1600px) {
     footer section article {
-        margin: 20px; 
-   }
+        margin: 20px;
+    }
 }
 
-   
+
 
 
 
@@ -648,8 +722,9 @@ img.form-img{
     max-height: 800px;
     background-repeat: round;
     background-size: 200px;
-    
+
 }
+
 .checkbox-register {
     display: flex;
     justify-content: space-around;
@@ -674,7 +749,7 @@ img.form-img{
     box-shadow: 10px 10px 64px 0px #399e34;
     -webkit-box-shadow: 10px 10px 64px 0px #399e34;
     -moz-box-shadow: 10px 10px 64px 0px #399e34;
-    
+
 }
 
 .form {
@@ -747,7 +822,7 @@ label {
     margin-left: 32%;
 }
 
-.main-login{
+.main-login {
 
     background: url("../img/fondo-carrito.png");
     width: 100%;

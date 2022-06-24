@@ -8,6 +8,11 @@ const users = require('../models/users')
 
 const usersController = {
 
+    
+    profile: (req, res) => {
+        res.render('profile')
+    },
+
     login: (req, res) => {
         res.render('login');
     },
