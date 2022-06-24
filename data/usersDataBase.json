@@ -1,10 +1,12 @@
-[{
-    "id": 1,
-    "nombre": "Lenis Lípari",
-    "usuario": "lenislipari",
-    "user_password": "12345",
-    "userRepeat_password": "12345",
-    "pais": "Argentina",
-    "direccion": "Armada Argentina 2483",
-    "terminos": "terminos"
-} ]
+[
+ {
+  "id": 1,
+  "nombreYApellido": " Lilia  ",
+  "usuario": " lilopadilla  ",
+  "password": "12345",
+  "repeat-password": "12345",
+  "pais": "Colom  ",
+  "direccion": "Tv 9#33a 52  ",
+  "terminos": "terminos"
+ }
+]

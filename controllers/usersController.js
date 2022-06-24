@@ -4,7 +4,7 @@ const {
     validationResult
 } = require('express-validator')
 
-
+const users = require('../models/users')
 
 const usersController = {
 
@@ -17,13 +17,13 @@ const usersController = {
     nuevoRegistro: (req, res) => {
 
         const resultValidation = validationResult(req);
-
-        console.log(resultValidation);
         if (resultValidation.errors.length > 0) {
             return res.render('register', {
-                errors: resultValidation.mapped()
+                errors: resultValidation.mapped(),
+                oldData: req.body
             });
         }
+        users.create(req.body);
         return res.send("Funciona el formulario");
 
 

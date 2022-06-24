@@ -61,7 +61,7 @@ store: (req, res) => {
 
 	products.push(newProduct)
 
-	fs.writeFileSync(productsFilePath, JSON.stringify(products));
+	fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 
 	res.redirect("/productos/categoria/" + newProduct.categoria);
 },
@@ -110,7 +110,7 @@ update: (req, res) => {
     })
 
 
-    fs.writeFileSync(productsFilePath, JSON.stringify(newProduct));
+    fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '));
 
     res.redirect("/productos/detalle-de-producto/" + productToEdit.id)
 
