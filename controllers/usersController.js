@@ -20,8 +20,9 @@ const usersController = {
     if(resultValidation.errors.length > 0) {
          return res.render('register', {
             errors: resultValidation.mapped()
-         })
+         });
     }
+    return res.send("Funciona el formulario");
 
      
     //     let newRegister = {

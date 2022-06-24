@@ -3,6 +3,9 @@ const multer = require('multer');
 const router = express.Router();
 const path = require ('path');
 const usersController = require ('../controllers/usersController');
+const {body} = require ('express-validator');
+
+
 
 const validations = [
   body('nombreYApellido').notEmpty().withMessage('Debe agregar nombre y apellido'),
@@ -11,8 +14,22 @@ const validations = [
   body('repeat-password').equals('repeat-password').withMessage('La contraseña debe coincidir'),
   body('pais').notEmpty().withMessage('Debe agregar un país'),
   body('direccion').notEmpty().withMessage('Debe agregar una dirección'),
-  body('fotoPerfil').notEmpty().withMessage('Debe agregar una foto de perfil'),
-  body('terminos').notEmpty().withMessage('Debe aceptar los términos y condiciones')
+  body('terminos').notEmpty().withMessage('Debe aceptar los términos y condiciones'),
+  body('fotoPerfil').custom((value, {req}) => {
+    let file = req.file;
+    let acceptedExtensions = ['.jpg','.JPEG','.JPG', '.PNG', '.png', '.gif'];
+   
+    if(!file) {
+      throw new Error('Debes subir una imágen')
+    } else {
+      let fileExtension = path.extname(file.originalname);
+    if(!acceptedExtensions.includes(fileExtension)){
+      throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`)
+    }
+  }
+    return true;
+  })
+
 ]
 
 const storage = multer.diskStorage({
@@ -26,7 +43,7 @@ const storage = multer.diskStorage({
     }
   })
   
-  const upload = multer({ storage: storage })
+  const uploadFile = multer({ storage: storage })
 
 
 router.get('/login', usersController.login);
@@ -35,7 +52,6 @@ router.get('/login', usersController.login);
 router.get('/registro', usersController.registro);
 
 
-router.post('/registro', upload.any(), usersController.nuevoRegistro)
-router.post('/registro',upload.any(), validations, usersController.nuevoRegistro)
+router.post('/registro', uploadFile.single('fotoPerfil'), validations, usersController.nuevoRegistro)
 
 module.exports = router;
