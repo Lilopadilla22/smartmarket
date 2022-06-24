@@ -9,7 +9,9 @@
 
     <main class="main-register">
 
-    <form class="card-register"  action="/usuarios/registro" method="POST">
+
+    <form class="card-register"  action="/usuarios/registro" method="POST" enctype="multipart/form-data">
+        
         <div class="card_header">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                 <path fill="none" d="M0 0h24v24H0z"></path>
@@ -20,37 +22,84 @@
             <h1 class="form_heading">Registro</h1>
         </div>
         <div class="field">
-            <label for="username">Nombre y apellido</label>
-            <input class="input-login" name="nombre" type="text" placeholder="Juan Martinez" id="username" required>
-        </div>
+            <label for="nombreYApellido">Nombre y apellido</label>
+            <input class="input-login" name="nombreYApellido" type="text" placeholder="Juan Martinez" id="username" >
+            
+            <% if (locals.errors && errors.nombreYApellido) { %>
+                <div class="text-danger">
+                     <%= errors.nombreYApellido.msg %> 
+                </div>
+               
+                <% } %>
+            </div>
+                                         
 
         <div class="field">
             <label for="usuario">Nombre de usuario</label>
-            <input class="input-login" name="usuario" type="usuario" placeholder="JuanMartinez115" id="usuario" required>
+            <input class="input-login" name="usuario" type="usuario" placeholder="JuanMartinez115" id="usuario" >
+            <% if (locals.errors && errors.usuario) { %>
+                <div class="text-danger">
+                     <%= errors.usuario.msg %> 
+                </div>
+               
+                <% } %>
         </div>
         <div class="field">
             <label for="password">Contraseña</label>
-            <input class="input-login" name="user_password" type="password" placeholder="Contraseña" id="password"
+            <input class="input-login" name="password" type="password" placeholder="Contraseña" id="password"
+                minlength="5" maxlength="10">
+                <% if (locals.errors && errors.password) { %>
+                    <div class="text-danger">
+                         <%= errors.password.msg %> 
+                    </div>
+                   
+                    <% } %>
+        </div>
+        <div class="field">
+            <label for="repeat-password">Confirmar Contraseña</label>
+            <input class="input-login" name="repeat-password" type="password" placeholder="Contraseña" id="password"
                 minlength="5" maxlength="10">
         </div>
         <div class="field">
-            <label for="password">Confirmar Contraseña</label>
-            <input class="input-login" name="userRepeat_password" type="password" placeholder="Contraseña" id="password"
-                minlength="5" maxlength="10">
-        </div>
-        <div class="field">
-            <label for="password">País</label>
-            <input class="input-login" name="pais" type="pais" placeholder="Argentina" id="pais" required>
+            <label for="pais">País</label>
+            <input class="input-login" name="pais" type="pais" placeholder="Argentina" id="pais" >
+            <% if (locals.errors && errors.pais) { %>
+                <div class="text-danger">
+                     <%= errors.pais.msg %> 
+                </div>
+               
+                <% } %>
         </div>
 
         <div class="field">
             <label for="direccion">Dirección</label>
-            <input class="input-login" name="direccion" type="direccion" placeholder="San Martín 525" id="direccion"
-                required>
+            <input class="input-login" name="direccion" type="direccion" placeholder="San Martín 525" id="direccion">
+            <% if (locals.errors && errors.direccion) { %>
+                <div class="text-danger">
+                     <%= errors.direccion.msg %> 
+                </div>
+               
+                <% } %>
+        </div>
+        <div class="field">
+            <label for="fotoPerfil">Foto de perfil</label>
+            <input type="file" name="fotoPerfil" value="fotoPerfil" id="perfilFile">
+            <% if (locals.errors && errors.fotoPerfil) { %>
+                <div class="text-danger">
+                     <%= errors.fotoPerfil.msg %> 
+                </div>
+               
+                <% } %>
         </div>
         <div class="checkbox-register">
             <label class="label-checkbox" for="acepto">
                 <input type="checkbox" name="terminos" value="terminos">Acepto términos y condiciones
+                <% if (locals.errors && errors.terminos) { %>
+                    <div class="text-danger">
+                         <%= errors.terminos.msg %> 
+                    </div>
+                   
+                    <% } %>
                 <input type="checkbox" name="ofertas" value="ofertas">Quiero recibir ofertas
             </label>
         </div>

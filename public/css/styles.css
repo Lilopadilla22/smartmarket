@@ -464,6 +464,10 @@ img.form-img{
     margin: 10px;
 }
 
+.text-danger {
+    color: red;
+    font-size: 12px;
+}
 
 
 @media (min-width: 768px) {
@@ -623,8 +627,8 @@ img.form-img{
 
 /* ---------------------- REGISTER--------------------*/
 .card-register {
-    width: 250px;
-    height: 550px;
+    width: 350px;
+    height: 650px;
     background: #F4F6FB;
     border: 1px solid white;
     box-shadow: 10px 10px 64px 0px #399e34;
