@@ -1,8 +1,7 @@
 const path = require('path');
 const fs = require('fs')
-const {
-    validationResult
-} = require('express-validator')
+const bcryptjs = require('bcryptjs')
+const { validationResult } = require('express-validator')
 
 const users = require('../models/users')
 
@@ -28,19 +27,19 @@ const usersController = {
                 oldData: req.body
             });
         }
-        users.create(req.body);
+
+        let userToCreate = {
+            nombreYApellido: req.body.nombreYApellido,
+            usuario: req.body.usuario,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            pais: req.body.pais,
+            direccion:req.body.direccion,
+            fotoPerfil: req.file.filename
+        }
+
+        users.create(userToCreate);
         return res.send("Funciona el formulario");
 
-
-        //     let newRegister = {
-        //     id: users[users.length - 1].id + 1,
-        //     ...req.body
-        // }
-
-        // users.push(newRegister)
-
-        // fs.writeFileSync(usersFilePath, JSON.stringify(users));
-        // res.redirect('/')
     }
 }
 
