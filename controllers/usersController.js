@@ -1,13 +1,15 @@
 const path = require('path');
 const fs = require('fs')
 const bcryptjs = require('bcryptjs')
-const { validationResult } = require('express-validator')
+const {
+    validationResult
+} = require('express-validator')
 
 const users = require('../models/users')
 
 const usersController = {
 
-    
+
     profile: (req, res) => {
         res.render('profile')
     },
@@ -15,6 +17,37 @@ const usersController = {
     login: (req, res) => {
         res.render('login');
     },
+
+    processLogin: (req, res) => {
+        let userInDB = users.findByfield('email', req.body.email);
+       if(userInDB){
+        let passwordCorrecta = bcryptjs.compareSync(req.body.password, userInDB.password);
+        if(passwordCorrecta){
+            return res.send("funciona el login")
+        }else{
+
+            return res.render("login", {
+                errors: {
+                            password: {
+                                msg: "Contraseña incorrecta"
+                            }
+                        }
+                    })
+        }
+       }
+       if(!userInDB){
+           
+           return res.render("login", {
+           errors: {
+                       email: {
+                           msg: "Ingrese un email válido"
+                       }
+                   }
+               })
+    }
+        
+    },
+
     registro: (req, res) => {
         res.render('register');
     },
@@ -28,17 +61,30 @@ const usersController = {
             });
         }
 
+        let userInDB = users.findByfield('email', req.body.email);
+
+        if (userInDB) {
+            return res.render('register', {
+                errors: {
+                    email: {
+                        msg: 'Este email ya está registrado'
+                    }
+                },
+                oldData: req.body
+            });
+        }
+
         let userToCreate = {
             nombreYApellido: req.body.nombreYApellido,
-            usuario: req.body.usuario,
+            email: req.body.email,
             password: bcryptjs.hashSync(req.body.password, 10),
             pais: req.body.pais,
-            direccion:req.body.direccion,
+            direccion: req.body.direccion,
             fotoPerfil: req.file.filename
         }
 
         users.create(userToCreate);
-        return res.send("Funciona el formulario");
+        return res.redirect("/usuarios/login");
 
     }
 }

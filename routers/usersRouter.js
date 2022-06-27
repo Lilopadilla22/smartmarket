@@ -8,10 +8,12 @@ const validations = require ('../middlewares/validateRegistermiddlewares')
 
 router.get('/login', usersController.login);
 
-router.get('/mi-perfil', usersController.profile)
+router.post('/login', usersController.processLogin );
+
+router.get('/mi-perfil', usersController.profile);
 
 router.get('/registro', usersController.registro);
 
-router.post('/registro', uploadFile.single('fotoPerfil'), validations, usersController.nuevoRegistro)
+router.post('/registro', uploadFile.single('fotoPerfil'), validations, usersController.nuevoRegistro);
 
 module.exports = router;

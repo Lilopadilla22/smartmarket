@@ -807,17 +807,17 @@ label {
 
 .button-login {
 
-    font-size: 18px;
+    font-size: 12px;
     background: #399e34;
     color: white;
-    padding: 0.2em 0.5em;
+    padding: 0.5em 0.5em;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     border: none;
     border-radius: 16px;
     overflow: hidden;
     transition: all 0.2s;
-    width: 70px;
+    width: 90px;
     height: 30px;
     margin-left: 32%;
 }

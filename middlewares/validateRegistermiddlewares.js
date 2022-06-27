@@ -5,7 +5,8 @@ const { body } = require('express-validator');
   
   const validations = [
     body('nombreYApellido').notEmpty().withMessage('Debe agregar nombre y apellido'),
-    body('usuario').notEmpty().withMessage('Debe agregar un nombre de usuario'),
+    body('email').notEmpty().withMessage('Debe agregar un email').bail()
+    .isEmail().withMessage('Debe ingresar un email válido'),
     body('pais').notEmpty().withMessage('Debe agregar un país'),
     body('direccion').notEmpty().withMessage('Debe agregar una dirección'),
     body('terminos').notEmpty().withMessage('Debe aceptar los términos y condiciones'),

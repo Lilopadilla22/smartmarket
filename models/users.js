@@ -32,7 +32,7 @@ const users = {
 
     findByfield: function (field, text){
         let allUsers = this.findAll();
-        let userFound= allUsers.find(oneUser => oneUser.id === id);
+        let userFound= allUsers.find(oneUser => oneUser.email === text);
         return userFound;
 
     },

@@ -32,12 +32,12 @@
 
 
             <div class="field">
-                <label for="usuario">Nombre de usuario</label>
-                <input class="input-login" name="usuario" type="text" id="usuario"
-                    value="<%= locals.oldData ? oldData.usuario : null %>">
-                <% if (locals.errors && errors.usuario) { %>
+                <label for="email">Email</label>
+                <input class="input-login" name="email" type="text" id="email"
+                    value="<%= locals.oldData ? oldData.email : null %>">
+                <% if (locals.errors && errors.email) { %>
                 <div class="text-danger">
-                    <%= errors.usuario.msg %>
+                    <%= errors.email.msg %>
                 </div>
 
                 <% } %>
