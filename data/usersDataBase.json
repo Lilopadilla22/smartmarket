@@ -1,11 +1,11 @@
 [
  {
-  "id": 1,
-  "nombreYApellido": "Lenis Lipari",
-  "email": "lenislipari@gmail.com",
-  "password": "$2a$10$mKppxfrcJUku4UmNAVHM8.Hv8q0TXF4kbUuwvMkc1HzPA3Er/DBA.",
+  "id": 2,
+  "nombreYApellido": "Felipe Brocca",
+  "email": "pipebrocca@gmail.com",
+  "password": "$2a$10$xqFU68Qu1dI147BFktcu1.v55bHNwfjxVxo/sKpMFZJH6zT2iTFMe",
   "pais": "Argentina",
-  "direccion": "arm argentina 2483 2do piso",
-  "fotoPerfil": "1656366131710_imagen.PNG"
+  "direccion": " Gallo 1421",
+  "fotoPerfil": "1656440830755_imagen.jpg"
  }
 ]

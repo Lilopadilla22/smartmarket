@@ -10,11 +10,11 @@
     <main class="main-profile">
 
         <div class="profile-card">
-            <img src="/images/users/fotoPerfil.jpg" style="width:100%">
-            <h1 class="usuario">Usuario</h1>
-            <p class="profile-nombreCompleto">Nombre Completo</p>
-            <p>Pais</p>
-            <p>Direccion</p>
+            <img class='fotoPerfil-enPerfil'src="/images/users/<%= user.fotoPerfil %>">
+            <h1 class="usuario"><%= user.nombreYApellido %> </h1>
+            <p class="profile-nombreCompleto"><%= user.email %></p>
+            <p><%= user.pais %></p>
+            <p><%= user.direccion %></p>
             <p><button class="profile-boton">Editar usuario</button></p>
             <p><button class="profile-boton">Eliminar usuario</button></p>
         </div>

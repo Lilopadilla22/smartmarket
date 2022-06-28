@@ -3,7 +3,8 @@
         <nav class="nav-menu">
             <div class="img-burguer">
                 <button class="boton-menu" onclick="actionMenu()"><i class="fa-solid fa-bars"></i></button>
-                <a href="/" class="logo-principal"><img src="/images/SMART MARKET_logo sin fondo.png" class="logo-principal"></a>
+                <a href="/" class="logo-principal"><img src="/images/SMART MARKET_logo sin fondo.png"
+                        class="logo-principal"></a>
             </div>
             <div class="group">
                 <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
@@ -16,14 +17,21 @@
                 <input placeholder="¿Qué producto buscas?" type="search" class="input">
             </div>
             <div class="opciones-header">
-                <div class="opciones-nav"><a href="/usuarios/registro"><i class="fa-solid fa-user"></i></a>
-                </div>
-                <div class="opciones-nav"><a href="/usuarios/login"><i class="fa-solid fa-right-to-bracket"></i></a>
+                <% if (locals.isLogged) { %>
+                <div class="opciones-nav"><a href="/usuarios/mi-perfil"><i class="fa-solid fa-user"></i></a>
                 </div>
                 <div class="opciones-nav"><a href="/productos/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
-                <div class="opciones-nav"><a href="/productos/crear-producto"><i class="fa-solid fa-circle-plus"></i></a>
+                <div class="opciones-nav"><a href="/productos/crear-producto"><i
+                            class="fa-solid fa-circle-plus"></i></a>
                 </div>
+                <div class="inicios-usuarios"><a href="/usuarios/logout">Cerrar sesión</a></div>
+                <% } else { %>
+
+                <div class="inicios-usuarios"><a href="/usuarios/login">Iniciar sesión</a></div>
+                <div class="inicios-usuarios"><a href="/usuarios/registro">Registrarse</a></div>
+                <% } %>
+
             </div>
         </nav>
 

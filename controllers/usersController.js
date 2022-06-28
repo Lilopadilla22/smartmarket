@@ -10,44 +10,49 @@ const users = require('../models/users')
 const usersController = {
 
 
-    profile: (req, res) => {
-        res.render('profile')
-    },
-
+    
     login: (req, res) => {
         res.render('login');
     },
-
+    
     processLogin: (req, res) => {
         let userInDB = users.findByfield('email', req.body.email);
-       if(userInDB){
-        let passwordCorrecta = bcryptjs.compareSync(req.body.password, userInDB.password);
-        if(passwordCorrecta){
-            return res.send("funciona el login")
-        }else{
-
+        if (userInDB) {
+            let passwordCorrecta = bcryptjs.compareSync(req.body.password, userInDB.password);
+            if (passwordCorrecta) {
+                delete userInDB.password
+                req.session.userLogueado = userInDB;
+                return res.redirect("/usuarios/mi-perfil")
+            } else {
+                
+                return res.render("login", {
+                    errors: {
+                        password: {
+                            msg: "Contraseña incorrecta"
+                        }
+                    }
+                })
+            }
+        }
+        if (!userInDB) {
+            
             return res.render("login", {
                 errors: {
-                            password: {
-                                msg: "Contraseña incorrecta"
-                            }
-                        }
-                    })
+                    email: {
+                        msg: "Ingrese un email válido"
+                    }
+                }
+            })
         }
-       }
-       if(!userInDB){
-           
-           return res.render("login", {
-           errors: {
-                       email: {
-                           msg: "Ingrese un email válido"
-                       }
-                   }
-               })
-    }
         
     },
-
+    profile: (req, res) => {
+        
+        res.render('profile', {
+            user: req.session.userLogueado
+        })
+    },
+    
     registro: (req, res) => {
         res.render('register');
     },
@@ -86,6 +91,11 @@ const usersController = {
         users.create(userToCreate);
         return res.redirect("/usuarios/login");
 
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+        
+        return res.redirect('/')
     }
 }
 
