@@ -613,8 +613,6 @@ img.form-img {
     main.main-edit {
         max-height: 870px;
     }
-
-
 }
 
 @media (min-width: 1024px) {
@@ -708,7 +706,7 @@ img.form-img {
     border: 1px solid white;
     -webkit-box-shadow: 10px 10px 64px 10px #399e34;
     padding: 25px;
-    margin-top: 140px;
+    margin-top: 100px;
 }
 
 main.main-register {
@@ -735,7 +733,23 @@ main.main-register {
     color: #868686;
     letter-spacing: 1px;
 }
+.button-register {
 
+    font-size: 12px;
+    background: #399e34;
+    color: white;
+    padding: 0.5em 0.5em;
+    padding-left: 28px;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+    width: 90px;
+    height: 30px;
+    margin-left: 32%;
+}
 
 
 
@@ -834,6 +848,11 @@ label {
     justify-content: center;
     align-content: center;
 
+}
+
+.recordarUsuario {
+    font-size: 12px;
+    margin: 5px;
 }
 
 
