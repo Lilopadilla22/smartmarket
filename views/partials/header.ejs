@@ -18,6 +18,7 @@
             </div>
             <div class="opciones-header">
                 <% if (locals.isLogged) { %>
+                <div class="inicios-usuarios"><%= user.nombreYApellido %></div>
                 <div class="opciones-nav"><a href="/usuarios/mi-perfil"><i class="fa-solid fa-user"></i></a>
                 </div>
                 <div class="opciones-nav"><a href="/productos/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -27,8 +28,8 @@
                 </div>
                 <div class="inicios-usuarios"><a href="/usuarios/logout">Cerrar sesión</a></div>
                 <% } else { %>
-
-                <div class="inicios-usuarios"><a href="/usuarios/login">Iniciar sesión</a></div>
+                    
+                
                 <div class="inicios-usuarios"><a href="/usuarios/registro">Registrarse</a></div>
                 <% } %>
 
