@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const res = require('express/lib/response');
-// const res = require('express/lib/response');
+const userLoggedMiddleware = require('../middlewares/userLoggedMiddleware');
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -10,7 +10,8 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const productsController = {
 
 index: (req, res) =>{
-    res.render('all-products', {products})
+   
+    res.render('all-products', {products, user: req.session.userLogueado})
 },
 categorias: (req, res) => {
     res.render('provis-categorias')
@@ -21,24 +22,24 @@ categoriaProducto: (req, res) =>{
     
     if (categoria[0] != undefined){
 
-        res.render('x-categoria', {categoria})
+        res.render('x-categoria', {categoria, user: req.session.userLogueado})
     
     } 
    
     
 },
 productCart: (req, res) =>{
-    res.render('productCart');
+    res.render('productCart', {user: req.session.userLogueado});
 },
 productDetail: (req, res) =>{
     let id = req.params.id
 	let product = products.find(product => product.id == id)
     
     
-    res.render('productDetail', {product});
+    res.render('productDetail', {product, user: req.session.userLogueado});
 },
 create: (req, res) => {
-    res.render('productCreate')
+    res.render('productCreate', {user: req.session.userLogueado})
 },
 store: (req, res) => {
     let imagen 
@@ -70,7 +71,7 @@ edit: (req, res) => {
     let id = req.params.id
     let product = products.find(product => product.id == id)
 
-    res.render('productEdit', {product})
+    res.render('productEdit', {product, user: req.session.userLogueado})
 
 },
 

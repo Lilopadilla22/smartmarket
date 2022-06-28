@@ -22,6 +22,9 @@ const usersController = {
             if (passwordCorrecta) {
                 delete userInDB.password
                 req.session.userLogueado = userInDB;
+                    if(req.body.recordarUsuario){
+                        res.cookie('email', req.body.email, {maxAge: (1000 * 60)*1440})
+                    }
                 return res.redirect("/usuarios/mi-perfil")
             } else {
                 
@@ -44,10 +47,12 @@ const usersController = {
                 }
             })
         }
+
+
         
     },
     profile: (req, res) => {
-        
+        console.log(req.cookies.email)
         res.render('profile', {
             user: req.session.userLogueado
         })
@@ -93,6 +98,8 @@ const usersController = {
 
     },
     logout: (req, res) => {
+        res.clearCookie('email');
+
         req.session.destroy();
         
         return res.redirect('/')

@@ -3,8 +3,10 @@ const app = express();
 const path = require('path');
 const methodOverride = require('method-override');
 const publicPath = path.resolve(__dirname, './public');
-const session = require('express-session')
-const userLoggedMiddleware = require ('./middlewares/userLoggedMiddleware')
+const session = require('express-session');
+const userLoggedMiddleware = require ('./middlewares/userLoggedMiddleware');
+const cookies = require ('cookie-parser');
+
 
 
 
@@ -18,7 +20,9 @@ app.use(session({
     resave: false, 
     saveUninitialized: false
 }));
+app.use(cookies());
 app.use(userLoggedMiddleware);
+
 
 app.listen(3000, () => {
     console.log('Servidor corriendo');
