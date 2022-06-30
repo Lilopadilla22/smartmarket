@@ -3,6 +3,7 @@ const fs = require('fs');
 const res = require('express/lib/response');
 const userLoggedMiddleware = require('../middlewares/userLoggedMiddleware');
 
+
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -122,7 +123,7 @@ destroy: (req, res) => {
     
     products.splice(products.indexOf(productToEliminate), 1)
     
-    fs.writeFileSync(productsFilePath, JSON.stringify(products));
+    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 
     res.redirect("/productos/categoria/" + productToEliminate.categoria)
 }
