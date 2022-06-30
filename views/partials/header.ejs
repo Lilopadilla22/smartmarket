@@ -19,7 +19,7 @@
             <div class="opciones-header">
                 <% if (locals.isLogged) { %>
                 <div class="inicios-usuarios"><%= user.nombreYApellido %></div>
-                <div class="opciones-nav"><a href="/usuarios/mi-perfil"><img src="/images/users/<%= user.fotoPerfil %>" style="width: 2em; border-radius: 50%;"></a>
+                <div class="opciones-nav"><a href="/usuarios/mi-perfil/<%= user.id %> "><img src="/images/users/<%= user.fotoPerfil %>" style="width: 2em; border-radius: 50%;"></a>
                 </div>
                 <div class="opciones-nav"><a href="/productos/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>

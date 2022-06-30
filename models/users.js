@@ -52,7 +52,7 @@ const users = {
 
     delete: function (id){
         let allUsers = this.findAll();
-        let userToEliminate = allUsers.find(user => user.id == id)
+        let userToEliminate = allUsers.find(user => user.id === id)
     
     allUsers.splice(allUsers.indexOf(userToEliminate), 1)
     

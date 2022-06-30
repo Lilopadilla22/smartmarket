@@ -15,8 +15,7 @@
             <p class="profile-nombreCompleto"><%= user.email %></p>
             <p><%= user.pais %></p>
             <p><%= user.direccion %></p>
-            <p><button class="profile-boton">Editar usuario</button></p>
-            <p><button class="profile-boton">Eliminar usuario</button></p>
+            <form method='POST'action="/usuarios/eliminar-perfil/<%= user.id %>?_method=DELETE"><p><button class="profile-boton">Eliminar usuario</button></p></form>
         </div>
         
 

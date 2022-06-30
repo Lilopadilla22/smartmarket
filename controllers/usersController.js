@@ -103,6 +103,13 @@ const usersController = {
         req.session.destroy();
         
         return res.redirect('/')
+    },
+    eliminarUsuario: (req, res) => {
+        let idUsuarioAEliminar = req.params.id
+       
+        users.delete(idUsuarioAEliminar);
+       
+        res.redirect('/')
     }
 }
 

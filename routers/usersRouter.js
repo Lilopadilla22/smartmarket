@@ -15,10 +15,12 @@ router.post('/login', usersController.processLogin );
 
 router.get('/logout', usersController.logout);
 
-router.get('/mi-perfil', authMiddleware, usersController.profile);
+router.get('/mi-perfil/:id', authMiddleware, usersController.profile);
 
 router.get('/registro', guestMiddleware, usersController.registro);
 
 router.post('/registro', uploadFile.single('fotoPerfil'), validations, usersController.nuevoRegistro);
+
+router.delete('/eliminar-perfil/:id', authMiddleware, usersController.eliminarUsuario)
 
 module.exports = router;
