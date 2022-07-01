@@ -23,7 +23,7 @@ categoriaProducto: (req, res) =>{
     
     if (categoria[0] != undefined){
 
-        res.render('x-categoria', {categoria, user: req.session.userLogueado})
+        res.render('x-categoria', {categoria, categoriaURL,user: req.session.userLogueado})
     
     } 
    

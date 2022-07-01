@@ -8,19 +8,37 @@
     <%- include ('./partials/header') %> 
 
     <main class="main-section">
-        <div>
-            <a href="/productos/categorias">
-                <button class="boton-categorias"> Todas las categorías
-                    <div class="icono-boton-categorias">
-                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 0h24v24H0z" fill="none"></path>
-                            <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                                fill="currentColor"></path>
-                        </svg>
-                    </div>
-                </button>
-            </a>
-        </div>
+        <nav class="nav-select-categorias">
+            <select class="select-categorias"
+                onchange="window.location.href=this.options[this.options.selectedIndex].value" name="elige" size="1">
+
+                <option value="/productos/categoria/almacen" <% if(categoriaURL === 'almacen') { %> selected <% } %>>
+                    Almacén
+                </option>
+
+                <option value="/productos/categoria/bebidas" <% if(categoriaURL === 'bebidas') {%> selected <% } %>>
+                    Bebidas</option>
+
+                <option value="/productos/categoria/bebidas-con-alcohol"
+                    <% if(categoriaURL === 'bebidas-con-alcohol') {%> selected <% } %>>Alcohol</option>
+
+                <option value="/productos/categoria/carnes" <% if(categoriaURL === 'carnes') {%> selected <% } %>>Carnes
+                </option>
+
+                <option value="/productos/categoria/higiene" <% if(categoriaURL === 'higiene') {%> selected <% } %>>
+                    Higiene</option>
+
+                <option value="/productos/categoria/lacteos" <% if(categoriaURL === 'lacteos') {%> selected <% } %>>
+                    Lácteos</option>
+
+                <option value="/productos/categoria/limpieza" <% if(categoriaURL === 'limpieza') {%> selected <% } %>>
+                    Limpieza</option>
+
+                <option value="/productos/categoria/verduleria" <% if(categoriaURL === 'verduleria') {%> selected
+                    <% } %>>Verdulería</option>
+
+            </select>
+        </nav>
         <section class="conjunto-articulos-productos">
 
 
