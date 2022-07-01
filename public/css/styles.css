@@ -172,6 +172,26 @@ button.boton-menu {
     display: none;
 }
 
+.select-header {
+    width: 110px;
+    background-color: #63bc5e;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 10px;
+    color: white;
+    position: absolute;
+    right: 50px;
+}
+.opciones-select-header-nombre {
+    background-color: #e4e4e4;
+    color: #868686;
+}
+.opciones-select-header {
+    background-color: #e4e4e4;
+    color: #383e42;
+}
+
 .img-burguer {
     display: flex;
     align-items: center;
@@ -570,6 +590,11 @@ img.form-img {
     .boton-menu {
         display: none;
     }
+    .select-header {
+        width: 120px;
+        font-size: 11px;
+        right: 70px;
+    }
 
     img.logo-principal {
         width: 150px;
@@ -595,7 +620,7 @@ img.form-img {
         display: flex;
         line-height: 28px;
         align-items: center;
-        width: 40%;
+        width: 31%;
     }
 
     footer section {
@@ -656,14 +681,25 @@ img.form-img {
 }
 
 @media (min-width: 1024px) {
-    
+
     .nav-select-categorias {
-        display:none;
+        display: none;
     }
+
     .nav-menu {
         justify-content: space-evenly;
     }
-
+    .select-header {
+        width: 150px;
+        font-size: 14px;
+        right: 60px;
+    }
+    .opciones-nav-header{
+        width: 2em; 
+        border-radius: 50%;
+        position: absolute;
+        right: 215px;
+    }
     .slider {
         width: 100%;
         height: 45vh;
