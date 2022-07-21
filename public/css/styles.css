@@ -145,19 +145,22 @@ a.logo-principal {
     align-items: center;
     margin-right: 10px;
 }
+
 .inicios-usuarios {
     font-size: 10px;
     color: white;
 }
-.inicios-usuarios a{
+
+.inicios-usuarios a {
     font-size: 10px;
     color: white;
     margin-right: 10px;
 }
-.inicios-usuarios a:hover{
-    
+
+.inicios-usuarios a:hover {
+
     color: #008c2a;
-    
+
 }
 
 button.boton-menu {
@@ -167,6 +170,26 @@ button.boton-menu {
     border: none;
     border-radius: 30%;
     display: none;
+}
+
+.select-header {
+    width: 110px;
+    background-color: #63bc5e;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 10px;
+    color: white;
+    position: absolute;
+    right: 50px;
+}
+.opciones-select-header-nombre {
+    background-color: #e4e4e4;
+    color: #868686;
+}
+.opciones-select-header {
+    background-color: #e4e4e4;
+    color: #383e42;
 }
 
 .img-burguer {
@@ -232,6 +255,24 @@ input:hover {
     width: 1rem;
     height: 1rem;
 }
+
+.nav-select-categorias {
+    position: absolute;
+    top: 130px;
+    left: 5%;
+}
+
+.select-categorias {
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+    background-color: #63bc5e;
+    color: white;
+    border: none;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
 
 main.main-edit {
     background-image: url(/img/fondo-carrito.png);
@@ -538,6 +579,7 @@ img.form-img {
 .profile-boton:hover {
     opacity: 0.7;
 }
+
 .fotoPerfil-enPerfil {
     width: 80%;
     border-radius: 50%;
@@ -547,6 +589,11 @@ img.form-img {
 @media (min-width: 768px) {
     .boton-menu {
         display: none;
+    }
+    .select-header {
+        width: 120px;
+        font-size: 11px;
+        right: 70px;
     }
 
     img.logo-principal {
@@ -573,7 +620,7 @@ img.form-img {
         display: flex;
         line-height: 28px;
         align-items: center;
-        width: 40%;
+        width: 31%;
     }
 
     footer section {
@@ -635,10 +682,24 @@ img.form-img {
 
 @media (min-width: 1024px) {
 
+    .nav-select-categorias {
+        display: none;
+    }
+
     .nav-menu {
         justify-content: space-evenly;
     }
-
+    .select-header {
+        width: 150px;
+        font-size: 14px;
+        right: 60px;
+    }
+    .opciones-nav-header{
+        width: 2em; 
+        border-radius: 50%;
+        position: absolute;
+        right: 215px;
+    }
     .slider {
         width: 100%;
         height: 45vh;
@@ -673,10 +734,12 @@ img.form-img {
         width: 150px;
         height: 200px;
     }
+
     .inicios-usuarios {
         font-size: 15px;
     }
-    .inicios-usuarios a{
+
+    .inicios-usuarios a {
         font-size: 15px;
     }
 
@@ -747,7 +810,7 @@ main.main-register {
 }
 
 .checkbox-register {
-   
+
     margin: 10px;
 
 }
@@ -757,6 +820,7 @@ main.main-register {
     color: #868686;
     letter-spacing: 1px;
 }
+
 .button-register {
 
     font-size: 12px;

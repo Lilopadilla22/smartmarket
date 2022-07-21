@@ -84,6 +84,7 @@ main.main-section {
 section.conjunto-articulos-productos {
     background: #e4e4e4;
     width: 90vw;
+    max-width: 720px;
     position: relative;
     top: 180px;
     left: 5vw;
@@ -321,7 +322,7 @@ section.conjunto-articulos-barra-categorias {
 section.conjunto-articulos-productos {
     background: #e4e4e4;
     width: 70vw;
-    left: 300px;
+    left: 29%;
     margin-bottom: 300px;
 }
 
@@ -429,7 +430,7 @@ section.conjunto-articulos-productos {
 @media (min-width: 1440px) {
 
     section.conjunto-articulos-productos {
-        left: 300px;
+        left: 29%;
         width: 75%;
         max-width: 1010px;
     }
@@ -472,7 +473,7 @@ section.conjunto-articulos-productos {
 @media (min-width: 1800px) {
 
     section.conjunto-articulos-productos {
-        left: 400px;
+        left: 25%;
         width: 70%;
         max-width: 1260px;
     }

@@ -25,7 +25,7 @@ const usersController = {
                     if(req.body.recordarUsuario){
                         res.cookie('email', req.body.email, {maxAge: (1000 * 60)*1440})
                     }
-                return res.redirect("/usuarios/mi-perfil")
+                return res.redirect("/")
             } else {
                 
                 return res.render("login", {
@@ -52,7 +52,7 @@ const usersController = {
         
     },
     profile: (req, res) => {
-        console.log(req.cookies.email)
+        
         res.render('profile', {
             user: req.session.userLogueado
         })
@@ -103,6 +103,13 @@ const usersController = {
         req.session.destroy();
         
         return res.redirect('/')
+    },
+    eliminarUsuario: (req, res) => {
+        let idUsuarioAEliminar = req.params.id
+       
+        users.delete(idUsuarioAEliminar);
+       
+        res.redirect('/')
     }
 }
 
