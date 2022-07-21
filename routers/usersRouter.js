@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
-const usersController = require('../controllers/usersController');
+const usersController = require('../controllers/userController');
 const guestMiddleware = require ('../middlewares/guestMiddleware')
 const authMiddleware = require ('../middlewares/authMiddleware')
 
@@ -15,12 +15,12 @@ router.post('/login', usersController.processLogin );
 
 router.get('/logout', usersController.logout);
 
-router.get('/mi-perfil/:id', authMiddleware, usersController.profile);
+router.get('/mi-perfil/:id', authMiddleware, usersController.detail);
 
 router.get('/registro', guestMiddleware, usersController.registro);
 
-router.post('/registro', uploadFile.single('fotoPerfil'), validations, usersController.nuevoRegistro);
+router.post('/registro', uploadFile.single('fotoPerfil'), validations, usersController.create);
 
-router.delete('/eliminar-perfil/:id', authMiddleware, usersController.eliminarUsuario)
+router.delete('/eliminar-perfil/:id', authMiddleware, usersController.destroy)
 
 module.exports = router;
