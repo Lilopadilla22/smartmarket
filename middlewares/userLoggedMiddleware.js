@@ -1,21 +1,31 @@
-const user = require('../database/models/users');
+const db = require('../database/models');
+const usersController = require('../controllers/userController');
 
-function userLoggedMiddleware(req, res, next) {
-    
+
+
+async function userLoggedMiddleware (req, res, next) {
+  
     res.locals.isLogged = false;
-    let emailCookie = req.cookies.email;
-    let userFrontCookie = user.findByfield('email', emailCookie)
+    emailSession = req.session.userLogueado
 
-    if(userFrontCookie){
-        req.session.userLogueado = userFrontCookie
-    };
-
-    if(req.session && req.session.userLogueado) {
-        res.locals.isLogged = true;
+    if (emailSession){
+        res.locals.isLogged = true
+        user = emailSession;
     }
-    
+        
+        
+        
+       
 
     next();
+
 }
 
 module.exports = userLoggedMiddleware
+    
+    
+ 
+        
+        
+           
+    

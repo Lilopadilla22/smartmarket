@@ -18,13 +18,13 @@
                 <h1 class="form_heading">Registro</h1>
             </div>
             <div class="field">
-                <label for="nombreYApellido">Nombre y apellido</label>
-                <input class="input-login" name="nombreYApellido" type="text" id="username"
-                    value="<%= locals.oldData ? oldData.nombreYApellido : null %>">
+                <label for="full_name">Nombre y apellido</label>
+                <input class="input-login" name="full_name" type="text" id="username"
+                    value="<%= locals.oldData ? oldData.full_name : null %>">
 
-                <% if (locals.errors && errors.nombreYApellido) { %>
+                <% if (locals.errors && errors.full_name) { %>
                 <div class="text-danger">
-                    <%= errors.nombreYApellido.msg %>
+                    <%= errors.full_name.msg %>
                 </div>
 
                 <% } %>
@@ -64,34 +64,34 @@
                 <% } %>
             </div>
             <div class="field">
-                <label for="pais">País</label>
-                <input class="input-login" name="pais" type="pais" id="pais"
-                    value="<%= locals.oldData ? oldData.pais : null %>">
-                <% if (locals.errors && errors.pais) { %>
+                <label for="country">País</label>
+                <input class="input-login" name="country" type="pais" id="pais"
+                    value="<%= locals.oldData ? oldData.country : null %>">
+                <% if (locals.errors && errors.country) { %>
                 <div class="text-danger">
-                    <%= errors.pais.msg %>
+                    <%= errors.country.msg %>
                 </div>
 
                 <% } %>
             </div>
 
             <div class="field">
-                <label for="direccion">Dirección</label>
-                <input class="input-login" name="direccion" type="direccion" id="direccion"
-                    value="<%= locals.oldData ? oldData.direccion : null %>">
-                <% if (locals.errors && errors.direccion) { %>
+                <label for="address">Dirección</label>
+                <input class="input-login" name="address" type="direccion" id="direccion"
+                    value="<%= locals.oldData ? oldData.address : null %>">
+                <% if (locals.errors && errors.address) { %>
                 <div class="text-danger">
-                    <%= errors.direccion.msg %>
+                    <%= errors.address.msg %>
                 </div>
 
                 <% } %>
             </div>
             <div class="field">
-                <label for="fotoPerfil">Foto de perfil</label>
-                <input type="file" name="fotoPerfil" value="fotoPerfil" id="perfilFile">
-                <% if (locals.errors && errors.fotoPerfil) { %>
+                <label for="profile_image">Foto de perfil</label>
+                <input type="file" name="profile_image" value="fotoPerfil" id="perfilFile">
+                <% if (locals.errors && errors.profile_image) { %>
                 <div class="text-danger">
-                    <%= errors.fotoPerfil.msg %>
+                    <%= errors.profile_image.msg %>
                 </div>
 
                 <% } %>

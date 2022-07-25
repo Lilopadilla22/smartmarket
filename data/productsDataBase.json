@@ -753,11 +753,11 @@
  },
  {
   "id": 100,
-  "imagen": "cepillo dientes 2.jpg",
-  "categoria": "higiene",
   "nombre": "Cepillo dental Colgate",
+  "precio": "$90",
+  "categoria": "higiene",
   "detalle": "Cepillo dental Colgate Essential Clean suave 1 Uni.",
-  "precio": "$70"
+  "imagen": "cepillo dientes 2.jpg"
  },
  {
   "id": 101,

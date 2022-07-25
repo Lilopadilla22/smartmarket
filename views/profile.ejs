@@ -10,12 +10,12 @@
     <main class="main-profile">
 
         <div class="profile-card">
-            <img class='fotoPerfil-enPerfil'src="/images/users/<%= user.fotoPerfil %>">
-            <h1 class="usuario"><%= user.nombreYApellido %> </h1>
+            <div class='fotoPerfil-enPerfil'><img class='fotoPerfil-enDIVPerfil' src="/images/users/<%= user.profile_image %>"></div>
+            <h1 class="usuario"><%= user.full_name %> </h1>
             <p class="profile-nombreCompleto"><%= user.email %></p>
-            <p><%= user.pais %></p>
-            <p><%= user.direccion %></p>
-            <form method='POST'action="/usuarios/eliminar-perfil/<%= user.id %>?_method=DELETE"><p><button class="profile-boton">Eliminar usuario</button></p></form>
+            <p><%= user.country %></p>
+            <p><%= user.address %></p>
+            <form method='POST'action="/usuarios/eliminar-perfil/<%= user.users_id %>?_method=DELETE"><p><button class="profile-boton">Eliminar usuario</button></p></form>
         </div>
         
 

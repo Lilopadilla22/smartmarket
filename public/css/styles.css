@@ -171,6 +171,12 @@ button.boton-menu {
     border-radius: 30%;
     display: none;
 }
+.opciones-nav-header img{
+        
+    width: 2em;
+    border-radius: 50%;
+    height: 2em;
+}
 
 .select-header {
     width: 110px;
@@ -580,10 +586,12 @@ img.form-img {
     opacity: 0.7;
 }
 
-.fotoPerfil-enPerfil {
+.fotoPerfil-enPerfil img{
     width: 80%;
+    max-height: 450px;
     border-radius: 50%;
 }
+
 
 
 @media (min-width: 768px) {
@@ -700,6 +708,7 @@ img.form-img {
         position: absolute;
         right: 215px;
     }
+    
     .slider {
         width: 100%;
         height: 45vh;

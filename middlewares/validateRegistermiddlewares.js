@@ -4,11 +4,11 @@ const { body } = require('express-validator');
   
   
   const validations = [
-    body('nombreYApellido').notEmpty().withMessage('Debe agregar nombre y apellido'),
+    body('full_name').notEmpty().withMessage('Debe agregar nombre y apellido'),
     body('email').notEmpty().withMessage('Debe agregar un email').bail()
     .isEmail().withMessage('Debe ingresar un email válido'),
-    body('pais').notEmpty().withMessage('Debe agregar un país'),
-    body('direccion').notEmpty().withMessage('Debe agregar una dirección'),
+    body('country').notEmpty().withMessage('Debe agregar un país'),
+    body('address').notEmpty().withMessage('Debe agregar una dirección'),
     body('terminos').notEmpty().withMessage('Debe aceptar los términos y condiciones'),
     body('password').notEmpty().withMessage('Debe ingresar una contraseña').bail()
     .custom((value, { req }) => {
@@ -20,7 +20,7 @@ const { body } = require('express-validator');
       }
       return true;
     }),
-    body('fotoPerfil').custom((value, { req }) => {
+    body('profile_image').custom((value, { req }) => {
       let file = req.file;
       let acceptedExtensions = ['.jpg', '.JPEG', '.JPG', '.PNG', '.png', '.gif'];
   

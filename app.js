@@ -5,7 +5,7 @@ const methodOverride = require('method-override');
 const publicPath = path.resolve(__dirname, './public');
 const session = require('express-session');
 const userLoggedMiddleware = require ('./middlewares/userLoggedMiddleware');
-const cookies = require ('cookie-parser');
+const cookieParser = require ('cookie-parser');
 
 
 
@@ -16,11 +16,12 @@ app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(session({
-    secret: "El secreto de sus ojos",
+    secret: "Secret"
+    ,
     resave: false, 
     saveUninitialized: false
 }));
-app.use(cookies());
+app.use(cookieParser());
 app.use(userLoggedMiddleware);
 
 

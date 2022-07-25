@@ -18,18 +18,17 @@
             </div>
             <div class="opciones-header">
                 <% if (locals.isLogged) { %>
-                    <div class="opciones-nav-header"><a href="/usuarios/mi-perfil/<%= user.id %> "><img
-                        src="/images/users/<%= user.fotoPerfil %>"
-                        style="width: 2em; border-radius: 50%;"></a>
+                    <div class="opciones-nav-header"><a href="/usuarios/mi-perfil/<%= user.users_id %> "><img
+                        src="/images/users/<%= user.profile_image %>"></a>
                 </div>
                 <select name="" id="" class="select-header" 
                     onchange="window.location.href=this.options[this.options.selectedIndex].value">
                     <option value="" disabled class="opciones-select-header">----------------------------------</option>
                     <option value="" class="opciones-select-header-nombre" disabled selected>
-                      <%= user.nombreYApellido %>
+                      <%= user.full_name %>
                     </option>
                     <option value="" disabled class="opciones-select-header">----------------------------------</option>
-                        <option value="/usuarios/mi-perfil/<%= user.id %>" class="opciones-select-header">
+                        <option value="/usuarios/mi-perfil/<%= user.users_id %>" class="opciones-select-header">
                             MI PERFIL
                         </option>
                         <option value="" disabled class="opciones-select-header">----------------------------------</option>
@@ -38,7 +37,7 @@
                     </option>
                     <option value="" disabled class="opciones-select-header">----------------------------------</option>
                     <option value="/productos/crear-producto" class="opciones-select-header">
-                        CREAR PRODUCTO (+)
+                        CREAR PRODUCTO
                     </option>
                     <option value="" disabled class="opciones-select-header">----------------------------------</option>
                     <option value="/usuarios/logout" class="opciones-select-header">Cerrar sesión</option>
@@ -46,10 +45,10 @@
                 </select>
                 <% } else { %>
 
+                    <div class="inicios-usuarios"><a href="/usuarios/registro">Registrarse</a></div>
+                    <div class="inicios-usuarios"><a href="/usuarios/login">Iniciar sesión</a></div>
+                    <% } %>
 
-                <div class="inicios-usuarios"><a href="/usuarios/registro">Registrarse</a></div>
-                <div class="inicios-usuarios"><a href="/usuarios/login">Iniciar sesión</a></div>
-                <% } %>
 
             </div>
         </nav>
