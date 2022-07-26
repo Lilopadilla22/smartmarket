@@ -27,11 +27,11 @@
 
             <article class="articulo-productos">
                 <a href="/productos/detalle-de-producto/<%= producto.id %>">
-                    <img class="imagen-producto" src="/img/<%= producto.imagen%>">
+                    <img class="imagen-producto" src="/img/<%= producto.image%>">
                     <div class="detalles-producto">
-                        <div class="nombre-producto"><%= producto.nombre%></div>
-                        <div class="descripcion-producto"><%= producto.detalle%></div>
-                        <div class="precio-producto"><%= producto.precio%></div>
+                        <div class="nombre-producto"><%= producto.name%></div>
+                        <div class="descripcion-producto"><%= producto.descriptions%></div>
+                        <div class="precio-producto">$ <%= producto.price%></div>
 
                         <button class="agregar-carrito-boton">
                             <i class="fa-solid fa-cart-shopping"></i>

@@ -4,30 +4,30 @@ const path = require ('path')
 const multer = require('multer');
 const authMiddleware = require ('../middlewares/authMiddleware')
 
-const productsController = require('../controllers/productsController');
+const productbd = require('../controllers/productbd');
 
 
 
 // ************ MULTER ************
 const upload = require('../middlewares/multerProductsmiddleware');
 
-router.get('/', productsController.index);
-router.get('/carrito', authMiddleware,productsController.productCart);
-router.get('/detalle-de-producto/:id', productsController.productDetail);
-router.get('/categorias', productsController.categorias);
-router.get('/categoria/:categoria', productsController.categoriaProducto);
+router.get('/', productbd.list);
+//router.get('/carrito', authMiddleware,productbd.productCart);
+router.get('/detalle-de-producto/:id', productbd.detail);
+//router.get('/categorias', productbd.categorias);
+router.get('/categoria/:category_id', productbd.categories);
 
 // /*** EDIT ONE PRODUCT ***/ 
-router.get('/editar-producto/:id', authMiddleware,productsController.edit); 
-router.put('/editar-producto/:id', upload.any(), productsController.update); 
+router.get('/editar-producto/:id', authMiddleware,productbd.edit); 
+router.put('/editar-producto/:id', upload.any(), productbd.update); 
 
 
 // // CREATE ONE PRODUCT //
-router.get('/crear-producto', authMiddleware,productsController.create);
-router.post('/crear-producto', upload.any(), productsController.store);
+router.get('/crear-producto', authMiddleware,productbd.add);
+router.post('/crear-producto', upload.any("image"), productbd.create);
 
 // DELETE ONE PRODUCT //
-router.delete('/borrar-producto/:id', authMiddleware,productsController.destroy);
+router.delete('/borrar-producto/:id', authMiddleware,productbd.destroy);
 
 
 

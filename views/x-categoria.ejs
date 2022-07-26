@@ -8,37 +8,7 @@
     <%- include ('./partials/header') %> 
 
     <main class="main-section">
-        <nav class="nav-select-categorias">
-            <select class="select-categorias"
-                onchange="window.location.href=this.options[this.options.selectedIndex].value" name="elige" size="1">
 
-                <option value="/productos/categoria/almacen" <% if(categoriaURL === 'almacen') { %> selected <% } %>>
-                    Almacén
-                </option>
-
-                <option value="/productos/categoria/bebidas" <% if(categoriaURL === 'bebidas') {%> selected <% } %>>
-                    Bebidas</option>
-
-                <option value="/productos/categoria/bebidas-con-alcohol"
-                    <% if(categoriaURL === 'bebidas-con-alcohol') {%> selected <% } %>>Alcohol</option>
-
-                <option value="/productos/categoria/carnes" <% if(categoriaURL === 'carnes') {%> selected <% } %>>Carnes
-                </option>
-
-                <option value="/productos/categoria/higiene" <% if(categoriaURL === 'higiene') {%> selected <% } %>>
-                    Higiene</option>
-
-                <option value="/productos/categoria/lacteos" <% if(categoriaURL === 'lacteos') {%> selected <% } %>>
-                    Lácteos</option>
-
-                <option value="/productos/categoria/limpieza" <% if(categoriaURL === 'limpieza') {%> selected <% } %>>
-                    Limpieza</option>
-
-                <option value="/productos/categoria/verduleria" <% if(categoriaURL === 'verduleria') {%> selected
-                    <% } %>>Verdulería</option>
-
-            </select>
-        </nav>
         <section class="conjunto-articulos-productos">
 
 
@@ -46,11 +16,11 @@
 
             <article class="articulo-productos">
                 <a href="/productos/detalle-de-producto/<%= producto.id %>">
-                    <img class="imagen-producto" src="/img/<%= producto.imagen%>">
+                    <img class="imagen-producto" src="/img/<%= producto.image%>">
                     <div class="detalles-producto">
-                        <div class="nombre-producto"><%= producto.nombre%></div>
-                        <div class="descripcion-producto"><%= producto.detalle%></div>
-                        <div class="precio-producto"><%= producto.precio%></div>
+                        <div class="nombre-producto"><%= producto.name%></div>
+                        <div class="descripcion-producto"><%= producto.descriptions%></div>
+                        <div class="precio-producto">$ <%= producto.price%></div>
 
                         <button class="agregar-carrito-boton">
                             <i class="fa-solid fa-cart-shopping"></i>

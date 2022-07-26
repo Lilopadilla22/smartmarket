@@ -11,37 +11,37 @@
 
         <form class="form-edit" action="/productos/editar-producto/<%= product.id %>?_method=PUT" method="POST"
             enctype="multipart/form-data">
-            <h2 class="products-title">Estás editando: <%= product.nombre %> </h2>
+            <h2 class="products-title">Estás editando: <%= product.name %> </h2>
             <div class="div-form-edit">
                 <label for="nombre" class="form-label">Nombre del producto:</label>
-                <input type="text" id="nombre" name="nombre" value="<%= product.nombre %>" class="form-input">
+                <input type="text" id="nombre" name="name" value="<%= product.name %>" class="form-input">
 
 
                 <label for="precio" class="form-label">Precio del producto:</label>
-                <input type="text" id="precio" name="precio" value="<%= product.precio %>" class="form-input">
+                <input type="text" id="precio" name="price" value="<%= product.price %>" class="form-input">
 
                 
 
 
                 <label for="categoria" class="form-label">Categoría:</label>
-                <select name="categoria" id="categoria" class="form-input" value="categoria">
-                    <option value="almacen" <% if(product.categoria === 'almacen') { %> selected <%}%> >Almacen</option>
-                    <option value="bebidas" <% if(product.categoria === 'bebidas') { %> selected <% } %> >Bebidas</option>
-                    <option value="bebidas-con-alcohol"  <% if(product.categoria === 'bebidas-con-alcohol') {%> selected <% } %> >Bebidas con alcohol</option>
-                    <option value="carnes" <% if(product.categoria === 'carnes') {%> selected <% } %>>Carnes</option>
-                    <option value="higiene" <% if(product.categoria === 'higiene') {%> selected <% } %> >Higiene</option>
-                    <option value="lacteos" <% if(product.categoria === 'lacteos') {%> selected <% } %> >Lacteos</option>
-                    <option value="limpieza" <% if(product.categoria === 'limpieza') {%> selected <% } %>>Limpieza</option>
-                    <option value="verduleria" <% if(product.categoria === 'verduleria') {%> selected <% } %>>Verduleria</option>
+                <select name="categories_id" id="categoria" class="form-input" value="categoria">
+                    <option value="1" <% if(product.categories.name === 'almacen') { %> selected <%}%> >Almacen</option>
+                    <option value="2" <% if(product.categories.name === 'bebidas') { %> selected <% } %> >Bebidas</option>
+                    <option value="3"  <% if(product.categories.name === 'bebidas-con-alcohol') {%> selected <% } %> >Bebidas con alcohol</option>
+                    <option value="4" <% if(product.categories.name === 'carnes') {%> selected <% } %>>Carnes</option>
+                    <option value="5" <% if(product.categories.name === 'higiene') {%> selected <% } %> >Higiene</option>
+                    <option value="6" <% if(product.categories.name === 'lacteos') {%> selected <% } %> >Lacteos</option>
+                    <option value="7" <% if(product.categories.name === 'limpieza') {%> selected <% } %>>Limpieza</option>
+                    <option value="8" <% if(product.categories.name === 'verduleria') {%> selected <% } %>>Verduleria</option>
                 </select>
 
 
                 <!-- <label for="image" class="form-label">Imágen</label> -->
-                <img name="image" class="form-img" src="/img/<%= product.imagen %>" value="imagen">
-                <input type="file" name="imagen" class="form-input-image" value="imagen" id="imagen">
+                <img name="image" class="form-img" src="/img/<%= product.image%>" value="imagen">
+                <input type="file" name="image" class="form-input-image" value="imagen" id="imagen">
 
                 <label for="detalle" class="form-label">Descripción:</label>
-                <textarea name="detalle" id="detalle" class="form-input" value="detalle"><%= product.detalle %></textarea>
+                <textarea name="descriptions" id="detalle" class="form-input" value="detalle"><%= product.descriptions%></textarea>
 
             </div>
 

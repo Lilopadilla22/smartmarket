@@ -12,7 +12,7 @@
     <link href="/css/stylesDetail.css" rel="stylesheet">
 
 
-    <title><%=product.nombre%></title>
+    <title><%=product.name%></title>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
             <section class="detalleDelProducto">
                 <div class="productoDetalle">
 
-                    <div class="detalleImagen"> <img src="/img/<%= product.imagen %>" alt="Doritos"> </div>
+                    <div class="detalleImagen"> <img src="/img/<%= product.image%>" alt="Doritos"> </div>
 
                 </div>
             </section>
@@ -32,12 +32,12 @@
             <section class="carritoDelProducto">
                 <div class="detallesDelCarrito">
                     <div class="carritoDescripcion">
-                        <h2><%= product.nombre %></h2>
+                        <h2><%= product.name %></h2>
                     </div>
                     <div class="carritoDescripcion">
-                        <h3><%= product.detalle %></h3>
+                        <h3><%= product.descriptions%></h3>
                     </div>
-                    <div class="carritoDescripcion"><span class="precio-en-detail"><%= product.precio %></span></div>
+                    <div class="carritoDescripcion"><span class="precio-en-detail"><%= product.price%></span></div>
                     <div class="botonDeAdicionar"> <button class="botonDeCantidad">+</button> Cantidad
                         <button class="botonDeCantidad">-</button></div>
                     <div class="botonDeAgregar"><button class="botonPago">Agregar Producto</button></div>
