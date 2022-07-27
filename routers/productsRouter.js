@@ -24,7 +24,7 @@ router.put('/editar-producto/:id', upload.any(), productbd.update);
 
 // // CREATE ONE PRODUCT //
 router.get('/crear-producto', authMiddleware,productbd.add);
-router.post('/crear-producto', upload.any("image"), productbd.create);
+router.post('/crear-producto', upload.any(), productbd.create);
 
 // DELETE ONE PRODUCT //
 router.delete('/borrar-producto/:id', authMiddleware,productbd.destroy);

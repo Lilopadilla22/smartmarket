@@ -41,20 +41,26 @@ const productbd = {
 },
      
     add: function (req, res) {
-        
-            res.render("productCreate")
-
+        db.Category.findAll()
+        .then((categories) => {
+            return res.render("productCreate", {categories} )
+        })
     },
     create: function (req, res) {
- 
-            db.Product.create({
-
-               ...req.body, 
-               image: req.file.filename
-            
-            })
-
-            .then((product) =>{
+    db.Product.create({
+        categories_id : req.body.categories_id,
+        name : req.body.name,
+        price : req.body.price,
+        descriptions : req.body.descriptions,
+        image: req.files[0].filename,
+        stock: 0
+    })
+    
+    
+    .then((product) =>{
+                console.log("🚀 ~ req.file.filename", req.files)
+                
+                
 
             res.redirect("/productos")
                 
