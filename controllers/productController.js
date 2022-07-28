@@ -78,19 +78,26 @@ const productbd = {
     update: function (req,res) {
 
         let productId = req.params.id
-
-        db.Product.update({
-
-            ...req.body
-
-        }, 
-        {
-
-            where: { id: productId }
-
-        })
+        db.Product.findByPk(productId)
+        .then((product) => {
+            let oldPic = product.image
+            if(!req.body.image){
+                req.files.push(oldPic)
+            }
+                db.Product.update({
         
-        .then((product) => res.redirect("/productos"))
+                    ...req.body,
+                    image: req.files[0].filename
+                }, 
+                {
+        
+                    where: { id: productId }
+        
+                })
+                
+                .then((product) => res.redirect("/productos"))
+            }) 
+
 
     },
 

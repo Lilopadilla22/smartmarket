@@ -50,8 +50,8 @@ const usersController = {
                     })
                 }
                 if (req.body.recordarUsuario != undefined) {
-                    res.cookie('recordame', user.email, {
-                       maxAge: (1000 * 60) * 120
+                    res.cookie('recordame', user.users_id, {
+                       maxAge: (1000 * 60) * 1200
                    })
                 } 
                 if (passwordCorrecta) {
@@ -89,9 +89,12 @@ const usersController = {
 
 
     logout: (req, res) => {
-        res.clearCookie('email');
-
+        
         req.session.destroy();
+        
+        if(req.cookies.recordame){
+            res.clearCookie('recordame');
+        }
 
         return res.redirect('/')
     },
@@ -152,37 +155,49 @@ const usersController = {
         },
  
  
-    //     edit: function(req, res) {
+        edit: function(req, res) {
 
-    //     let userId = req.params.id
+        let userId = req.params.id
+        
 
-    //     db.User.findByPk(userId)
+        db.User.findByPk(userId)
 
-    //     .then(User => res.render("userEdit", {user: User}))
-    // },
+        .then(User => res.render("userEdit", {user: User}))
+    },
 
-    // update: function (req,res) {
+    update: function (req,res) {
 
-    //     let userId = req.params.id
+        let userId = req.params.id
+        db.User.findByPk(userId)
+        .then((user) => {
+            let oldPic = user.profile_image
+            if(!req.body.profile_image){
+                req.files.push(oldPic)
+            } 
+            const resultValidation = validationResult(req)
+    
+            if (resultValidation.errors.length > 0) {
+                return res.render('userEdit', {
+                    errors: resultValidation.mapped(),
+                    oldData: req.body
+                });
+            }
+            db.User.update({
+                ...req.body,
+                password: bcryptjs.hashSync(req.body.password, 10),
+                profile_image:req.files[0].filename
+            },
+            {
+    
+                where: { users_id: userId }
+    
+            })
+    
+            .then((user) => res.redirect("/usuarios/mi-perfil/" + userId))
+        })
+        
 
-    //     db.User.update({
-    //         status_id: 1,
-    //         email:req.body.email,
-    //         password:bcryptjs.hashSync(req.body.password, 10),
-    //         full_name:req.body.full_name,
-    //         country:req.body.country,
-    //         address:req.body.address,
-    //         profile_image: userId.profile_image
-    //     },
-    //     {
-
-    //         where: { users_id: userId }
-
-    //     })
-
-    //     .then((user) => res.redirect("/usuarios/mi-perfil/" + userId))
-
-    // },
+    },
 
             
 
@@ -196,7 +211,14 @@ const usersController = {
                 users_id: userId
             }
 
-        }).then(() => res.redirect("/"))
+        }).then(() => {
+            req.session.destroy();
+        
+        if(req.cookies.recordame){
+            res.clearCookie('recordame');
+        }
+            res.redirect("/")
+        })
 
     }
 

@@ -7,6 +7,7 @@ const authMiddleware = require ('../middlewares/authMiddleware')
 
 const uploadFile = require('../middlewares/multerUsersmiddlewares')
 const validations = require ('../middlewares/validateRegistermiddlewares')
+const validationsEditUser = require('../middlewares/validateEditUserMiddleware')
 
 
 router.get('/login', guestMiddleware, usersController.login);
@@ -21,8 +22,9 @@ router.get('/registro', guestMiddleware, usersController.register);
 
 router.post('/registro', uploadFile.single('profile_image'), validations, usersController.create);
 
-// router.get('/editar-usuario/:id', usersController.edit);
-// router.put('/editar-usuario/:id', uploadFile.any(), usersController.update);
+router.get('/editar-usuario/:id', authMiddleware,usersController.edit);
+
+router.put('/editar-usuario/:id', uploadFile.any(), validationsEditUser,usersController.update);
 
 
 router.delete('/eliminar-perfil/:id', authMiddleware, usersController.destroy)

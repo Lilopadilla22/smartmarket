@@ -3,29 +3,29 @@ const usersController = require('../controllers/userController');
 
 
 
-async function userLoggedMiddleware (req, res, next) {
-  
-    res.locals.isLogged = false;
-    emailSession = req.session.userLogueado
+ function userLoggedMiddleware(req, res, next) {
 
-    if (emailSession){
-        res.locals.isLogged = true
-        user = emailSession;
+    res.locals.isLogged = false;
+    idCookie = req.cookies.recordame
+    if (req.session.userLogueado) {
+        res.locals.isLogged = true;
+        user = req.session.userLogueado
     }
-        
-        
-        
-       
+    if (idCookie) {
+        db.User.findByPk(idCookie)
+            .then((user) => {
+                res.locals.isLogged = true
+                req.session.userLogueado = user;
+            })
+
+    }
+
 
     next();
 
 }
 
+
+
+
 module.exports = userLoggedMiddleware
-    
-    
- 
-        
-        
-           
-    
