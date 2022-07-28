@@ -15,6 +15,9 @@
             <p class="profile-nombreCompleto"><%= user.email %></p>
             <p><%= user.country %></p>
             <p><%= user.address %></p>
+            <!-- <a href="/usuarios/editar-usuario/ EJS!!!!!!! ">
+                <div class="profile-boton"><button class="profile-boton">Editar Usuario</button></div>
+            </a> -->
             <form method='POST'action="/usuarios/eliminar-perfil/<%= user.users_id %>?_method=DELETE"><p><button class="profile-boton">Eliminar usuario</button></p></form>
         </div>
         

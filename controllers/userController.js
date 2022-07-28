@@ -150,12 +150,41 @@ const usersController = {
                 
             })
         },
+ 
+ 
+    //     edit: function(req, res) {
 
+    //     let userId = req.params.id
 
+    //     db.User.findByPk(userId)
 
-              
+    //     .then(User => res.render("userEdit", {user: User}))
+    // },
 
+    // update: function (req,res) {
 
+    //     let userId = req.params.id
+
+    //     db.User.update({
+    //         status_id: 1,
+    //         email:req.body.email,
+    //         password:bcryptjs.hashSync(req.body.password, 10),
+    //         full_name:req.body.full_name,
+    //         country:req.body.country,
+    //         address:req.body.address,
+    //         profile_image: userId.profile_image
+    //     },
+    //     {
+
+    //         where: { users_id: userId }
+
+    //     })
+
+    //     .then((user) => res.redirect("/usuarios/mi-perfil/" + userId))
+
+    // },
+
+            
 
     destroy: function (req, res) {
 
@@ -164,7 +193,7 @@ const usersController = {
         db.User.destroy({
 
             where: {
-                id: userId
+                users_id: userId
             }
 
         }).then(() => res.redirect("/"))
@@ -186,24 +215,6 @@ const usersController = {
     // },
 
 
-    // update: function (req,res) {
-
-    //     let movieId = req.params.id
-
-    //     db.Movie.update({
-
-    //         ...req.body
-
-    //     },
-    //     {
-
-    //         where: { id: movieId }
-
-    //     })
-
-    //     .then(() => res.redirect("/movies"))
-
-    // },
 
     // delete: function (req, res) {
 

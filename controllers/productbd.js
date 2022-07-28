@@ -58,10 +58,8 @@ const productbd = {
     
     
     .then((product) =>{
-                console.log("🚀 ~ req.file.filename", req.files)
                 
-                
-
+            
             res.redirect("/productos")
                 
             }) 
