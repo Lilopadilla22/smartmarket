@@ -1860,7 +1860,18 @@ VALUES
  'tv9',
  'colombia',
  '1656447330404_imagen.jpg'
+ ),
+ (
+ '3',
+ '3', 
+ 'lenislipari@gmail.com', 
+ '$2a$10$ngHSgEZykmkwAqlyAYISC.80oz7HEdR5M.o5Mj6J8QpnYQeDCNYze', 
+ 'Lenis Lipari', 
+ 'armada argentina 2483', 
+ 'Argentina', 
+ '1658953003494_imagen.jpg'
  );
+
 
 --
 -- Table structure for table `users_status`
