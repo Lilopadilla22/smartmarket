@@ -3,7 +3,7 @@ const usersController = require('../controllers/userController');
 
 
 
- function userLoggedMiddleware(req, res, next) {
+async function userLoggedMiddleware(req, res, next) {
 
     res.locals.isLogged = false;
     idCookie = req.cookies.recordame
@@ -12,11 +12,11 @@ const usersController = require('../controllers/userController');
         user = req.session.userLogueado
     }
     if (idCookie) {
-        db.User.findByPk(idCookie)
-            .then((user) => {
+       const user = await db.User.findByPk(idCookie)
+            
                 res.locals.isLogged = true
                 req.session.userLogueado = user;
-            })
+            
 
     }
 

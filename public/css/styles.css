@@ -983,4 +983,9 @@ label {
 
 
 
-/* --------------- productEdit ------------------------- */
+/* --------------- validacionFormularios ------------------------- */
+
+small{
+    color: red;
+    font-size: 12px;
+}
