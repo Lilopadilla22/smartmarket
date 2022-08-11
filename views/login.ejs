@@ -25,9 +25,10 @@
       <% if (locals.errors && errors.email) { %>
         <div class="text-danger">
             <%= errors.email.msg %>
-        </div>
-
-        <% } %>
+          </div>
+          
+          <% } %>
+          <small class="smallEmailLogin"></small>
     </div>
     <div class="field">
       <label for="password">Contraseña</label>
@@ -35,9 +36,10 @@
       <% if (locals.errors && errors.password) { %>
         <div class="text-danger">
             <%= errors.password.msg %>
-        </div>
-
-        <% } %>
+          </div>
+          
+          <% } %>
+          <small class="smallPasswordLogin"></small>
     </div>
     <div class="recordarUsuario">
     <input type="checkbox" class="checkbox-login" name="recordarUsuario" value="recordarUsuario"> Recordar usuario
@@ -49,6 +51,7 @@
 </main>
 
   <%- include('./partials/footer') %>
+  <script src="../funcionesFrontend/validacionLogin.js"></script>
 </body>
 
 </html>
