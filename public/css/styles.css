@@ -171,8 +171,9 @@ button.boton-menu {
     border-radius: 30%;
     display: none;
 }
-.opciones-nav-header img{
-        
+
+.opciones-nav-header img {
+
     width: 2em;
     border-radius: 50%;
     height: 2em;
@@ -189,10 +190,12 @@ button.boton-menu {
     position: absolute;
     right: 50px;
 }
+
 .opciones-select-header-nombre {
     background-color: #e4e4e4;
     color: #868686;
 }
+
 .opciones-select-header {
     background-color: #e4e4e4;
     color: #383e42;
@@ -311,7 +314,7 @@ main.main-detail {
     margin: 5px;
     padding: 5px;
     text-align: center;
-    align-content:stretch;
+    align-content: stretch;
     color: white;
     text-shadow: 2px 2px 4px #868686;
     width: 150px;
@@ -328,12 +331,12 @@ main.main-detail {
 }
 
 
-.categoria:hover i{
+.categoria:hover i {
     color: #8bff85 !important;
 }
 
-.categoria:hover a{
-    color: #8bff85!important;
+.categoria:hover a {
+    color: #8bff85 !important;
 }
 
 a {
@@ -346,7 +349,7 @@ a {
     margin: 10px;
     margin-bottom: 18px;
     margin-top: 30px;
-    color:rgb(116, 116, 116);
+    color: rgb(116, 116, 116);
 }
 
 .productos-destacados {
@@ -382,7 +385,7 @@ a {
     width: 110px;
     height: 150px;
     border-radius: 10px;
-    
+
 }
 
 footer {
@@ -506,11 +509,12 @@ h2.products-title {
 }
 
 div.div-form-edit {
-    position: absolute;
-    top: 15%;
-    left: 5%;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 40px;
     display: flex;
-    flex-wrap: wrap;
+
 }
 
 label.form-label {
@@ -524,7 +528,8 @@ label.form-label {
     height: 35px;
     border-radius: 5px;
     border: 0.1px solid black;
-    margin-bottom: 15px;
+    margin-bottom: 2px;
+    
 }
 
 .form-input-image {
@@ -607,7 +612,7 @@ img.form-img {
     opacity: 0.7;
 }
 
-.fotoPerfil-enPerfil img{
+.fotoPerfil-enPerfil img {
     width: 80%;
     max-height: 450px;
     border-radius: 50%;
@@ -619,6 +624,7 @@ img.form-img {
     .boton-menu {
         display: none;
     }
+
     .select-header {
         width: 120px;
         font-size: 11px;
@@ -723,18 +729,20 @@ img.form-img {
     .nav-menu {
         justify-content: space-evenly;
     }
+
     .select-header {
         width: 150px;
         font-size: 14px;
         right: 60px;
     }
-    .opciones-nav-header{
-        width: 2em; 
+
+    .opciones-nav-header {
+        width: 2em;
         border-radius: 50%;
         position: absolute;
         right: 215px;
     }
-    
+
     .slider {
         width: 100%;
         height: 45vh;
@@ -787,6 +795,7 @@ img.form-img {
 
     label.form-label {
         margin-bottom: 5px;
+        margin-top: 5px;
     }
 
     main.main-detail {
@@ -804,6 +813,7 @@ img.form-img {
         padding: 10px 15px;
 
     }
+
     .categoria {
         width: 200px;
         height: 100px;
@@ -985,7 +995,7 @@ label {
 
 /* --------------- validacionFormularios ------------------------- */
 
-small{
+small {
     color: red;
     font-size: 12px;
 }

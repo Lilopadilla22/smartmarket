@@ -1,6 +1,7 @@
 window.onload = function(){
     
     let smallFulname = document.querySelector(".smallFullname")
+    console.log(smallFulname)
     let full_name= document.querySelector('#username');
          full_name.addEventListener("blur", ()=> {
             if(full_name.value == ""){

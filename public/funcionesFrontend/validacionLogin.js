@@ -11,7 +11,7 @@ window.onload = function(){
             })
         
 
-            let smallPasswordLogin = document.querySelector(".smallPasswordLogin")
+    let smallPasswordLogin = document.querySelector(".smallPasswordLogin")
     let passwordLogin = document.querySelector('#password');
     passwordLogin.addEventListener("blur", ()=>{
         if(passwordLogin == ""){
