@@ -24,6 +24,11 @@ const productbd = {
                 res.render('productDetail.ejs', {product});
             });
     },
+    'productCart': (req, res) =>{
+        res.render('productCart', {
+            user: req.session.userLogueado
+        });
+},
 
     categories: (req,res) => {
 

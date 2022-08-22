@@ -13,7 +13,7 @@ const productController = require('../controllers/productController');
 const upload = require('../middlewares/multerProductsmiddleware');
 
 router.get('/', productController.list);
-//router.get('/carrito', authMiddleware,productbd.productCart);
+router.get('/carrito', authMiddleware, productController.productCart);
 router.get('/detalle-de-producto/:id', productController.detail);
 
 router.get('/categoria/:category_id', productController.categories);
