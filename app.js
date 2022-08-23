@@ -34,12 +34,16 @@ app.listen(3000, () => {
 const usersRouter = require('./routers/usersRouter');
 const productsRouter = require('./routers/productsRouter'); 
 const mainRouters = require('./routers/mainRouters'); 
+const routerAPIusers = require('./routers/apis/routerAPIusers')
+const routerAPIproducts = require('./routers/apis/routerAPIproducts')
 
 
 
 app.use('/', mainRouters);
 app.use('/productos', productsRouter);
 app.use('/usuarios', usersRouter);
+app.use('/api', routerAPIusers)
+app.use('/api', routerAPIproducts)
 
 
 
