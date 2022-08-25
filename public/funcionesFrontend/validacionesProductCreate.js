@@ -11,10 +11,12 @@ function validarNoEstaVacio(smallClassName, inputId, mensajeDeError) {
     let smallText = document.querySelector(smallClassName)
     let input = document.querySelector(inputId);
     input.addEventListener("blur", () => {
-        if (input == "") {
+        if (input.value == "") {
             smallText.innerHTML = mensajeDeError
         } else if (input.value.length < 1) {
             smallText.innerHTML = mensajeDeError
+        } else {
+            smallText.innerHTML = ""
         }
     })
 }

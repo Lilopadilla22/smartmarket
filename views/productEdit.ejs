@@ -3,61 +3,70 @@
 
 <%- include ('./partials/head') %>
 
-<body>
+    <body>
 
-    <%- include ('./partials/header') %>
+        <%- include ('./partials/header') %>
 
-    <main class="main-edit">
+            <main class="main-edit">
 
-        <form class="form-edit" action="/productos/editar-producto/<%= product.id %>?_method=PUT" method="POST"
-            enctype="multipart/form-data">
-            <h2 class="products-title">Estás editando: <%= product.name %> </h2>
-            <div class="div-form-edit">
-                <label for="nombre" class="form-label">Nombre del producto:</label>
-                <input type="text" id="nombre" name="name" value="<%= product.name %>" class="form-input">
-                <small class="smallProductEditName"></small>
+                <form class="form-edit" action="/productos/editar-producto/<%= product.id %>?_method=PUT" method="POST"
+                    enctype="multipart/form-data">
+                    <h2 class="products-title">Estás editando: <%= product.name %>
+                    </h2>
+                    <div class="div-form-edit">
+                        <label for="nombre" class="form-label">Nombre del producto:</label>
+                        <input type="text" id="nombre" name="name" value="<%= product.name %>" class="form-input">
+                        <small class="smallProductEditName"></small>
 
+                        <label for="precio" class="form-label">Precio del producto:</label>
+                        <input type="number" id="precio" name="price" value="<%= product.price %>" class="form-input">
+                        <small class="smallProductEditPrice"></small>
 
-                <label for="precio" class="form-label">Precio del producto:</label>
-                <input type="text" id="precio" name="price" value="<%= product.price %>" class="form-input">
-
-                
-
-
-                <label for="categoria" class="form-label">Categoría:</label>
-                <select name="categories_id" id="categoria" class="form-input" value="categoria">
-                    <option value="1" <% if(product.categories.name === 'almacen') { %> selected <%}%> >Almacen</option>
-                    <option value="2" <% if(product.categories.name === 'bebidas') { %> selected <% } %> >Bebidas</option>
-                    <option value="3"  <% if(product.categories.name === 'bebidas-con-alcohol') {%> selected <% } %> >Bebidas con alcohol</option>
-                    <option value="4" <% if(product.categories.name === 'carnes') {%> selected <% } %>>Carnes</option>
-                    <option value="5" <% if(product.categories.name === 'higiene') {%> selected <% } %> >Higiene</option>
-                    <option value="6" <% if(product.categories.name === 'lacteos') {%> selected <% } %> >Lacteos</option>
-                    <option value="7" <% if(product.categories.name === 'limpieza') {%> selected <% } %>>Limpieza</option>
-                    <option value="8" <% if(product.categories.name === 'verduleria') {%> selected <% } %>>Verduleria</option>
-                </select>
-
-
-                <!-- <label for="image" class="form-label">Imágen</label> -->
-                <img name="image" class="form-img" src="/img/<%= product.image%>" value="imagen">
-                <input type="file" name="image" class="form-input-image" value="imagen" id="imagen">
-
-                <label for="detalle" class="form-label">Descripción:</label>
-                <textarea name="descriptions" id="detalle" class="form-input" value="detalle"><%= product.descriptions%></textarea>
-
-            </div>
-
-            <div class="button-edit-create">
-                <button type="submit" class="buy-now-button">Guardar producto</button>
-            </div>
-
-        </form>
+                        <label for="categoria" class="form-label">Categoría:</label>
+                        <select name="categories_id" id="categoria" class="form-input" value="categoria">
+                            <option value="1" <% if(product.categories.name==='almacen' ) { %> selected <%}%> >Almacen
+                            </option>
+                            <option value="2" <% if(product.categories.name==='bebidas' ) { %> selected <% } %> >Bebidas
+                            </option>
+                            <option value="3" <% if(product.categories.name==='bebidas-con-alcohol' ) {%> selected <% }
+                                    %> >Bebidas con alcohol</option>
+                            <option value="4" <% if(product.categories.name==='carnes' ) {%> selected <% } %>>Carnes
+                            </option>
+                            <option value="5" <% if(product.categories.name==='higiene' ) {%> selected <% } %> >Higiene
+                            </option>
+                            <option value="6" <% if(product.categories.name==='lacteos' ) {%> selected <% } %> >Lacteos
+                            </option>
+                            <option value="7" <% if(product.categories.name==='limpieza' ) {%> selected <% } %>>Limpieza
+                            </option>
+                            <option value="8" <% if(product.categories.name==='verduleria' ) {%> selected <% } %>
+                                    >Verduleria</option>
+                        </select> <small class="smallProductEditCategoria"></small>
 
 
-    </main>
+                        <!-- <label for="image" class="form-label">Imágen</label> -->
+                        <img name="image" class="form-img" src="/img/<%= product.image%>" value="imagen">
+                        <input type="file" name="image" class="form-input-image" value="imagen" id="imagen">
 
-    <%- include('./partials/footer') %>
+                        <label for="detalle" class="form-label">Descripción:</label>
+                        <textarea name="descriptions" id="detalle" class="form-input"
+                            value="detalle"><%= product.descriptions%></textarea>
+                        <small class="smallProductEditDescription"></small>
 
-    <script src="../funcionesFrontend/validacionesProductEdit.js"></script>
-</body>
+
+                    </div>
+
+                    <div class="button-edit-create">
+                        <button type="submit" class="buy-now-button">Guardar producto</button>
+                    </div>
+
+                </form>
+
+
+            </main>
+
+            <%- include('./partials/footer') %>
+
+                <script src="../../funcionesFrontend/validacionesProductEdit.js"></script>
+    </body>
 
 </html>
