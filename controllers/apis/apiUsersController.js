@@ -7,8 +7,9 @@ module.exports = {
     listUsers: (req, res) => {
 
         DB.User
-            .findAll({attributes: ["users_id", "email", "full_name",[DB.Sequelize.fn("CONCAT", '/api/user/', DB.Sequelize.col("users_id")) ,"detail"] 
-        ]})
+            .findAll({
+                attributes: ["users_id", "email", "full_name", [DB.Sequelize.fn("CONCAT", '/api/user/', DB.Sequelize.col("users_id")), "detail"]]
+            })
             .then(users => {
                 return res.json({
 
@@ -17,24 +18,30 @@ module.exports = {
 
                 })
             })
-        },
-
-
-
+    },
 
 
     showUser: (req, res) => {
 
         DB.User
 
-            .findByPk(req.params.id)
-
+            .findByPk(req.params.id, {
+                attributes: ["users_id", "email", "full_name", [DB.Sequelize.fn("CONCAT", '/api/user/', DB.Sequelize.col("users_id"), "/profile_image"), "image"]]
+            })
             .then(user => {
-                user.password = 'ACCESO RESTRINGIDO'
-                user.status_id = 'ACCESO RESTRINGIDO'
                 return res.json({
                     data: user
                 })
+            })
+    },
+
+    showUserImage: (req, res) => {
+        DB.User
+            .findByPk(req.params.id)
+
+            .then(user => {
+
+                return res.send(user.profile_image)
             })
     }
 

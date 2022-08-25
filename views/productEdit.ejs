@@ -15,6 +15,7 @@
             <div class="div-form-edit">
                 <label for="nombre" class="form-label">Nombre del producto:</label>
                 <input type="text" id="nombre" name="name" value="<%= product.name %>" class="form-input">
+                <small class="smallProductEditName"></small>
 
 
                 <label for="precio" class="form-label">Precio del producto:</label>
@@ -55,6 +56,8 @@
     </main>
 
     <%- include('./partials/footer') %>
+
+    <script src="../funcionesFrontend/validacionesProductEdit.js"></script>
 </body>
 
 </html>
