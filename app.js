@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use(userLoggedMiddleware);
 
 
-app.listen(3000, () => {
+app.listen(3001, () => {
     console.log('Servidor corriendo');
 });
 
