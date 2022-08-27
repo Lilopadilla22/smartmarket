@@ -203,12 +203,65 @@ footer {
 @media (max-width: 425px) {
     .general {
         flex-direction: column;
+
     }
 
     body {
         height: auto;
     }
+
+    .descripcionProductos {
+        flex-direction: row;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+    }
+
+    .descripcionProductos div {
+        margin-bottom: 10px;
+        flex-basis: 50%;
+    }
+
+    .lista {
+        display: none;
+    }
+
+    .detallesDeProducto {
+        min-width: 0;
+        padding-left: 50px;
+    }
+
+    .nombreImagenProducto,
+    .price,
+    .total,
+    .radio,
+    .accionesProducto {
+
+        width: 50%;
+    }
+
+    .radio {
+        padding-top: 10px;
+    }
+
+    .buttonDelete {
+        padding-left: 20px;
+    }
+
+    
+
+
+
+
+
+
+
+
+
+
 }
+
+
 
 @media (min-width: 426px) and (max-width: 768px) {
     body {
