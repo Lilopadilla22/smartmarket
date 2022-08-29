@@ -4,13 +4,28 @@
 <%- include ('./partials/head') %>
 
 <body>
-    
-    <%- include ('./partials/header') %> 
+
+    <%- include ('./partials/header') %>
 
     <main class="main-section">
+        <div class="div-select-categorias">
+            <select onchange="location.href=this.options[this.selectedIndex].value" name="elige" size="1">
+                <option value="" selected disabled style="font-size:15px; color:black;">Categorías</option>
+
+                <option value="http://localhost:3001/productos">Todos los productos</option>
+                <option value="http://localhost:3001/productos/categoria/almacen">Almacen</option>
+                <option value="http://localhost:3001/productos/categoria/bebidas-con-alcohol">Alcohol</option>
+                <option value="http://localhost:3001/productos/categoria/bebidas">Bebidas</option>
+                <option value="http://localhost:3001/productos/categoria/carnes">Carnes</option>
+                <option value="http://localhost:3001/productos/categoria/higiene">Higiene</option>
+                <option value="http://localhost:3001/productos/categoria/lacteos">Lacteos</option>
+                <option value="http://localhost:3001/productos/categoria/limpieza">Limpieza</option>
+                <option value="http://localhost:3001/productos/categoria/verduleria">Verduleria</option>
+
+            </select>
+        </div>
 
         <section class="conjunto-articulos-productos">
-
 
             <% categoria.forEach(producto => {%>
 
@@ -30,7 +45,7 @@
                 </a>
             </article>
 
-           
+
             <% }) %>
 
         </section>
@@ -70,7 +85,7 @@
     </main>
 
     <%- include ('partials/footer') %>
-    
+
 </body>
 
 </html>

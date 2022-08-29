@@ -1,12 +1,13 @@
 window.onload = function () {
-    validarNoEstaVacio(".smallProductEditName", '#nombre', "Ingrese un nombre para el producto");
-    validarNoEstaVacio(".smallProductEditPrice", '#precio', "Ingrese un precio para el producto");
-    validarNoEstaVacio(".smallProductEditCategoria", '#categoria', "Ingrese una categoria para el producto");
-    validarNoEstaVacio(".smallProductEditDescription", '#detalle', "Ingrese una descripcion para el producto");
+    validarFront(".smallProductEditName", '#nombre', "Ingrese un nombre para el producto");
+    validarFront(".smallProductEditPrice", '#precio', "Ingrese un precio para el producto");
+    validarFront(".smallProductEditCategoria", '#categoria', "Ingrese una categoria para el producto");
+    validarFront(".smallProductEditDescription", '#detalle', "Ingrese una descripcion para el producto");
+    validarFront(".smallProductEditImage", "#imagen", "Si no agrega imagen, se mantendra la del producto")
 }
 
 
-function validarNoEstaVacio(smallClassName, inputId, mensajeDeError) {
+function validarFront(smallClassName, inputId, mensajeDeError) {
     let smallText = document.querySelector(smallClassName)
     let input = document.querySelector(inputId);
     input.addEventListener("blur", () => {

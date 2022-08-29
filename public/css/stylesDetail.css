@@ -87,10 +87,12 @@ main {
 .botonDeCantidad {
     width: 25px;
     height: 25px;
+
 }
 
 .botonDeAdicionar {
     padding-top: 5%;
+
 }
 
 .botonDeAgregar {
@@ -98,12 +100,15 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
 }
 
 .botonPago {
     padding: 10px;
     justify-content: center;
     width: 80%;
+    border-radius: 10px;
+    border: 0.5px solid grey
 }
 
 .precio-en-detail {

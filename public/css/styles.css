@@ -339,7 +339,7 @@ main.main-detail {
     color: #8bff85 !important;
 }
 
-a {
+.categoria a {
     color: white;
 }
 
@@ -426,12 +426,11 @@ footer section article {
     text-decoration: none;
     padding: 10px 5px;
     display: block;
-    font-size: 25px;
-
+    font-size: 12px;
 }
 
 .nav-footer li a:hover {
-    background-color: #868686;
+    color: #848484;
 }
 
 .nav-footer>li {
@@ -443,9 +442,6 @@ footer section article {
     max-width: 140px;
 }
 
-ul.lista-footer li a {
-    font-size: 12px;
-}
 
 .nav-footer li:hover>ul {
     display: block;
