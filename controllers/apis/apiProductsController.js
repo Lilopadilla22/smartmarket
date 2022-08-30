@@ -20,13 +20,13 @@ module.exports = {
             });
 
         const productsTotalCount = await DB.Product.count()
-        let listaProductos = [{
+        let listaProductos = {
             count: productsTotalCount,
             data: productsSum,
             categoriesByCount: categorySum
 
 
-        }]
+        }
         res.json(listaProductos)
     },
 
