@@ -40,18 +40,24 @@
                     <div class="carritoDescripcion"><span class="precio-en-detail">$ <%= product.price%></span></div>
                     <div class="botonDeAdicionar"> <button class="botonDeCantidad">+</button> Cantidad
                         <button class="botonDeCantidad">-</button></div>
-                    <div class="botonDeAgregar"><button class="botonPago">Agregar Producto</button></div>
-                    <div class="botonDeAgregar"><button class="botonPago">Comprar ahora</button></div>
-                    <a href="/productos/editar-producto/<%= product.id %> ">
-                        <div class="botonDeAgregar"><button class="botonPago">Editar Producto</button></div>
-                    </a>
-                    <form action="/productos/borrar-producto/<%= product.id %>?_method=DELETE" method="POST">
-
-                        <div class="botonDeAgregar"><button class="botonPago">Eliminar Producto</button></div>
-
-                    </form>
-
-
+                    <% if (locals.isLogged && user.status_id !== 3) { %>     
+                    <div style="margin-bottom: 240px;">
+                        <div class="botonDeAgregar"><button class="botonPago">Agregar Producto</button></div>
+                        <div class="botonDeAgregar"><button class="botonPago">Comprar ahora</button></div>
+                    </div>    
+                    <% } %>
+                        
+                    <% if (locals.isLogged && user.status_id === 3) { %> 
+                        <div class="botonDeAgregar"><button class="botonPago">Agregar Producto</button></div>
+                        <div class="botonDeAgregar"><button class="botonPago">Comprar ahora</button></div>
+                        <a href="/productos/editar-producto/<%= product.id %> ">
+                            <div class="botonDeAgregar"><button class="botonPago">Editar Producto</button></div>
+                        </a>
+                        <form action="/productos/borrar-producto/<%= product.id %>?_method=DELETE" method="POST">
+    
+                            <div class="botonDeAgregar" style="margin-bottom: 100px;"><button class="botonPago">Eliminar Producto</button></div>
+                        </form>
+                    <% } %>
                 </div>
             </section>
 
@@ -62,3 +68,7 @@
 </body>
 
 </html>
+
+                        
+                            
+

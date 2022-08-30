@@ -17,7 +17,7 @@
                 <input placeholder="¿Qué producto buscas?" type="search" class="input">
             </div>
             <div class="opciones-header">
-                <% if (locals.isLogged) { %>
+                <% if (locals.isLogged && user.status_id === 3) { %>
                     <div class="opciones-nav-header"><a href="/usuarios/mi-perfil/<%= user.users_id %> "><img
                         src="/images/users/<%= user.profile_image %>"></a>
                 </div>
@@ -38,6 +38,28 @@
                     <option value="" disabled class="opciones-select-header">----------------------------------</option>
                     <option value="/productos/crear-producto" class="opciones-select-header">
                         CREAR PRODUCTO
+                    </option>
+                    <option value="" disabled class="opciones-select-header">----------------------------------</option>
+                    <option value="/usuarios/logout" class="opciones-select-header">Cerrar sesión</option>
+                    <option value="" disabled class="opciones-select-header">----------------------------------</option>
+                </select>
+                <% } else if (locals.isLogged && user.status_id !== 3) { %> 
+                    <div class="opciones-nav-header"><a href="/usuarios/mi-perfil/<%= user.users_id %> "><img
+                        src="/images/users/<%= user.profile_image %>"></a>
+                </div>
+                <select name="" id="" class="select-header" 
+                    onchange="window.location.href=this.options[this.options.selectedIndex].value">
+                    <option value="" disabled class="opciones-select-header">----------------------------------</option>
+                    <option value="" class="opciones-select-header-nombre" disabled selected>
+                      <%= user.full_name %>
+                    </option>
+                    <option value="" disabled class="opciones-select-header">----------------------------------</option>
+                        <option value="/usuarios/mi-perfil/<%= user.users_id %>" class="opciones-select-header">
+                            MI PERFIL
+                        </option>
+                        <option value="" disabled class="opciones-select-header">----------------------------------</option>
+                    <option value="/productos/carrito" class="opciones-select-header">
+                        CARRITO 
                     </option>
                     <option value="" disabled class="opciones-select-header">----------------------------------</option>
                     <option value="/usuarios/logout" class="opciones-select-header">Cerrar sesión</option>

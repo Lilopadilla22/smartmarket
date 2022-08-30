@@ -11,7 +11,7 @@ export default function Container() {
     
 return (
         <>
-    <div className="container text-center d-flex flex-wrap w-100 h-90 p-3 shadow mt-5">
+    <div className="container text-center d-flex flex-wrap w-100 h-90 p-3 shadow my-5">
     
         <div className="col-4">
             <TotalProducts />

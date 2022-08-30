@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const path = require ('path')
 const multer = require('multer');
+const clientMiddleware = require('../middlewares/clientMiddleware')
 const authMiddleware = require ('../middlewares/authMiddleware');
 const validateProductsMiddleware = require ('../middlewares/validateProductsMiddleware')
 
@@ -19,16 +20,16 @@ router.get('/detalle-de-producto/:id', productController.detail);
 router.get('/categoria/:category_id', productController.categories);
 
 // /*** EDIT ONE PRODUCT ***/ 
-router.get('/editar-producto/:id', authMiddleware,productController.edit); 
+router.get('/editar-producto/:id', clientMiddleware,productController.edit); 
 router.put('/editar-producto/:id', upload.any(),validateProductsMiddleware, productController.update); 
 
 
 // // CREATE ONE PRODUCT //
-router.get('/crear-producto', authMiddleware,productController.add);
+router.get('/crear-producto', clientMiddleware,productController.add);
 router.post('/crear-producto', upload.any(),validateProductsMiddleware, productController.create);
 
 // DELETE ONE PRODUCT //
-router.delete('/borrar-producto/:id', authMiddleware,productController.destroy);
+router.delete('/borrar-producto/:id',productController.destroy);
 
 
 
