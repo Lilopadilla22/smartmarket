@@ -7,8 +7,8 @@ export default function CategoryList(){
   
 return(
   <>
-  
-  <ul className="list-group col-6">
+  <div className="list-group col-1"></div>
+  <ul className="list-group col-7">
   <h3>Listado de Categorías</h3>
 {data && data.length > 0 && data.map((category , i) => {
 return (

@@ -15,7 +15,7 @@ module.exports = {
                     as: 'categories'
                 },
                 group: ['Product.categories_id'],
-                attributes: ['categories.name', [DB.Sequelize.fn('COUNT', DB.Sequelize.col('categories.categories_id')), 'countByCategorie']],
+                attributes: ['categories.name',[DB.Sequelize.fn('COUNT', DB.Sequelize.col('categories.categories_id')), 'countByCategorie']],
 
             });
 
