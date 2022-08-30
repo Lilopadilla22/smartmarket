@@ -33,7 +33,8 @@ module.exports = {
     
     showProduct: (req, res) => {
         DB.Product
-            .findByPk(req.params.id, {attributes: [ "id", "categories_id", "name", "price", "descriptions", [DB.Sequelize.fn('CONCAT',"/api/product/", DB.Sequelize.col('id'), "/image"), 'image']]})
+            .findByPk(req.params.id, {attributes: [ "id", "categories_id", "name", "price", "descriptions",
+             [DB.Sequelize.fn('CONCAT',"http://localhost:3001/img/", DB.Sequelize.col('image')), 'image']]})
             .then(product => {
 
                 res.json({
@@ -50,6 +51,19 @@ module.exports = {
     
                 return res.send(Product.image)
             })
-    }
+    }, 
+    LastProduct: async (req, res) => {
+        await DB.Product
+         .findOne({
+            order: [['id', 'DESC']],
+            limit: 1,
+            offset: 0,
+            attributes: ["id", "name", "descriptions", 'categories_id', [DB.Sequelize.fn('CONCAT',"http://localhost:3001/img/", DB.Sequelize.col('image')), 'image']]
+         })
+        .then(product => {
+            let listaProductos = {data: product}
+            res.json(listaProductos)
+        })
+    }    
 }
 
