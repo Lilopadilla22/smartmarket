@@ -3,138 +3,131 @@
 
 <%- include ('./partials/head') %>
 
-<body class="body-register">
+    <body class="body-register">
 
-    <%- include ('./partials/header') %>
-
-
-    <main class="main-register">
+        <%- include ('./partials/header') %>
 
 
-        <form class="card-register" action="/usuarios/registro" method="POST" enctype="multipart/form-data">
-
-            <div class="card_header">
-
-                <h1 class="form_heading">Registro</h1>
-            </div>
-            <div class="errores">
-                <ul>
-
-                </ul>
-            </div>
-            <div class="field">
-                <label for="full_name">Nombre y apellido</label>
-                <input class="input-login" name="full_name" type="text" id="username"
-                    value="<%= locals.oldData ? oldData.full_name : null %>">
-
-                <% if (locals.errors && errors.full_name) { %>
-                <div class="text-danger">
-                    <%= errors.full_name.msg %>
-                </div>
-
-                <% } %>
-                <small class="smallFullname"></small>
-            </div>
-            
+            <main class="main-register">
 
 
-            <div class="field">
-                <label for="email">Email</label>
-                <input class="input-login" name="email" type="text" id="email"
-                    value="<%= locals.oldData ? oldData.email : null %>">
-                <% if (locals.errors && errors.email) { %>
-                <div class="text-danger">
-                    <%= errors.email.msg %>
-                </div>
+                <form class="card-register" action="/usuarios/registro" method="POST" enctype="multipart/form-data">
 
-                <% } %>
-                <small class="smallEmail"></small>
-            </div>
-            <div class="field">
-                <label for="password">Contraseña</label>
-                <input class="input-login" name="password" type="password" id="password" minlength="5" maxlength="10">
-                <% if (locals.errors && errors.password) { %>
-                <div class="text-danger">
-                    <%= errors.password.msg %>
-                </div>
+                    <div class="card_header">
 
-                <% } %>
-                <small class="smallPassword"></small>
-            </div>
+                        <h1 class="form_heading">Registro</h1>
+                    </div>
+                    <div class="errores">
+                        <ul>
 
-            <div class="field">
-                <label for="repeatPassword">Confirmar Contraseña</label>
-                <input class="input-login" name="repeatPassword" type="password" id="repeatPassword" minlength="5"
-                    maxlength="10">
-                <% if (locals.errors && errors.password) { %>
-                <div class="text-danger">
-                    <%= errors.password.msg %>
-                    
-                </div>
-                <% } %>
-                <small class="smallRepeatPassword"></small>
-            </div>
-            <div class="field">
-                <label for="country">País</label>
-                <input class="input-login" name="country" type="pais" id="pais"
-                    value="<%= locals.oldData ? oldData.country : null %>">
-                <% if (locals.errors && errors.country) { %>
-                <div class="text-danger">
-                    <%= errors.country.msg %>
-                    
-                </div>
+                        </ul>
+                    </div>
+                    <div class="field">
+                        <label for="full_name">Nombre y apellido</label>
+                        <input class="input-login" name="full_name" type="text" id="username"
+                            value="<%= locals.oldData ? oldData.full_name : null %>">
 
-                <% } %>
-                <small class="smallCountry"></small>
-            </div>
-
-            <div class="field">
-                <label for="address">Dirección</label>
-                <input class="input-login" name="address" type="direccion" id="direccion"
-                    value="<%= locals.oldData ? oldData.address : null %>">
-                <% if (locals.errors && errors.address) { %>
-                <div class="text-danger">
-                    <%= errors.address.msg %>
-                </div>
-
-                <% } %>
-                <small class="smallAddress"></small>
-            </div>
-            <div class="field">
-                <label for="profile_image">Foto de perfil</label>
-                <input type="file" name="profile_image" value="fotoPerfil" id="perfilFile">
-                <% if (locals.errors && errors.profile_image) { %>
-                <div class="text-danger">
-                    <%= errors.profile_image.msg %>
-                </div>
-
-                <% } %>
-            </div>
-            <div class="checkbox-register">
-                <label class="label-checkbox" for="terminos">
-                    <input type="checkbox" class="checkbox-register" name="terminos" value="terminos">Acepto términos y
-                    condiciones
-                    <% if (locals.errors && errors.terminos) { %>
-                    <div class="text-danger">
-                        <%= errors.terminos.msg %>
+                        <small class="smallFullname">
+                            <% if (locals.errors && errors.full_name) { %>
+                                <%= errors.full_name.msg %>
+                                    <% } %>
+                        </small>
                     </div>
 
-                    <% } %>
-                    <input type="checkbox" class="checkbox-register" name="ofertas" value="ofertas">Quiero recibir
-                    ofertas
-                </label>
-            </div>
 
-            <div>
-                <button class="button-register" type="submit">Enviar</button>
-            </div>
-        </form>
-    </main>
-    
-    <%- include('./partials/footer') %>
-    
-    <script src="../funcionesFrontend/validacionesRegister.js"></script>
 
-</body>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input class="input-login" name="email" type="text" id="email"
+                            value="<%= locals.oldData ? oldData.email : null %>">
+                                                     
+                                <small class="smallEmail">
+                                    <% if (locals.errors && errors.email) { %>
+                                            <%= errors.email.msg %>
+                                            <% } %>
+                                </small>
+                    </div>
+                    <div class="field">
+                        <label for="password">Contraseña</label>
+                        <input class="input-login" name="password" type="password" id="password" minlength="5"
+                            maxlength="10">
+                                                   
+                                <small class="smallPassword">
+                                    <% if (locals.errors && errors.password) { %>
+                                            <%= errors.password.msg %>
+                                            <% } %>
+                                </small>
+                    </div>
+
+                    <div class="field">
+                        <label for="repeatPassword">Confirmar Contraseña</label>
+                        <input class="input-login" name="repeatPassword" type="password" id="repeatPassword"
+                            minlength="5" maxlength="10">
+                        
+                                <small class="smallRepeatPassword">
+                                    <% if (locals.errors && errors.password) { %>
+                                            <%= errors.password.msg %>
+                                        <% } %>
+                                </small>
+                    </div>
+                    <div class="field">
+                        <label for="country">País</label>
+                        <input class="input-login" name="country" type="pais" id="pais"
+                            value="<%= locals.oldData ? oldData.country : null %>">
+                       
+                                <small class="smallCountry">
+                                    <% if (locals.errors && errors.country) { %>                                
+                                        <%= errors.country.msg %>            
+                                        <% } %>
+                                </small>
+                    </div>
+
+                    <div class="field">
+                        <label for="address">Dirección</label>
+                        <input class="input-login" name="address" type="direccion" id="direccion"
+                            value="<%= locals.oldData ? oldData.address : null %>">
+                        
+                                <small class="smallAddress"><% if (locals.errors && errors.address) { %>
+                                        <%= errors.address.msg %>
+                                    <% } %></small>
+                    </div>
+                    <div class="field">
+                        <label for="profile_image">Foto de perfil</label>
+                        <input type="file" name="profile_image" value="fotoPerfil" id="perfilFile">
+                        <% if (locals.errors && errors.profile_image) { %>
+                            <div class="text-danger">
+                                <%= errors.profile_image.msg %>
+                            </div>
+
+                            <% } %>
+                    </div>
+                    <div class="checkbox-register">
+                        <label class="label-checkbox" for="terminos">
+                            <input type="checkbox" class="checkbox-register" name="terminos" value="terminos">Acepto
+                            términos y
+                            condiciones
+                            <% if (locals.errors && errors.terminos) { %>
+                                <div class="text-danger">
+                                    <%= errors.terminos.msg %>
+                                </div>
+
+                                <% } %>
+                                    <input type="checkbox" class="checkbox-register" name="ofertas"
+                                        value="ofertas">Quiero recibir
+                                    ofertas
+                        </label>
+                    </div>
+
+                    <div>
+                        <button class="button-register" type="submit">Enviar</button>
+                    </div>
+                </form>
+            </main>
+
+            <%- include('./partials/footer') %>
+
+                <script src="../funcionesFrontend/validacionesRegister.js"></script>
+
+    </body>
 
 </html>
