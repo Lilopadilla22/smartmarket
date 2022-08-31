@@ -43,12 +43,11 @@ main {
 .lista {
     display: flex;
     list-style: none;
-    min-width: 700px;
     width: 100%;
 }
 
 .lista li {
-    flex-basis: 22%;
+    flex-basis: 30%;
     font-weight: bold;
 }
 
@@ -69,6 +68,7 @@ main {
 .nombreImagenProducto {
     display: flex;
     align-items: center;
+    font-size: 12px;
 }
 
 .nombreImagenProducto>img {
@@ -82,7 +82,7 @@ main {
 }
 
 .descripcionProductos div {
-    flex-basis: 22%;
+    flex-basis: 30%;
     min-width: 30px;
 }
 
@@ -127,7 +127,6 @@ main {
 }
 
 .pagarUno {
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -252,6 +251,7 @@ footer {
 
     .price {
         padding-top: 18px;
+        font-size: 12px;
     }
 
 }
@@ -275,10 +275,18 @@ footer {
     .detallesDeProducto {
         width: 100vw
     }
+    .price {
+        font-size: 12px;
+        padding-left: 20px;
+    }
 }
 
 @media (min-width: 768px) {
     body {
         min-height: 840px;
+    }
+    .price {
+        font-size: 12px;
+        padding-left: 20px;
     }
 }
