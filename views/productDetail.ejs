@@ -40,19 +40,19 @@
                     <div class="carritoDescripcion"><span class="precio-en-detail">$ <%= product.price%></span></div>
                     <div class="botonDeAdicionar"> <button class="botonDeCantidad">+</button> Cantidad
                         <button class="botonDeCantidad">-</button></div>
-                    <% if (locals.isLogged && user.status_id !== 3) { %>     
-                    <div style="margin-bottom: 240px;">
-                        <div class="botonDeAgregar"><button class="botonPago">Agregar Producto</button></div>
+                    <% if (!locals.isLogged || user.status_id !== 3) { %>     
+                    <div style="margin-bottom: 260px;">
                         <div class="botonDeAgregar"><button class="botonPago">Comprar ahora</button></div>
                     </div>    
                     <% } %>
                         
                     <% if (locals.isLogged && user.status_id === 3) { %> 
+                        <a href="/productos/crear-producto">
                         <div class="botonDeAgregar"><button class="botonPago">Agregar Producto</button></div>
-                        <div class="botonDeAgregar"><button class="botonPago">Comprar ahora</button></div>
+                        </a>
                         <a href="/productos/editar-producto/<%= product.id %> ">
                             <div class="botonDeAgregar"><button class="botonPago">Editar Producto</button></div>
-                        </a>
+                            </a>
                         <form action="/productos/borrar-producto/<%= product.id %>?_method=DELETE" method="POST">
     
                             <div class="botonDeAgregar" style="margin-bottom: 100px;"><button class="botonPago">Eliminar Producto</button></div>

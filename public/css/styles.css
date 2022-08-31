@@ -163,14 +163,6 @@ a.logo-principal {
 
 }
 
-button.boton-menu {
-    background-color: #008c2a;
-    color: white;
-    padding: 9px;
-    border: none;
-    border-radius: 30%;
-    display: none;
-}
 
 .opciones-nav-header img {
 
@@ -722,9 +714,7 @@ img.form-img {
         display: none;
     }
 
-    .nav-menu {
-        justify-content: space-evenly;
-    }
+    
 
     .select-header {
         width: 150px;
@@ -814,6 +804,7 @@ img.form-img {
         width: 200px;
         height: 100px;
     }
+  
 
 
 }
