@@ -35,6 +35,8 @@ main {
 
 .carritoDelProducto {
     flex-basis: 50%;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .detalleImagen {
@@ -46,9 +48,7 @@ main {
     position: relative;
     left: 25%;
 }
-.detalleImagen img{
-    
-}
+
 
 .detalleImagen>img {
     border-radius: 20px;
@@ -91,17 +91,18 @@ main {
 }
 
 .botonDeAdicionar {
-    padding-top: 5%;
+    margin-top: 5%;
 
 }
 
 .botonDeAgregar {
-    padding-top: 50px;
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
 }
+
 
 .botonPago {
     padding: 10px;
@@ -109,6 +110,10 @@ main {
     width: 80%;
     border-radius: 10px;
     border: 0.5px solid grey
+}
+.botonPago:hover {
+    background-color: #ced0d1;
+    cursor: pointer;
 }
 
 .precio-en-detail {
